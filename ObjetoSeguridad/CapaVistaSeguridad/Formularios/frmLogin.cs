@@ -1,23 +1,28 @@
 ﻿//BRIAN SANTIZO FORM
 //0901-17-1483
+using CapaControladorSeguridad;
 using System;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Clinica
+namespace CapaVistaSeguridad
 {
     public partial class frmLogin : Form
     {
-        string strUsuarioDB, strContrasenaDB;
-        
 
+        clsControladorPerfil controlador = new clsControladorPerfil();
         public frmLogin()
         {
             InitializeComponent();
             //CODIFICACION PARA EL TEXTFIELD DE CONTRASEÑA
             txtPassword.PasswordChar = '*';
+
         }
+        
+        bool Verificacion;
+           
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -30,6 +35,10 @@ namespace Clinica
         {
              System.Windows.Forms.Application.Exit();
         }
-
+       
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Verificacion = controlador.Login(txtUsuario.Text, txtPassword.Text);
+        }
     }
 }

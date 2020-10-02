@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\frmAsignacionDeAplicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAsignacionDeAplicaciones.Designer.cs">
+      <DependentUpon>frmAsignacionDeAplicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmAgregarAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmAgregarAplicacion.Designer.cs">
+      <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmMantenimientoPerfil.cs">
       <SubType>Form</SubType>
@@ -69,8 +81,14 @@
     <Folder Include="Iconos\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\frmAsignacionDeAplicaciones.resx">
+      <DependentUpon>frmAsignacionDeAplicaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimientos\frmAgregarAplicacion.resx">
+      <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmMantenimientoPerfil.resx">
       <DependentUpon>frmMantenimientoPerfil.cs</DependentUpon>

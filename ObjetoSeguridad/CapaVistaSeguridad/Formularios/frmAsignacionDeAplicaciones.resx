@@ -117,15 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="colCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colNombreAplicacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colEstado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFYSURBVChTY/hP
+        AKAo+PP37/+Grsn/U/PK/mcWlP3fv38/qoKQ3Ib/XFJq/+V9i/5LOcT/FxQSRijYfODMf2YO7v9mHaf+
+        Oy39+l/XO+W/r68fRMGnL9/+C8pp/FeObAFLmpSv+S8kLPz/6dOnEAWe8QX/BTRt/zsu+fzfZvqD/3xC
+        ov/Xrl0LkvrPsHTTnv8snHz/LSdcBetWtvL9Hx4eAZYEAQYhOc3/GilTwZKGBYv+S0hJ/3/79i1UGqhA
+        WFHnv3rSRLACg4Il/8UkJP+/efMGKg1UsGLrfqAVvP8t+6+AFak5hv0PDQ2DSkMDyj+l9L+AujXYkbYz
+        n/wXFJP8v2jRIoSCr9++/xeS1/yvFFoP9ea6/wKCQv8fP36MCKhtR85BAqrtOFiRnl/6fy8vb4QCEIgq
+        av3PJamKPahB4O+/f//bJswAR1ZOUcX/I0eOoCrABP//AwDSCHMGNw5kxgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAgregarTodo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQCAYAAAArij59AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFcSURBVChTY/hP
+        ADDs37//f2ZB2f/UvLL/DV2T///5+xcqBQEMgkLC/6Uc4v/L+xb955JS+x+S2wCVggAGX1+//7reKf+d
+        ln79b9Zx6j8zB/f/zQfOQKWBCp4+ffpfSFj4v0n5GrAi5ciW/4JyGv8/ffkGUQAi1q5d+59PSPS/zfQH
+        /x2XfP4voGn73zO+AKEABMLDI/4rW/mCTbGccPU/Cyff/6Wb9iAUvH379r+ElPR/w4JFYEUaKVP/C8lp
+        IhS8efPmv5iE5H+DgiVgBepJE/8LK+ogFISGhv1XcwyDWNF/BWgF7/8VW/dDFCxatOi/oJjkf9uZTyCO
+        VLf+759SCtbI8Pjx4/8CgkJAb64D61YKrf8vJK/5/+u37xAFXl7e//X80sGSZm3HwQG17cg5sCQIoAa1
+        pOr/qKJWqBQEMBw5cuR/TlEFOLLaJsz4//ffP6gUBMB9gR38/w8AcfFzBr/EZNYAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
