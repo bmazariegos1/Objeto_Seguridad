@@ -9,5 +9,9 @@ C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug
 C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Properties.Resources.resources
 C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.GenerateResource.cache
 C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
-C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\Clinica.frmLogin.resources
 C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoPerfil.resources
+C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAgregarAplicacion.resources
+C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.frmAsignacionDeAplicaciones.resources
+C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.frmLogin.resources
+C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\CARLOS JAVIER\source\repos\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.pdb

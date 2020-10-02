@@ -1,4 +1,4 @@
-﻿namespace Clinica
+﻿namespace CapaVistaSeguridad
 {
     partial class frmLogin
     {
@@ -49,7 +49,7 @@
             this.pbxUsuario.Enabled = false;
             this.pbxUsuario.ErrorImage = null;
             this.pbxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pbxUsuario.Image")));
-            this.pbxUsuario.Location = new System.Drawing.Point(420, 13);
+            this.pbxUsuario.Location = new System.Drawing.Point(459, 13);
             this.pbxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.pbxUsuario.Name = "pbxUsuario";
             this.pbxUsuario.Size = new System.Drawing.Size(96, 77);
@@ -63,7 +63,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(322, 107);
+            this.lblUsuario.Location = new System.Drawing.Point(361, 107);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(66, 17);
@@ -73,7 +73,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(341, 138);
+            this.txtUsuario.Location = new System.Drawing.Point(380, 138);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(242, 20);
@@ -82,7 +82,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(341, 195);
+            this.txtPassword.Location = new System.Drawing.Point(380, 195);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(242, 20);
@@ -94,7 +94,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Rockwell", 11.25F);
             this.lblPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblPassword.Location = new System.Drawing.Point(309, 167);
+            this.lblPassword.Location = new System.Drawing.Point(348, 167);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(79, 17);
@@ -126,21 +126,24 @@
             this.pbxLogo.Enabled = false;
             this.pbxLogo.ErrorImage = null;
             this.pbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbxLogo.Image")));
-            this.pbxLogo.Location = new System.Drawing.Point(26, 48);
+            this.pbxLogo.Location = new System.Drawing.Point(24, 32);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(223, 181);
+            this.pbxLogo.Size = new System.Drawing.Size(265, 216);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 8;
             this.pbxLogo.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(702, 2);
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(523, 234);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(39, 34);
+            this.btnSalir.Size = new System.Drawing.Size(110, 32);
             this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Cancelar";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
@@ -149,23 +152,23 @@
             this.btnAceptar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAceptar.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(420, 234);
+            this.btnAceptar.Location = new System.Drawing.Point(364, 234);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(110, 32);
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = " Login";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.pnlBlanco);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
