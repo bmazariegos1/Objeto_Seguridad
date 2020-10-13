@@ -11,31 +11,33 @@ namespace CapaModeloSeguridad
     public class clsModeloPerfil
     {
         Conexion cn = new Conexion();
-        public bool Login(string strUsuario, string strContraseña)
+        
+        public int Login(string strUsuario, string strContrasena)
         {
             try
             {
                 string strUsuarioDB = "";
                 string strContrasenaDB = "";
-                OdbcCommand command = new OdbcCommand("SELECT usuario_login, contraseña_login FROM LOGIN WHERE usuario_login='" + strUsuario + "' AND contraseña_login='" + strContraseña + "' AND estado_login = "+ 1 +" ;", cn.conexion());
+                OdbcCommand command = new OdbcCommand("SELECT usuario_login, contraseña_login FROM login WHERE usuario_login ='" + strUsuario + "' AND contraseña_login ='" + strContrasena + "' AND estado_login = 1 ;", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
                 strUsuarioDB = reader.GetString(0);
                 strContrasenaDB = reader.GetString(1);
+                Console.WriteLine("Es true" + strUsuarioDB + strContrasenaDB);
                 reader.Close();
                 if (String.IsNullOrEmpty(strUsuarioDB) || String.IsNullOrEmpty(strContrasenaDB))
                 {
-                    return true;
+                    return 0;
                 }
                 else
                 {
-                    return false;
+                    return 1;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al consular usuario"+ ex);
-                return false;
+                Console.WriteLine("CapaModelo Error al consular usuario:  "+ ex);
+                return 0;
             }
         }
     }

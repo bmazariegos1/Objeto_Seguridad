@@ -1,5 +1,4 @@
-﻿//BRIAN SANTIZO FORM
-//0901-17-1483
+﻿
 using CapaControladorSeguridad;
 using System;
 using System.Data.Odbc;
@@ -19,9 +18,6 @@ namespace CapaVistaSeguridad
             txtPassword.PasswordChar = '*';
 
         }
-        
-        bool Verificacion;
-           
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -35,10 +31,26 @@ namespace CapaVistaSeguridad
         {
              System.Windows.Forms.Application.Exit();
         }
-       
+
+        //public bool Verificacion { get; set; }
+        public string usuario()
+        {
+            return txtUsuario.Text;
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Verificacion = controlador.Login(txtUsuario.Text, txtPassword.Text);
+            Console.WriteLine("antes de llamada");
+            if(controlador.Login(txtUsuario.Text, txtPassword.Text)== 1)
+            {
+                Console.WriteLine("valor true" + txtUsuario.Text + txtPassword.Text);
+                DialogResult = DialogResult.OK;
+            }else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
+            
+            
         }
     }
 }

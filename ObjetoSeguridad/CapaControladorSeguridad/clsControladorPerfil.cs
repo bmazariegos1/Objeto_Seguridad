@@ -1,9 +1,12 @@
-﻿using CapaModeloSeguridad;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaModeloSeguridad;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace CapaControladorSeguridad
 {
@@ -11,9 +14,10 @@ namespace CapaControladorSeguridad
     {
         clsModeloPerfil Modelo = new clsModeloPerfil();
 
-        public bool Login(string strUsuario, string strContraseña)
+        public int Login(string strUsuario, string strContrasena)
         {
-            return Modelo.Login(strUsuario, strContraseña);
+            int estado = Modelo.Login(strUsuario, strContrasena);
+            return estado;
         }
 
     }
