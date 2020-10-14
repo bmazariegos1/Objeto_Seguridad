@@ -10,7 +10,7 @@ namespace CapaModeloSeguridad
 {
     public class clsModeloPerfil
     {
-        Conexion cn = new Conexion();
+        clsConexion cn = new clsConexion();
         
         public int Login(string strUsuario, string strContrasena)
         {

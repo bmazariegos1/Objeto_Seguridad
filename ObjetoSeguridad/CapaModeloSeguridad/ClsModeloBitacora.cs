@@ -11,7 +11,7 @@ namespace CapaModeloSeguridad
      public class ClsModeloBitacora
     {
 
-        Conexion cn = new Conexion();
+        clsConexion cn = new clsConexion();
         String query;
 
         public int UserSystem; //variable para mantener guardado el usuario 

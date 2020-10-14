@@ -44,7 +44,8 @@
   <ItemGroup>
     <Compile Include="ClsModeloBitacora.cs" />
     <Compile Include="clsModeloPerfil.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="clsPermisos.cs" />
+    <Compile Include="clsConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
