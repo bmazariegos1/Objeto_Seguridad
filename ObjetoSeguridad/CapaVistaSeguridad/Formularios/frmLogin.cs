@@ -11,6 +11,7 @@ namespace CapaVistaSeguridad
     {
 
         clsControladorPerfil controlador = new clsControladorPerfil();
+        clsVistaBitacora cn = new clsVistaBitacora();
         public frmLogin()
         {
             InitializeComponent();
@@ -32,24 +33,39 @@ namespace CapaVistaSeguridad
              System.Windows.Forms.Application.Exit();
         }
 
-        //public bool Verificacion { get; set; }
         public string usuario()
         {
             return txtUsuario.Text;
         }
-
+        int contador = 0;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("antes de llamada");
-            if(controlador.Login(txtUsuario.Text, txtPassword.Text)== 1)
+            if (contador <= 3)
             {
-                Console.WriteLine("valor true" + txtUsuario.Text + txtPassword.Text);
-                DialogResult = DialogResult.OK;
-            }else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos");
+                if (controlador.Login(txtUsuario.Text, txtPassword.Text) == 1)
+                {
+                    //para registro de usuario en bitacora
+                    cn.user(txtUsuario.Text);
+                    cn.insert("Logeo Exitoso", 1);
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    //para registro de usuario en bitacora  
+                    cn.user(txtUsuario.Text);
+                    cn.insert("Logeo erroneo", 1);
+                    contador++;
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
             }
-            
+            if (contador > 3)
+            {
+                //para registro de usuario en bitacora  
+                cn.user(txtUsuario.Text);
+                cn.insert("Logeo erroneo bloqueo de Usuario", 1);
+                controlador.BloquearUsuario(txtUsuario.Text);
+                MessageBox.Show("A completado los intentos posibles, el usuario a sido Bloqueado por seguridad, contacte a su jefe inmediato.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }
     }

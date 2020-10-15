@@ -26,7 +26,7 @@ clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
 
 //para registro de usuario en bitacora
 clsVistaBitacora cn = new clsVistaBitacora();
-            cn.user(/*variable*/);
+            cn.user(/*variable que contiene el usuario*/);
 
 //para registro de accion en bitacora
 clsVistaBitacora cn = new clsVistaBitacora();

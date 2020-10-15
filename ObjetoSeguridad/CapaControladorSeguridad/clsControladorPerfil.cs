@@ -19,6 +19,10 @@ namespace CapaControladorSeguridad
             int estado = Modelo.Login(strUsuario, strContrasena);
             return estado;
         }
-
+        public void BloquearUsuario(string Usuario)
+        {
+            string Consulta = "UPDATE login set estado_login= 0 where usuario_login= '" + Usuario + "';";
+            Modelo.Modificar(Consulta);
+        }
     }
 }
