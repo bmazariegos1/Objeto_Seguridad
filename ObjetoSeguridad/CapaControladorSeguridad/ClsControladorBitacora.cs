@@ -7,15 +7,14 @@ using CapaModeloSeguridad;
 
 namespace CapaControladorSeguridad
 {
-    public class ClsControladorBitacora
+    public class clsControladorBitacora
     {
 
-        ClsModeloBitacora b = new ClsModeloBitacora();
+        clsModeloBitacora b = new clsModeloBitacora();
 
-        public void usuario(int usuario) //obtiene el usuario
+        public void usuario(string usu) //obtiene el usuario
         {
-            b.UserSystem = usuario;
-            //usuario = b.UserSystem;
+            b.getUsuario(usu);
         }
 
         public void acciones(int aplicacion, String accion) //obtiene los valores necesarios para registrar movimientos
@@ -23,7 +22,7 @@ namespace CapaControladorSeguridad
             b.nombreAplicacion = aplicacion;
             b.accion = accion;
 
-            b.Insertar();
+            b.Insertar(accion, aplicacion);
         }
 
     }
