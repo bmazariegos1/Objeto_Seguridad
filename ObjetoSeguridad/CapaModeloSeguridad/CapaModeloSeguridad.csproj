@@ -46,6 +46,7 @@
     <Compile Include="clsModeloPerfil.cs" />
     <Compile Include="clsPermisos.cs" />
     <Compile Include="clsConexion.cs" />
+    <Compile Include="clsVariableUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

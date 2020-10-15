@@ -66,3 +66,20 @@ D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\Capa
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.pdb
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.pdb
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csprojAssemblyReference.cache
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.frmAsignacionDeAplicaciones.resources
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.frmLogin.resources
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAgregarAplicacion.resources
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoPerfil.resources
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Properties.Resources.resources
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.GenerateResource.cache
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CoreCompileInputs.cache
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete

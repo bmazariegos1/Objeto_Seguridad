@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsFuncionesSeguridad.cs" />
+    <Compile Include="clsVistaBitacora.cs" />
     <Compile Include="Formularios\frmAsignacionDeAplicaciones.cs">
       <SubType>Form</SubType>
     </Compile>

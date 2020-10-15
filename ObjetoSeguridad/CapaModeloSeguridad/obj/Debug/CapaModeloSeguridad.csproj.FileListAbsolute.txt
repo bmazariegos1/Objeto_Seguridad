@@ -21,3 +21,9 @@ D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\Cap
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csprojAssemblyReference.cache
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+D:\Clases Universidad\Analisis de Sistemas II\Segundo Proyecto\Modulo Seguridad\Objeto Seguridad\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb

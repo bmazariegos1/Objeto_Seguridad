@@ -23,3 +23,11 @@ clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
             {
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
+
+//para registro de usuario en bitacora
+clsVistaBitacora cn = new clsVistaBitacora();
+            cn.user(/*variable*/);
+
+//para registro de accion en bitacora
+clsVistaBitacora cn = new clsVistaBitacora();
+            cn.insert(accion, aplicacion);
