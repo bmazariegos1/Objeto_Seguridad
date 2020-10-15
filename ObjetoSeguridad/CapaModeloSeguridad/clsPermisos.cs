@@ -45,7 +45,7 @@ namespace CapaModeloSeguridad
                                                     "WHERE LO.pk_id_login = " + strCodigo + " AND AP.pk_id_aplicacion = " + strAplicacion + "", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
-                strPermisosAplicacion = reader.GetString(0) + "," + reader.GetString(1) + "," + reader.GetString(2) + "," + reader.GetString(4) + "," + reader.GetString(5);
+                strPermisosAplicacion = reader.GetString(0) + "," + reader.GetString(1) + "," + reader.GetString(2) + "," + reader.GetString(3) + "," + reader.GetString(4);
                 reader.Close();
                 return strPermisosAplicacion;
             }
