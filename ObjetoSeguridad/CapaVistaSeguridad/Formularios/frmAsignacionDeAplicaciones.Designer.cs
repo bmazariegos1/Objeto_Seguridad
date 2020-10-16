@@ -30,32 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignacionDeAplicaciones));
             this.gbxUsuarioSelect = new System.Windows.Forms.GroupBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblPerfilesDisponibles = new System.Windows.Forms.Label();
             this.lblAplicacionesDisponibles = new System.Windows.Forms.Label();
-            this.lsvPerfilesDisponibles = new System.Windows.Forms.ListView();
-            this.lsvAplicacionesDisponibles = new System.Windows.Forms.ListView();
             this.lsvAplicacionesasignadas = new System.Windows.Forms.ListView();
             this.gbxPerfilesyAplicaciones = new System.Windows.Forms.GroupBox();
-            this.rbtnPerfiles = new System.Windows.Forms.RadioButton();
-            this.rbtnAplicaciones = new System.Windows.Forms.RadioButton();
-            this.lblAplicacioneAsignadas = new System.Windows.Forms.Label();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnAgregarTodo = new System.Windows.Forms.Button();
-            this.lblAgregar = new System.Windows.Forms.Label();
-            this.lblQuitar = new System.Windows.Forms.Label();
+            this.lblEditar = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblQuitar = new System.Windows.Forms.Label();
+            this.lblAgregar = new System.Windows.Forms.Label();
+            this.btnAgregarTodo = new System.Windows.Forms.Button();
+            this.lblAplicacioneAsignadas = new System.Windows.Forms.Label();
+            this.rbtnAplicaciones = new System.Windows.Forms.RadioButton();
+            this.rbtnPerfiles = new System.Windows.Forms.RadioButton();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.lblLimpiar = new System.Windows.Forms.Label();
             this.lblSalir = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.lblEditar = new System.Windows.Forms.Label();
+            this.dgvPerfilesDisponibles = new System.Windows.Forms.DataGridView();
+            this.dgvAplicacionesDisponibles = new System.Windows.Forms.DataGridView();
+            this.colNombre_Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxUsuarioSelect.SuspendLayout();
             this.gbxPerfilesyAplicaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesDisponibles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesDisponibles)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxUsuarioSelect
@@ -73,12 +77,32 @@
             this.gbxUsuarioSelect.TabStop = false;
             this.gbxUsuarioSelect.Text = "Usuario Seleccionado";
             // 
-            // txtUsuario
+            // lblNombreUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(58, 32);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(115, 23);
-            this.txtUsuario.TabIndex = 0;
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.Location = new System.Drawing.Point(209, 34);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(102, 16);
+            this.lblNombreUsuario.TabIndex = 4;
+            this.lblNombreUsuario.Text = "Nombre Usuario";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(173, 31);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(30, 25);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtNombreUsuario
+            // 
+            this.txtNombreUsuario.Enabled = false;
+            this.txtNombreUsuario.Location = new System.Drawing.Point(316, 31);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(246, 23);
+            this.txtNombreUsuario.TabIndex = 3;
             // 
             // lblUsuario
             // 
@@ -89,22 +113,12 @@
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
-            // txtNombreUsuario
+            // txtUsuario
             // 
-            this.txtNombreUsuario.Enabled = false;
-            this.txtNombreUsuario.Location = new System.Drawing.Point(316, 31);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(246, 23);
-            this.txtNombreUsuario.TabIndex = 3;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(173, 31);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 25);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtUsuario.Location = new System.Drawing.Point(58, 32);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(115, 23);
+            this.txtUsuario.TabIndex = 0;
             // 
             // lblPerfilesDisponibles
             // 
@@ -126,24 +140,6 @@
             this.lblAplicacionesDisponibles.TabIndex = 4;
             this.lblAplicacionesDisponibles.Text = "Aplicaciones Disponibles";
             // 
-            // lsvPerfilesDisponibles
-            // 
-            this.lsvPerfilesDisponibles.HideSelection = false;
-            this.lsvPerfilesDisponibles.Location = new System.Drawing.Point(15, 47);
-            this.lsvPerfilesDisponibles.Name = "lsvPerfilesDisponibles";
-            this.lsvPerfilesDisponibles.Size = new System.Drawing.Size(210, 132);
-            this.lsvPerfilesDisponibles.TabIndex = 5;
-            this.lsvPerfilesDisponibles.UseCompatibleStateImageBehavior = false;
-            // 
-            // lsvAplicacionesDisponibles
-            // 
-            this.lsvAplicacionesDisponibles.HideSelection = false;
-            this.lsvAplicacionesDisponibles.Location = new System.Drawing.Point(15, 221);
-            this.lsvAplicacionesDisponibles.Name = "lsvAplicacionesDisponibles";
-            this.lsvAplicacionesDisponibles.Size = new System.Drawing.Size(210, 128);
-            this.lsvAplicacionesDisponibles.TabIndex = 10;
-            this.lsvAplicacionesDisponibles.UseCompatibleStateImageBehavior = false;
-            // 
             // lsvAplicacionesasignadas
             // 
             this.lsvAplicacionesasignadas.HideSelection = false;
@@ -155,6 +151,8 @@
             // 
             // gbxPerfilesyAplicaciones
             // 
+            this.gbxPerfilesyAplicaciones.Controls.Add(this.dgvAplicacionesDisponibles);
+            this.gbxPerfilesyAplicaciones.Controls.Add(this.dgvPerfilesDisponibles);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblEditar);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.btnEditar);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.button1);
@@ -164,10 +162,8 @@
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblAplicacioneAsignadas);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.rbtnAplicaciones);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.rbtnPerfiles);
-            this.gbxPerfilesyAplicaciones.Controls.Add(this.lsvPerfilesDisponibles);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lsvAplicacionesasignadas);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblPerfilesDisponibles);
-            this.gbxPerfilesyAplicaciones.Controls.Add(this.lsvAplicacionesDisponibles);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblAplicacionesDisponibles);
             this.gbxPerfilesyAplicaciones.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxPerfilesyAplicaciones.Location = new System.Drawing.Point(21, 95);
@@ -177,17 +173,67 @@
             this.gbxPerfilesyAplicaciones.TabStop = false;
             this.gbxPerfilesyAplicaciones.Text = "Perfiles y Aplicaciones";
             // 
-            // rbtnPerfiles
+            // lblEditar
             // 
-            this.rbtnPerfiles.AutoSize = true;
-            this.rbtnPerfiles.Location = new System.Drawing.Point(352, 329);
-            this.rbtnPerfiles.Name = "rbtnPerfiles";
-            this.rbtnPerfiles.Size = new System.Drawing.Size(68, 20);
-            this.rbtnPerfiles.TabIndex = 11;
-            this.rbtnPerfiles.TabStop = true;
-            this.rbtnPerfiles.Text = "Perfiles";
-            this.rbtnPerfiles.UseVisualStyleBackColor = true;
-            this.rbtnPerfiles.CheckedChanged += new System.EventHandler(this.rbtnPerfiles_CheckedChanged);
+            this.lblEditar.AutoSize = true;
+            this.lblEditar.Location = new System.Drawing.Point(253, 226);
+            this.lblEditar.Name = "lblEditar";
+            this.lblEditar.Size = new System.Drawing.Size(43, 16);
+            this.lblEditar.TabIndex = 19;
+            this.lblEditar.Text = "Editar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(255, 245);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(40, 30);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(255, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 30);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblQuitar
+            // 
+            this.lblQuitar.AutoSize = true;
+            this.lblQuitar.Location = new System.Drawing.Point(251, 166);
+            this.lblQuitar.Name = "lblQuitar";
+            this.lblQuitar.Size = new System.Drawing.Size(44, 16);
+            this.lblQuitar.TabIndex = 13;
+            this.lblQuitar.Text = "Quitar";
+            // 
+            // lblAgregar
+            // 
+            this.lblAgregar.AutoSize = true;
+            this.lblAgregar.Location = new System.Drawing.Point(252, 95);
+            this.lblAgregar.Name = "lblAgregar";
+            this.lblAgregar.Size = new System.Drawing.Size(57, 16);
+            this.lblAgregar.TabIndex = 12;
+            this.lblAgregar.Text = "Agregar";
+            // 
+            // btnAgregarTodo
+            // 
+            this.btnAgregarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTodo.Image")));
+            this.btnAgregarTodo.Location = new System.Drawing.Point(255, 123);
+            this.btnAgregarTodo.Name = "btnAgregarTodo";
+            this.btnAgregarTodo.Size = new System.Drawing.Size(40, 30);
+            this.btnAgregarTodo.TabIndex = 6;
+            this.btnAgregarTodo.UseVisualStyleBackColor = true;
+            // 
+            // lblAplicacioneAsignadas
+            // 
+            this.lblAplicacioneAsignadas.AutoSize = true;
+            this.lblAplicacioneAsignadas.Location = new System.Drawing.Point(365, 22);
+            this.lblAplicacioneAsignadas.Name = "lblAplicacioneAsignadas";
+            this.lblAplicacioneAsignadas.Size = new System.Drawing.Size(146, 16);
+            this.lblAplicacioneAsignadas.TabIndex = 10;
+            this.lblAplicacioneAsignadas.Text = "Aplicaciones Asignadas";
             // 
             // rbtnAplicaciones
             // 
@@ -201,59 +247,17 @@
             this.rbtnAplicaciones.UseVisualStyleBackColor = true;
             this.rbtnAplicaciones.CheckedChanged += new System.EventHandler(this.rbtnAplicaciones_CheckedChanged);
             // 
-            // lblAplicacioneAsignadas
+            // rbtnPerfiles
             // 
-            this.lblAplicacioneAsignadas.AutoSize = true;
-            this.lblAplicacioneAsignadas.Location = new System.Drawing.Point(365, 22);
-            this.lblAplicacioneAsignadas.Name = "lblAplicacioneAsignadas";
-            this.lblAplicacioneAsignadas.Size = new System.Drawing.Size(146, 16);
-            this.lblAplicacioneAsignadas.TabIndex = 10;
-            this.lblAplicacioneAsignadas.Text = "Aplicaciones Asignadas";
-            // 
-            // lblNombreUsuario
-            // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(209, 34);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(102, 16);
-            this.lblNombreUsuario.TabIndex = 4;
-            this.lblNombreUsuario.Text = "Nombre Usuario";
-            // 
-            // btnAgregarTodo
-            // 
-            this.btnAgregarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTodo.Image")));
-            this.btnAgregarTodo.Location = new System.Drawing.Point(255, 123);
-            this.btnAgregarTodo.Name = "btnAgregarTodo";
-            this.btnAgregarTodo.Size = new System.Drawing.Size(40, 30);
-            this.btnAgregarTodo.TabIndex = 6;
-            this.btnAgregarTodo.UseVisualStyleBackColor = true;
-            // 
-            // lblAgregar
-            // 
-            this.lblAgregar.AutoSize = true;
-            this.lblAgregar.Location = new System.Drawing.Point(252, 95);
-            this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(57, 16);
-            this.lblAgregar.TabIndex = 12;
-            this.lblAgregar.Text = "Agregar";
-            // 
-            // lblQuitar
-            // 
-            this.lblQuitar.AutoSize = true;
-            this.lblQuitar.Location = new System.Drawing.Point(251, 166);
-            this.lblQuitar.Name = "lblQuitar";
-            this.lblQuitar.Size = new System.Drawing.Size(44, 16);
-            this.lblQuitar.TabIndex = 13;
-            this.lblQuitar.Text = "Quitar";
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(255, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 30);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.rbtnPerfiles.AutoSize = true;
+            this.rbtnPerfiles.Location = new System.Drawing.Point(352, 329);
+            this.rbtnPerfiles.Name = "rbtnPerfiles";
+            this.rbtnPerfiles.Size = new System.Drawing.Size(68, 20);
+            this.rbtnPerfiles.TabIndex = 11;
+            this.rbtnPerfiles.TabStop = true;
+            this.rbtnPerfiles.Text = "Perfiles";
+            this.rbtnPerfiles.UseVisualStyleBackColor = true;
+            this.rbtnPerfiles.CheckedChanged += new System.EventHandler(this.rbtnPerfiles_CheckedChanged);
             // 
             // BtnLimpiar
             // 
@@ -291,22 +295,35 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnEditar
+            // dgvPerfilesDisponibles
             // 
-            this.btnEditar.Location = new System.Drawing.Point(255, 245);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(40, 30);
-            this.btnEditar.TabIndex = 8;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.dgvPerfilesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfilesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombre_Perfil});
+            this.dgvPerfilesDisponibles.Location = new System.Drawing.Point(15, 42);
+            this.dgvPerfilesDisponibles.Name = "dgvPerfilesDisponibles";
+            this.dgvPerfilesDisponibles.Size = new System.Drawing.Size(210, 140);
+            this.dgvPerfilesDisponibles.TabIndex = 20;
             // 
-            // lblEditar
+            // dgvAplicacionesDisponibles
             // 
-            this.lblEditar.AutoSize = true;
-            this.lblEditar.Location = new System.Drawing.Point(253, 226);
-            this.lblEditar.Name = "lblEditar";
-            this.lblEditar.Size = new System.Drawing.Size(43, 16);
-            this.lblEditar.TabIndex = 19;
-            this.lblEditar.Text = "Editar";
+            this.dgvAplicacionesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAplicacionesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombre_Aplicacion});
+            this.dgvAplicacionesDisponibles.Location = new System.Drawing.Point(15, 211);
+            this.dgvAplicacionesDisponibles.Name = "dgvAplicacionesDisponibles";
+            this.dgvAplicacionesDisponibles.Size = new System.Drawing.Size(210, 131);
+            this.dgvAplicacionesDisponibles.TabIndex = 21;
+            // 
+            // colNombre_Perfil
+            // 
+            this.colNombre_Perfil.HeaderText = "nombre_perfil";
+            this.colNombre_Perfil.Name = "colNombre_Perfil";
+            // 
+            // colNombre_Aplicacion
+            // 
+            this.colNombre_Aplicacion.HeaderText = "nombre_aplicacion";
+            this.colNombre_Aplicacion.Name = "colNombre_Aplicacion";
             // 
             // frmAsignacionDeAplicaciones
             // 
@@ -324,10 +341,13 @@
             this.MinimizeBox = false;
             this.Name = "frmAsignacionDeAplicaciones";
             this.Text = "frmAsignacionDeAplicaciones";
+            this.Load += new System.EventHandler(this.frmAsignacionDeAplicaciones_Load);
             this.gbxUsuarioSelect.ResumeLayout(false);
             this.gbxUsuarioSelect.PerformLayout();
             this.gbxPerfilesyAplicaciones.ResumeLayout(false);
             this.gbxPerfilesyAplicaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesDisponibles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesDisponibles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,8 +362,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblPerfilesDisponibles;
         private System.Windows.Forms.Label lblAplicacionesDisponibles;
-        private System.Windows.Forms.ListView lsvPerfilesDisponibles;
-        private System.Windows.Forms.ListView lsvAplicacionesDisponibles;
         private System.Windows.Forms.ListView lsvAplicacionesasignadas;
         private System.Windows.Forms.GroupBox gbxPerfilesyAplicaciones;
         private System.Windows.Forms.RadioButton rbtnAplicaciones;
@@ -360,5 +378,9 @@
         private System.Windows.Forms.Button btnAgregarTodo;
         private System.Windows.Forms.Label lblEditar;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridView dgvAplicacionesDisponibles;
+        private System.Windows.Forms.DataGridView dgvPerfilesDisponibles;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre_Perfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre_Aplicacion;
     }
 }
