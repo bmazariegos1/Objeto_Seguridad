@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion.cs" />
     <Compile Include="clsAsignacionDeAplicaciones.cs" />
     <Compile Include="ClsModeloBitacora.cs" />
     <Compile Include="clsModeloPerfil.cs" />

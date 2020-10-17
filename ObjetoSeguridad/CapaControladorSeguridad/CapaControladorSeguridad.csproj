@@ -49,6 +49,7 @@
     <Compile Include="clsControladorPerfil.cs" />
     <Compile Include="clsControlAsignacionDeAplicaciones.cs" />
     <Compile Include="clsObtenerPermisos.cs" />
+    <Compile Include="Cls_aplicacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
