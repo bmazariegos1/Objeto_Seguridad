@@ -101,8 +101,8 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                Console.WriteLine(txtUsuario +" "+ txtAplicacion);
-                string strConsulta = "insert into perfilusuario (fk_idusuario_perfilusuario, fk_idperfil_perfilusuario) values ((select pk_id_login from login where (usuario_login='"+ txtUsuario +"')),(select pk_id_perfil from perfil where (nombre_perfil='"+ txtAplicacion +"'))); ";
+                Console.WriteLine(txtUsuario + " " + txtAplicacion);
+                string strConsulta = "insert into perfilusuario (fk_idusuario_perfilusuario, fk_idperfil_perfilusuario) values ((select pk_id_login from login where (usuario_login='" + txtUsuario + "')),(select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -130,6 +130,41 @@ namespace CapaModeloSeguridad
                 Console.WriteLine("CapaModelo Error al consular 'consultaAplicacion':  " + ex);
                 return null;
             }
+
+        }
+        public OdbcDataReader eliminaradb(string txtUsuario, string txtAplicacion)
+        {
+            try
+            {
+                string strConsulta = "delete from aplicacionusuario where (fk_idlogin_aplicacionusuario = (select pk_id_login from login where (usuario_login = '" + txtUsuario + "')) and  fk_idaplicacion_aplicacionusuario = (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')));";
+                OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un eliminar.");
+                Console.WriteLine("CapaModelo Error al eliminar 'eliminaradb':  " + ex);
+                return null;
+            }
+        }
+        public OdbcDataReader eliminardbper(string txtUsuario, string txtAplicacion)
+        {
+            try
+            {
+                Console.WriteLine(txtUsuario + " " + txtAplicacion);
+                string strConsulta = "delete from perfilusuario where ((fk_idusuario_perfilusuario = (select pk_id_login from login where (usuario_login='" + txtUsuario + "'))) and (fk_idperfil_perfilusuario = (select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))));";
+                OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error al eliminar.");
+                Console.WriteLine("CapaModelo Error al eliminar 'eliminardbper':  " + ex);
+                return null;
+            }
+
         }
     }
 }
