@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Bryan Estuardo Mazariegos Davila
+ * 0901-17-1001
+ */
+using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
@@ -12,7 +16,7 @@ namespace CapaModeloSeguridad
     {
         clsConexion cn = new clsConexion();
         OdbcCommand Comm;
-
+        //funcion para insertar
         public int Login(string strUsuario, string strContrasena)
         {
             try
@@ -40,6 +44,43 @@ namespace CapaModeloSeguridad
                 return 0;
             }
         }
+        //funcion para obtener nuevos codigos
+        public string obtenerNuevocodigo(string Tabla, string Campo)
+        {
+            String CampoResultante = "";
+            try
+            {
+                string Consulta = "SELECT MAX(" + Campo + "+1) FROM " + Tabla + ";";
+                OdbcCommand command = new OdbcCommand(Consulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                CampoResultante = reader.GetValue(0).ToString();
+                reader.Close();
+                if (String.IsNullOrEmpty(CampoResultante))
+                    CampoResultante = "1";
+            }
+            catch (Exception Error)
+            {
+                Console.WriteLine("Error en modelo " + Error);
+            }
+            return CampoResultante;
+        }
+        //funcion para insertar en la BD
+        public OdbcDataReader Insertar(String Consulta)
+        {
+            try
+            {
+                Comm = new OdbcCommand(Consulta, cn.conexion());
+                OdbcDataReader mostrar = Comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Ocurrio un error al registrar modelo"+err);
+                return null;
+            }
+        }
+        //funcion para la modificacion en la DB
         public OdbcDataReader Modificar(string Consulta)
         {
             try
@@ -53,6 +94,23 @@ namespace CapaModeloSeguridad
                 Console.WriteLine("Error en modelo-modificar ", Error);
                 return null;
             }
+        }
+        //funcion para realizar consultas al a DB
+        public OdbcDataReader Consulta(string Consulta)
+        {
+            try
+            {
+                
+                Comm = new OdbcCommand(Consulta, cn.conexion());
+                OdbcDataReader reader = Comm.ExecuteReader();
+                return reader;
+            }
+            catch (Exception Error)
+            {
+                Console.WriteLine("Error en modelo " + Error);
+                return null;
+            }
+
         }
     }
 }
