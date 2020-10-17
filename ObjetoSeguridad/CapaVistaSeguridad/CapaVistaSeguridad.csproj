@@ -54,6 +54,12 @@
     <Compile Include="Formularios\frmAsignacionDeAplicaciones.Designer.cs">
       <DependentUpon>frmAsignacionDeAplicaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAsignarAplicacionesAPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAsignarAplicacionesAPerfil.Designer.cs">
+      <DependentUpon>frmAsignarAplicacionesAPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmAgregarAplicacion.Designer.cs">
       <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmConsultarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmConsultarPerfil.Designer.cs">
+      <DependentUpon>frmConsultarPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmMantenimientoPerfil.cs">
       <SubType>Form</SubType>
@@ -86,11 +98,17 @@
     <EmbeddedResource Include="Formularios\frmAsignacionDeAplicaciones.resx">
       <DependentUpon>frmAsignacionDeAplicaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAsignarAplicacionesAPerfil.resx">
+      <DependentUpon>frmAsignarAplicacionesAPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmAgregarAplicacion.resx">
       <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimientos\frmConsultarPerfil.resx">
+      <DependentUpon>frmConsultarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmMantenimientoPerfil.resx">
       <DependentUpon>frmMantenimientoPerfil.cs</DependentUpon>
