@@ -13,7 +13,7 @@ namespace CapaModeloSeguridad
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=Prueba1");
+            OdbcConnection conn = new OdbcConnection("Dsn=clc_erp");
             try
             {
                 conn.Open();
