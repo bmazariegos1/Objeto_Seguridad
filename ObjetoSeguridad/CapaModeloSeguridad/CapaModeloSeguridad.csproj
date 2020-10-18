@@ -48,6 +48,7 @@
     <Compile Include="clsModeloPerfil.cs" />
     <Compile Include="clsPermisos.cs" />
     <Compile Include="clsConexion.cs" />
+    <Compile Include="clsVariableGlobal.cs" />
     <Compile Include="clsVariableUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
