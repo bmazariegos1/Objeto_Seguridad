@@ -38,6 +38,10 @@
             this.lblPerfilesDisponibles = new System.Windows.Forms.Label();
             this.lblAplicacionesDisponibles = new System.Windows.Forms.Label();
             this.gbxPerfilesyAplicaciones = new System.Windows.Forms.GroupBox();
+            this.dgvAplicacionesAsignadas = new System.Windows.Forms.DataGridView();
+            this.colAplicacionesD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPerfilesAsignados = new System.Windows.Forms.DataGridView();
+            this.colPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAplicacionesDisponibles = new System.Windows.Forms.DataGridView();
             this.colNombre_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPerfilesDisponibles = new System.Windows.Forms.DataGridView();
@@ -54,16 +58,12 @@
             this.lblLimpiar = new System.Windows.Forms.Label();
             this.lblSalir = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.dgvPerfilesAsignados = new System.Windows.Forms.DataGridView();
-            this.dgvAplicacionesAsignadas = new System.Windows.Forms.DataGridView();
-            this.colPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAplicacionesD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxUsuarioSelect.SuspendLayout();
             this.gbxPerfilesyAplicaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesAsignados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesDisponibles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesAsignados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxUsuarioSelect
@@ -179,15 +179,62 @@
             this.gbxPerfilesyAplicaciones.TabStop = false;
             this.gbxPerfilesyAplicaciones.Text = "Perfiles y Aplicaciones";
             // 
+            // dgvAplicacionesAsignadas
+            // 
+            this.dgvAplicacionesAsignadas.AllowUserToAddRows = false;
+            this.dgvAplicacionesAsignadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAplicacionesAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colAplicacionesD});
+            this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(451, 248);
+            this.dgvAplicacionesAsignadas.Name = "dgvAplicacionesAsignadas";
+            this.dgvAplicacionesAsignadas.RowHeadersVisible = false;
+            this.dgvAplicacionesAsignadas.RowHeadersWidth = 51;
+            this.dgvAplicacionesAsignadas.RowTemplate.Height = 24;
+            this.dgvAplicacionesAsignadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAplicacionesAsignadas.Size = new System.Drawing.Size(279, 150);
+            this.dgvAplicacionesAsignadas.TabIndex = 24;
+            // 
+            // colAplicacionesD
+            // 
+            this.colAplicacionesD.HeaderText = "Aplicaciones Asignadas";
+            this.colAplicacionesD.MinimumWidth = 6;
+            this.colAplicacionesD.Name = "colAplicacionesD";
+            this.colAplicacionesD.Width = 125;
+            // 
+            // dgvPerfilesAsignados
+            // 
+            this.dgvPerfilesAsignados.AllowUserToAddRows = false;
+            this.dgvPerfilesAsignados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfilesAsignados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colPerfil});
+            this.dgvPerfilesAsignados.Location = new System.Drawing.Point(451, 52);
+            this.dgvPerfilesAsignados.Name = "dgvPerfilesAsignados";
+            this.dgvPerfilesAsignados.RowHeadersVisible = false;
+            this.dgvPerfilesAsignados.RowHeadersWidth = 51;
+            this.dgvPerfilesAsignados.RowTemplate.Height = 24;
+            this.dgvPerfilesAsignados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPerfilesAsignados.Size = new System.Drawing.Size(279, 172);
+            this.dgvPerfilesAsignados.TabIndex = 23;
+            // 
+            // colPerfil
+            // 
+            this.colPerfil.HeaderText = "Perfiles Asignados";
+            this.colPerfil.MinimumWidth = 6;
+            this.colPerfil.Name = "colPerfil";
+            this.colPerfil.Width = 125;
+            // 
             // dgvAplicacionesDisponibles
             // 
+            this.dgvAplicacionesDisponibles.AllowUserToAddRows = false;
             this.dgvAplicacionesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAplicacionesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre_Aplicacion});
             this.dgvAplicacionesDisponibles.Location = new System.Drawing.Point(20, 260);
             this.dgvAplicacionesDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAplicacionesDisponibles.Name = "dgvAplicacionesDisponibles";
+            this.dgvAplicacionesDisponibles.RowHeadersVisible = false;
             this.dgvAplicacionesDisponibles.RowHeadersWidth = 51;
+            this.dgvAplicacionesDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAplicacionesDisponibles.Size = new System.Drawing.Size(280, 161);
             this.dgvAplicacionesDisponibles.TabIndex = 21;
             // 
@@ -200,13 +247,16 @@
             // 
             // dgvPerfilesDisponibles
             // 
+            this.dgvPerfilesDisponibles.AllowUserToAddRows = false;
             this.dgvPerfilesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerfilesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre_Perfil});
             this.dgvPerfilesDisponibles.Location = new System.Drawing.Point(20, 52);
             this.dgvPerfilesDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPerfilesDisponibles.Name = "dgvPerfilesDisponibles";
+            this.dgvPerfilesDisponibles.RowHeadersVisible = false;
             this.dgvPerfilesDisponibles.RowHeadersWidth = 51;
+            this.dgvPerfilesDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPerfilesDisponibles.Size = new System.Drawing.Size(280, 172);
             this.dgvPerfilesDisponibles.TabIndex = 20;
             // 
@@ -235,6 +285,7 @@
             this.btnEditar.Size = new System.Drawing.Size(53, 37);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // button1
             // 
@@ -344,44 +395,6 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dgvPerfilesAsignados
-            // 
-            this.dgvPerfilesAsignados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerfilesAsignados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colPerfil});
-            this.dgvPerfilesAsignados.Location = new System.Drawing.Point(451, 52);
-            this.dgvPerfilesAsignados.Name = "dgvPerfilesAsignados";
-            this.dgvPerfilesAsignados.RowHeadersWidth = 51;
-            this.dgvPerfilesAsignados.RowTemplate.Height = 24;
-            this.dgvPerfilesAsignados.Size = new System.Drawing.Size(279, 172);
-            this.dgvPerfilesAsignados.TabIndex = 23;
-            // 
-            // dgvAplicacionesAsignadas
-            // 
-            this.dgvAplicacionesAsignadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAplicacionesAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colAplicacionesD});
-            this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(451, 248);
-            this.dgvAplicacionesAsignadas.Name = "dgvAplicacionesAsignadas";
-            this.dgvAplicacionesAsignadas.RowHeadersWidth = 51;
-            this.dgvAplicacionesAsignadas.RowTemplate.Height = 24;
-            this.dgvAplicacionesAsignadas.Size = new System.Drawing.Size(279, 150);
-            this.dgvAplicacionesAsignadas.TabIndex = 24;
-            // 
-            // colPerfil
-            // 
-            this.colPerfil.HeaderText = "Perfiles Asignados";
-            this.colPerfil.MinimumWidth = 6;
-            this.colPerfil.Name = "colPerfil";
-            this.colPerfil.Width = 125;
-            // 
-            // colAplicacionesD
-            // 
-            this.colAplicacionesD.HeaderText = "Aplicaciones Asignadas";
-            this.colAplicacionesD.MinimumWidth = 6;
-            this.colAplicacionesD.Name = "colAplicacionesD";
-            this.colAplicacionesD.Width = 125;
-            // 
             // frmAsignacionDeAplicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,16 +411,17 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAsignacionDeAplicaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAsignacionDeAplicaciones";
             this.Load += new System.EventHandler(this.frmAsignacionDeAplicaciones_Load);
             this.gbxUsuarioSelect.ResumeLayout(false);
             this.gbxUsuarioSelect.PerformLayout();
             this.gbxPerfilesyAplicaciones.ResumeLayout(false);
             this.gbxPerfilesyAplicaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesAsignados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesDisponibles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesDisponibles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilesAsignados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
