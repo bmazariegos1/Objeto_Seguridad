@@ -1,4 +1,6 @@
 ﻿using CapaControladorSeguridad;
+using CapaModeloSeguridad;
+using CapaVistaSeguridad.Formularios.Mantenimientos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +17,10 @@ namespace CapaVistaSeguridad.Formularios
 {
     public partial class frmAsignacionDeAplicaciones : Form
     {
-        string valor, valor1, modificar_aplicacion, modificar_perfil;
+       public string valor, valor1, modificar_aplicacion, modificar_perfil, ultimo;
         clsControlAsignacionDeAplicaciones asignacionDeAplicaciones = new clsControlAsignacionDeAplicaciones();
+        clsVariableGlobal glo = new clsVariableGlobal();
+        frmModificarPermisos modipermisos = new frmModificarPermisos();
         public frmAsignacionDeAplicaciones()
         {
             InitializeComponent();
@@ -123,6 +128,30 @@ namespace CapaVistaSeguridad.Formularios
                 Console.WriteLine(err.Message);
             }
         }
+        public void enviar_datos()
+        {
+            string apli1;
+            if (dgvAplicacionesAsignadas.Rows.Count > 0)
+            {
+                apli1 = (dgvAplicacionesAsignadas.Rows[dgvAplicacionesAsignadas.CurrentRow.Index].Cells[0].Value.ToString());
+                glo.aplica = apli1;
+                glo.usuariog = txtUsuario.Text;
+                frmModificarPermisos modPer = new frmModificarPermisos();
+                modPer.Show();
+            }
+        }
+        public void insertar_apermisos()
+        {
+            OdbcDataReader mostrar = asignacionDeAplicaciones.consultapermiso();
+            try
+            {
+
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+        }
         public void insertar_adbper()
         {
             OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_adbper(txtUsuario.Text, valor1);
@@ -199,6 +228,14 @@ namespace CapaVistaSeguridad.Formularios
             ControlRadioBoton();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            enviar_datos();
+           
+            
+
+        }
+
         private void frmAsignacionDeAplicaciones_Load(object sender, EventArgs e)
         {
             mostrar_consulta_perfil();
@@ -218,7 +255,7 @@ namespace CapaVistaSeguridad.Formularios
             //lsvAplicacionesasignadas.Items.Add (dgvAplicacionesDisponibles.Rows[dgvAplicacionesDisponibles.CurrentRow.Index].Cells[0].Value.ToString()); 
             if (rbtnAplicaciones.Checked)
             {
-                for (a = 0; a < dgvAplicacionesAsignadas.Rows.Count-1; a++)
+                for (a = 0; a < dgvAplicacionesAsignadas.Rows.Count; a++)
                    
                 {
                   
@@ -233,6 +270,7 @@ namespace CapaVistaSeguridad.Formularios
                     dgvAplicacionesAsignadas.Rows.Add(ApliAsig);
                     //aca jala para db
                     valor = ApliAsig;
+                    insertar_apermisos();
                     insertar_adb();
                 }
             }
@@ -240,7 +278,7 @@ namespace CapaVistaSeguridad.Formularios
 
             if (rbtnPerfiles.Checked)
             {
-                for ( b = 0; b < dgvPerfilesAsignados.Rows.Count-1 ; b++)
+                for ( b = 0; b < dgvPerfilesAsignados.Rows.Count ; b++)
                      
                 {
                     if (PerfiAsig == dgvPerfilesAsignados.Rows[b].Cells[0].Value.ToString())
@@ -264,40 +302,52 @@ namespace CapaVistaSeguridad.Formularios
             string PerfiAsig1 = "";
             string ApliAsig1 = "";
 
-  
-            
             if (rbtnPerfiles.Checked)
             {
-                int rowIndexMain = dgvPerfilesAsignados.CurrentCell.RowIndex;
-                if (rowIndexMain >= 0)
+                if (dgvPerfilesAsignados.Rows.Count > 0)
                 {
-                    PerfiAsig1 = (dgvPerfilesAsignados.Rows[dgvPerfilesAsignados.CurrentRow.Index].Cells[0].Value.ToString());
-                }
-                int rowIndex = dgvPerfilesAsignados.CurrentCell.RowIndex;
-                if (rowIndex >= 0)
-                {
-                    modificar_perfil = PerfiAsig1;
-                    dgvPerfilesAsignados.Rows.RemoveAt(rowIndex);
-                    eliminar_adbper();
+                    int rowIndexMain = dgvPerfilesAsignados.CurrentCell.RowIndex;
+                    if (rowIndexMain >= 0)
+                    {
+                        PerfiAsig1 = (dgvPerfilesAsignados.Rows[dgvPerfilesAsignados.CurrentRow.Index].Cells[0].Value.ToString());
+                    }
+                    int rowIndex = dgvPerfilesAsignados.CurrentCell.RowIndex;
+                    if (rowIndex >= 0)
+                    {
+                        modificar_perfil = PerfiAsig1;
+                        dgvPerfilesAsignados.Rows.RemoveAt(rowIndex);
+                        eliminar_adbper();
+                    }
                 }
             }
+                
             if (rbtnAplicaciones.Checked)
-            {
-                int rowIndexMaina = dgvAplicacionesAsignadas.CurrentCell.RowIndex;
-                if (rowIndexMaina >= 0)
                 {
-                    ApliAsig1 = (dgvAplicacionesAsignadas.Rows[dgvAplicacionesAsignadas.CurrentRow.Index].Cells[0].Value.ToString());
-                }
+                if (dgvAplicacionesAsignadas.Rows.Count > 0)
+                {
+                   int rowIndexMaina = dgvAplicacionesAsignadas.CurrentCell.RowIndex;
 
-                int rowIndex1 = dgvAplicacionesAsignadas.CurrentCell.RowIndex;
-                if (rowIndex1 >= 0)
-                {
-                    modificar_aplicacion = ApliAsig1;
-                    dgvAplicacionesAsignadas.Rows.RemoveAt(rowIndex1);
-                    eliminar_adb();
+                    if (rowIndexMaina >= 0)
+                    {
+                        ApliAsig1 = (dgvAplicacionesAsignadas.Rows[dgvAplicacionesAsignadas.CurrentRow.Index].Cells[0].Value.ToString());
+                    }
                 }
-            }
+                if (dgvAplicacionesAsignadas.Rows.Count > 0)
+                {
+                   int  rowIndex1 = dgvAplicacionesAsignadas.CurrentCell.RowIndex;
+
+                    if (rowIndex1 >= 0)
+                    {
+                        modificar_aplicacion = ApliAsig1;
+                        dgvAplicacionesAsignadas.Rows.RemoveAt(rowIndex1);
+                        eliminar_adb();
+                    }
+                }
+                }
+         
+       
+            } 
         }
     }
-}
+
 

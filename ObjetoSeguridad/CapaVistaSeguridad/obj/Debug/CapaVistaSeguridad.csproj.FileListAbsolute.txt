@@ -104,3 +104,4 @@ C:\Users\jmora\Desktop\SegudadAhoraSi\Objeto_Seguridad\ObjetoSeguridad\CapaVista
 C:\Users\jmora\Desktop\SegudadAhoraSi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.pdb
 C:\Users\jmora\Desktop\SegudadAhoraSi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.pdb
 C:\Users\jmora\Desktop\SegudadAhoraSi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
+C:\Users\jmora\Desktop\SegudadAhoraSi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModificarPermisos.resources

@@ -48,6 +48,7 @@ namespace CapaModeloSeguridad
                 return null;
             }
         }
+   
         public OdbcDataReader consultaaplicacion()
         {
             try
@@ -101,7 +102,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                Console.WriteLine(txtUsuario + " " + txtAplicacion);
+                //Console.WriteLine(txtUsuario + " " + txtAplicacion);
                 string strConsulta = "insert into perfilusuario (fk_idusuario_perfilusuario, fk_idperfil_perfilusuario) values ((select pk_id_login from login where (usuario_login='" + txtUsuario + "')),(select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
@@ -119,7 +120,41 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "insert into aplicacionusuario (fk_idlogin_aplicacionusuario, fk_idaplicacion_aplicacionusuario, fk_idpermiso_aplicacionusuario)  values((select pk_id_login from login where (usuario_login = '" + txtUsuario + "')), (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')),1); ";
+                string strConsulta = "insert into aplicacionusuario (fk_idlogin_aplicacionusuario, fk_idaplicacion_aplicacionusuario, fk_idpermiso_aplicacionusuario)  values((select pk_id_login from login where (usuario_login = '" + txtUsuario + "')), (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')), (SELECT MAX(pk_id_permiso) FROM permiso)); ";
+                OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error en insertar adb.");
+                Console.WriteLine("CapaModelo Error al consular 'consultaAplicacion':  " + ex);
+                return null;
+            }
+
+        }
+        public OdbcDataReader consulta_aplicaciones_activas(string txtUsuario, string txtAplicacion)
+        {
+            try
+            {
+                string strConsulta = "select * from permiso where ((pk_id_permiso = (select pk_id_permiso from permiso p inner join aplicacionusuario apu on p.pk_id_permiso = apu.fk_idpermiso_aplicacionusuario inner join aplicacion ap on ap.pk_id_aplicacion = apu.fk_idaplicacion_aplicacionusuario inner join login lo on lo.pk_id_login = apu.fk_idlogin_aplicacionusuario  where lo.usuario_login = '"+txtUsuario+"' and ap.nombre_aplicacion= '"+txtAplicacion+"'))); ";
+                OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio en consulta de activas.");
+                Console.WriteLine("CapaModelo Error al consular 'consultaAplicacion':  " + ex);
+                return null;
+            }
+
+        }
+        public OdbcDataReader consultapermisos()
+        {
+            try
+            {
+                string strConsulta = "INSERT INTO permiso (insertar_permiso, modificar_permiso, eliminar_permiso, consultar_permiso, imprimir_permiso) VALUES ('0', '0', '0', '0', '0'); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -152,7 +187,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                Console.WriteLine(txtUsuario + " " + txtAplicacion);
+               
                 string strConsulta = "delete from perfilusuario where ((fk_idusuario_perfilusuario = (select pk_id_login from login where (usuario_login='" + txtUsuario + "'))) and (fk_idperfil_perfilusuario = (select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))));";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
@@ -162,6 +197,24 @@ namespace CapaModeloSeguridad
             {
                 MessageBox.Show("Ocurrio un error al eliminar.");
                 Console.WriteLine("CapaModelo Error al eliminar 'eliminardbper':  " + ex);
+                return null;
+            }
+
+        }
+        public OdbcDataReader actualizacion_aplicaciones_activas(string txtUsuario, string txtAplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string txtAplicacionid)
+        {
+            try
+            {
+                //Console.WriteLine(txtUsuario + " " + txtAplicacion + " " +insertar + " " +modificar + " " +eliminar + " " +consultar + " " +imprimir);
+                string strConsulta = "UPDATE permiso SET insertar_permiso = '" + insertar + "', modificar_permiso = '" + modificar + "', eliminar_permiso = '" + eliminar + "', consultar_permiso = '" + consultar + "', imprimir_permiso = '" + imprimir + "' WHERE (pk_id_permiso = '"+txtAplicacionid+"');";
+                OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio en actualizacion.");
+                Console.WriteLine("CapaModelo Error al actualizar 'actualizacion_aplicaciones_activas':  " + ex);
                 return null;
             }
 

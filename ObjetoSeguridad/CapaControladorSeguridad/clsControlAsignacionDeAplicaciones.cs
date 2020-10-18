@@ -53,5 +53,17 @@ namespace CapaControladorSeguridad
         {
             return asignacionDeAplicaciones.eliminardbper(UserName, Aplicacion);
         }
+        public OdbcDataReader consultapermiso()
+        {
+            return asignacionDeAplicaciones.consultapermisos();
+        }
+        public OdbcDataReader consulta_aplicaciones_activas(string UserName, string Aplicacion)
+        {
+            return asignacionDeAplicaciones.consulta_aplicaciones_activas(UserName, Aplicacion);
+        }
+        public OdbcDataReader cambio_aplicaciones_activas(string UserName, string Aplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string apliid)
+        {
+            return asignacionDeAplicaciones.actualizacion_aplicaciones_activas(UserName, Aplicacion, insertar, modificar,eliminar,consultar,imprimir, apliid);
+        }
     }
 }
