@@ -29,95 +29,110 @@
         private void InitializeComponent()
         {
             this.gbxDatosPerfil = new System.Windows.Forms.GroupBox();
-            this.lblCodigoPerfil = new System.Windows.Forms.Label();
-            this.lblNombrePerfil = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtNombrePerfil = new System.Windows.Forms.TextBox();
-            this.lblNoCodigo = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.dgvAplicacionesAsignadas = new System.Windows.Forms.DataGridView();
-            this.btnGuardarPerfil = new System.Windows.Forms.Button();
-            this.gbxAplicacionesAsignadas = new System.Windows.Forms.GroupBox();
-            this.lblGuardar = new System.Windows.Forms.Label();
-            this.lblAgregarAplicacion = new System.Windows.Forms.Label();
-            this.btnAgregarAplicacion = new System.Windows.Forms.Button();
-            this.lblPermisosaplicacion = new System.Windows.Forms.Label();
-            this.btnEditarPermisos = new System.Windows.Forms.Button();
-            this.lblLimpiar = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombreAplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gbxEstado = new System.Windows.Forms.GroupBox();
-            this.rbtnHabilitado = new System.Windows.Forms.RadioButton();
-            this.rbtnDesabilitado = new System.Windows.Forms.RadioButton();
-            this.lblModificar = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.gbxEstado = new System.Windows.Forms.GroupBox();
+            this.rbtnDesabilitado = new System.Windows.Forms.RadioButton();
+            this.rbtnHabilitado = new System.Windows.Forms.RadioButton();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lblNoCodigo = new System.Windows.Forms.Label();
+            this.btnGuardarPerfil = new System.Windows.Forms.Button();
+            this.txtNombrePerfil = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblNombrePerfil = new System.Windows.Forms.Label();
+            this.lblCodigoPerfil = new System.Windows.Forms.Label();
+            this.dgvPerfil = new System.Windows.Forms.DataGridView();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombrePerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxDatosPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).BeginInit();
-            this.gbxAplicacionesAsignadas.SuspendLayout();
             this.gbxEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxDatosPerfil
             // 
-            this.gbxDatosPerfil.Controls.Add(this.btnBuscar);
-            this.gbxDatosPerfil.Controls.Add(this.lblBuscar);
-            this.gbxDatosPerfil.Controls.Add(this.btnModificar);
-            this.gbxDatosPerfil.Controls.Add(this.lblModificar);
             this.gbxDatosPerfil.Controls.Add(this.gbxEstado);
-            this.gbxDatosPerfil.Controls.Add(this.lblGuardar);
             this.gbxDatosPerfil.Controls.Add(this.txtDescripcion);
             this.gbxDatosPerfil.Controls.Add(this.lblNoCodigo);
-            this.gbxDatosPerfil.Controls.Add(this.btnGuardarPerfil);
             this.gbxDatosPerfil.Controls.Add(this.txtNombrePerfil);
             this.gbxDatosPerfil.Controls.Add(this.lblDescripcion);
             this.gbxDatosPerfil.Controls.Add(this.lblNombrePerfil);
             this.gbxDatosPerfil.Controls.Add(this.lblCodigoPerfil);
             this.gbxDatosPerfil.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatosPerfil.Location = new System.Drawing.Point(21, 1);
+            this.gbxDatosPerfil.Location = new System.Drawing.Point(12, 83);
             this.gbxDatosPerfil.Name = "gbxDatosPerfil";
-            this.gbxDatosPerfil.Size = new System.Drawing.Size(510, 190);
+            this.gbxDatosPerfil.Size = new System.Drawing.Size(510, 170);
             this.gbxDatosPerfil.TabIndex = 0;
             this.gbxDatosPerfil.TabStop = false;
             this.gbxDatosPerfil.Text = "Datos Perfil";
             // 
-            // lblCodigoPerfil
+            // btnEliminar
             // 
-            this.lblCodigoPerfil.AutoSize = true;
-            this.lblCodigoPerfil.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPerfil.Location = new System.Drawing.Point(15, 30);
-            this.lblCodigoPerfil.Name = "lblCodigoPerfil";
-            this.lblCodigoPerfil.Size = new System.Drawing.Size(83, 16);
-            this.lblCodigoPerfil.TabIndex = 0;
-            this.lblCodigoPerfil.Text = "Código Perfil";
+            this.btnEliminar.Font = new System.Drawing.Font("Rockwell", 8F);
+            this.btnEliminar.Location = new System.Drawing.Point(241, 21);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(66, 39);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblNombrePerfil
+            // btnModificar
             // 
-            this.lblNombrePerfil.AutoSize = true;
-            this.lblNombrePerfil.Location = new System.Drawing.Point(224, 30);
-            this.lblNombrePerfil.Name = "lblNombrePerfil";
-            this.lblNombrePerfil.Size = new System.Drawing.Size(87, 16);
-            this.lblNombrePerfil.TabIndex = 1;
-            this.lblNombrePerfil.Text = "Nombre Prefil";
+            this.btnModificar.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(170, 21);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(65, 39);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // lblDescripcion
+            // gbxEstado
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 56);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(77, 16);
-            this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "Descripción";
+            this.gbxEstado.Controls.Add(this.rbtnDesabilitado);
+            this.gbxEstado.Controls.Add(this.rbtnHabilitado);
+            this.gbxEstado.Location = new System.Drawing.Point(334, 70);
+            this.gbxEstado.Name = "gbxEstado";
+            this.gbxEstado.Size = new System.Drawing.Size(139, 78);
+            this.gbxEstado.TabIndex = 8;
+            this.gbxEstado.TabStop = false;
+            this.gbxEstado.Text = "Estado";
             // 
-            // txtNombrePerfil
+            // rbtnDesabilitado
             // 
-            this.txtNombrePerfil.Location = new System.Drawing.Point(317, 27);
-            this.txtNombrePerfil.Name = "txtNombrePerfil";
-            this.txtNombrePerfil.Size = new System.Drawing.Size(156, 23);
-            this.txtNombrePerfil.TabIndex = 3;
+            this.rbtnDesabilitado.AutoSize = true;
+            this.rbtnDesabilitado.Location = new System.Drawing.Point(18, 48);
+            this.rbtnDesabilitado.Name = "rbtnDesabilitado";
+            this.rbtnDesabilitado.Size = new System.Drawing.Size(105, 20);
+            this.rbtnDesabilitado.TabIndex = 10;
+            this.rbtnDesabilitado.TabStop = true;
+            this.rbtnDesabilitado.Text = "Deshabilitado";
+            this.rbtnDesabilitado.UseVisualStyleBackColor = true;
+            // 
+            // rbtnHabilitado
+            // 
+            this.rbtnHabilitado.AutoSize = true;
+            this.rbtnHabilitado.Location = new System.Drawing.Point(18, 22);
+            this.rbtnHabilitado.Name = "rbtnHabilitado";
+            this.rbtnHabilitado.Size = new System.Drawing.Size(85, 20);
+            this.rbtnHabilitado.TabIndex = 9;
+            this.rbtnHabilitado.TabStop = true;
+            this.rbtnHabilitado.Text = "Habilitado";
+            this.rbtnHabilitado.UseVisualStyleBackColor = true;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(98, 70);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(213, 78);
+            this.txtDescripcion.TabIndex = 7;
             // 
             // lblNoCodigo
             // 
@@ -129,199 +144,119 @@
             this.lblNoCodigo.Text = "No. Código";
             this.lblNoCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(98, 56);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(213, 78);
-            this.txtDescripcion.TabIndex = 4;
-            // 
-            // dgvAplicacionesAsignadas
-            // 
-            this.dgvAplicacionesAsignadas.AllowUserToAddRows = false;
-            this.dgvAplicacionesAsignadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAplicacionesAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCodigo,
-            this.colNombreAplicacion,
-            this.colEstado});
-            this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(9, 102);
-            this.dgvAplicacionesAsignadas.Name = "dgvAplicacionesAsignadas";
-            this.dgvAplicacionesAsignadas.RowHeadersVisible = false;
-            this.dgvAplicacionesAsignadas.Size = new System.Drawing.Size(486, 194);
-            this.dgvAplicacionesAsignadas.TabIndex = 1;
-            // 
             // btnGuardarPerfil
             // 
-            this.btnGuardarPerfil.Location = new System.Drawing.Point(130, 145);
+            this.btnGuardarPerfil.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPerfil.Location = new System.Drawing.Point(104, 21);
             this.btnGuardarPerfil.Name = "btnGuardarPerfil";
-            this.btnGuardarPerfil.Size = new System.Drawing.Size(49, 39);
-            this.btnGuardarPerfil.TabIndex = 8;
+            this.btnGuardarPerfil.Size = new System.Drawing.Size(60, 39);
+            this.btnGuardarPerfil.TabIndex = 2;
+            this.btnGuardarPerfil.Text = "Guardar";
             this.btnGuardarPerfil.UseVisualStyleBackColor = true;
             this.btnGuardarPerfil.Click += new System.EventHandler(this.btnGuardarPerfil_Click);
             // 
-            // gbxAplicacionesAsignadas
+            // txtNombrePerfil
             // 
-            this.gbxAplicacionesAsignadas.Controls.Add(this.btnLimpiar);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.lblLimpiar);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.btnEditarPermisos);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.lblPermisosaplicacion);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.btnAgregarAplicacion);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.lblAgregarAplicacion);
-            this.gbxAplicacionesAsignadas.Controls.Add(this.dgvAplicacionesAsignadas);
-            this.gbxAplicacionesAsignadas.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxAplicacionesAsignadas.Location = new System.Drawing.Point(21, 197);
-            this.gbxAplicacionesAsignadas.Name = "gbxAplicacionesAsignadas";
-            this.gbxAplicacionesAsignadas.Size = new System.Drawing.Size(510, 302);
-            this.gbxAplicacionesAsignadas.TabIndex = 3;
-            this.gbxAplicacionesAsignadas.TabStop = false;
-            this.gbxAplicacionesAsignadas.Text = "Aplicaciones Asignadas a Perfil";
+            this.txtNombrePerfil.Location = new System.Drawing.Point(317, 27);
+            this.txtNombrePerfil.Name = "txtNombrePerfil";
+            this.txtNombrePerfil.Size = new System.Drawing.Size(156, 23);
+            this.txtNombrePerfil.TabIndex = 6;
             // 
-            // lblGuardar
+            // lblDescripcion
             // 
-            this.lblGuardar.AutoSize = true;
-            this.lblGuardar.Location = new System.Drawing.Point(67, 156);
-            this.lblGuardar.Name = "lblGuardar";
-            this.lblGuardar.Size = new System.Drawing.Size(57, 16);
-            this.lblGuardar.TabIndex = 3;
-            this.lblGuardar.Text = "Guardar";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(15, 70);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(77, 16);
+            this.lblDescripcion.TabIndex = 2;
+            this.lblDescripcion.Text = "Descripción";
             // 
-            // lblAgregarAplicacion
+            // lblNombrePerfil
             // 
-            this.lblAgregarAplicacion.AutoSize = true;
-            this.lblAgregarAplicacion.Location = new System.Drawing.Point(11, 49);
-            this.lblAgregarAplicacion.Name = "lblAgregarAplicacion";
-            this.lblAgregarAplicacion.Size = new System.Drawing.Size(121, 16);
-            this.lblAgregarAplicacion.TabIndex = 2;
-            this.lblAgregarAplicacion.Text = "Agregar Aplicación";
+            this.lblNombrePerfil.AutoSize = true;
+            this.lblNombrePerfil.Location = new System.Drawing.Point(224, 30);
+            this.lblNombrePerfil.Name = "lblNombrePerfil";
+            this.lblNombrePerfil.Size = new System.Drawing.Size(87, 16);
+            this.lblNombrePerfil.TabIndex = 1;
+            this.lblNombrePerfil.Text = "Nombre Prefil";
             // 
-            // btnAgregarAplicacion
+            // lblCodigoPerfil
             // 
-            this.btnAgregarAplicacion.Location = new System.Drawing.Point(140, 38);
-            this.btnAgregarAplicacion.Name = "btnAgregarAplicacion";
-            this.btnAgregarAplicacion.Size = new System.Drawing.Size(49, 39);
-            this.btnAgregarAplicacion.TabIndex = 3;
-            this.btnAgregarAplicacion.UseVisualStyleBackColor = true;
-            this.btnAgregarAplicacion.Click += new System.EventHandler(this.btnAgregarAplicacion_Click);
+            this.lblCodigoPerfil.AutoSize = true;
+            this.lblCodigoPerfil.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPerfil.Location = new System.Drawing.Point(15, 30);
+            this.lblCodigoPerfil.Name = "lblCodigoPerfil";
+            this.lblCodigoPerfil.Size = new System.Drawing.Size(83, 16);
+            this.lblCodigoPerfil.TabIndex = 0;
+            this.lblCodigoPerfil.Text = "Código Perfil";
             // 
-            // lblPermisosaplicacion
+            // dgvPerfil
             // 
-            this.lblPermisosaplicacion.AutoSize = true;
-            this.lblPermisosaplicacion.Location = new System.Drawing.Point(215, 38);
-            this.lblPermisosaplicacion.Name = "lblPermisosaplicacion";
-            this.lblPermisosaplicacion.Size = new System.Drawing.Size(92, 32);
-            this.lblPermisosaplicacion.TabIndex = 4;
-            this.lblPermisosaplicacion.Text = "Editar Permiso\r\n    Aplicación";
+            this.dgvPerfil.AllowUserToAddRows = false;
+            this.dgvPerfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodigo,
+            this.colNombrePerfil,
+            this.colDescripcion,
+            this.colEstado});
+            this.dgvPerfil.Location = new System.Drawing.Point(12, 302);
+            this.dgvPerfil.Name = "dgvPerfil";
+            this.dgvPerfil.RowHeadersVisible = false;
+            this.dgvPerfil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPerfil.Size = new System.Drawing.Size(510, 186);
+            this.dgvPerfil.TabIndex = 11;
             // 
-            // btnEditarPermisos
+            // btnNuevo
             // 
-            this.btnEditarPermisos.Location = new System.Drawing.Point(313, 38);
-            this.btnEditarPermisos.Name = "btnEditarPermisos";
-            this.btnEditarPermisos.Size = new System.Drawing.Size(49, 39);
-            this.btnEditarPermisos.TabIndex = 4;
-            this.btnEditarPermisos.UseVisualStyleBackColor = true;
+            this.btnNuevo.Font = new System.Drawing.Font("Rockwell", 8.25F);
+            this.btnNuevo.Location = new System.Drawing.Point(41, 21);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(57, 39);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // lblLimpiar
+            // btnCancelar
             // 
-            this.lblLimpiar.AutoSize = true;
-            this.lblLimpiar.Location = new System.Drawing.Point(379, 49);
-            this.lblLimpiar.Name = "lblLimpiar";
-            this.lblLimpiar.Size = new System.Drawing.Size(52, 16);
-            this.lblLimpiar.TabIndex = 6;
-            this.lblLimpiar.Text = "Limpiar";
+            this.btnCancelar.Font = new System.Drawing.Font("Rockwell", 8.25F);
+            this.btnCancelar.Location = new System.Drawing.Point(313, 21);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(61, 39);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnLimpiar
+            // btnSeleccionar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(434, 38);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(49, 39);
-            this.btnLimpiar.TabIndex = 5;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnSeleccionar.Location = new System.Drawing.Point(436, 262);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(86, 34);
+            this.btnSeleccionar.TabIndex = 12;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // colCodigo
             // 
             this.colCodigo.HeaderText = "Código";
             this.colCodigo.Name = "colCodigo";
             // 
-            // colNombreAplicacion
+            // colNombrePerfil
             // 
-            this.colNombreAplicacion.HeaderText = "Nombre Aplicación";
-            this.colNombreAplicacion.Name = "colNombreAplicacion";
-            this.colNombreAplicacion.Width = 300;
+            this.colNombrePerfil.HeaderText = "Nombre de Perfil";
+            this.colNombrePerfil.Name = "colNombrePerfil";
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
             // 
             // colEstado
             // 
             this.colEstado.HeaderText = "Estado";
             this.colEstado.Name = "colEstado";
-            this.colEstado.Width = 80;
-            // 
-            // gbxEstado
-            // 
-            this.gbxEstado.Controls.Add(this.rbtnDesabilitado);
-            this.gbxEstado.Controls.Add(this.rbtnHabilitado);
-            this.gbxEstado.Location = new System.Drawing.Point(334, 56);
-            this.gbxEstado.Name = "gbxEstado";
-            this.gbxEstado.Size = new System.Drawing.Size(139, 78);
-            this.gbxEstado.TabIndex = 5;
-            this.gbxEstado.TabStop = false;
-            this.gbxEstado.Text = "Estado";
-            // 
-            // rbtnHabilitado
-            // 
-            this.rbtnHabilitado.AutoSize = true;
-            this.rbtnHabilitado.Location = new System.Drawing.Point(18, 22);
-            this.rbtnHabilitado.Name = "rbtnHabilitado";
-            this.rbtnHabilitado.Size = new System.Drawing.Size(85, 20);
-            this.rbtnHabilitado.TabIndex = 6;
-            this.rbtnHabilitado.TabStop = true;
-            this.rbtnHabilitado.Text = "Habilitado";
-            this.rbtnHabilitado.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDesabilitado
-            // 
-            this.rbtnDesabilitado.AutoSize = true;
-            this.rbtnDesabilitado.Location = new System.Drawing.Point(18, 48);
-            this.rbtnDesabilitado.Name = "rbtnDesabilitado";
-            this.rbtnDesabilitado.Size = new System.Drawing.Size(105, 20);
-            this.rbtnDesabilitado.TabIndex = 7;
-            this.rbtnDesabilitado.TabStop = true;
-            this.rbtnDesabilitado.Text = "Deshabilitado";
-            this.rbtnDesabilitado.UseVisualStyleBackColor = true;
-            // 
-            // lblModificar
-            // 
-            this.lblModificar.AutoSize = true;
-            this.lblModificar.Location = new System.Drawing.Point(185, 156);
-            this.lblModificar.Name = "lblModificar";
-            this.lblModificar.Size = new System.Drawing.Size(63, 16);
-            this.lblModificar.TabIndex = 9;
-            this.lblModificar.Text = "Modificar";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(249, 145);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(49, 39);
-            this.btnModificar.TabIndex = 10;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(317, 156);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(48, 16);
-            this.lblBuscar.TabIndex = 11;
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(371, 145);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(49, 39);
-            this.btnBuscar.TabIndex = 12;
-            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // frmMantenimientoPerfil
             // 
@@ -329,20 +264,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(554, 511);
-            this.Controls.Add(this.gbxAplicacionesAsignadas);
+            this.Controls.Add(this.btnSeleccionar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.dgvPerfil);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.gbxDatosPerfil);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnGuardarPerfil);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMantenimientoPerfil";
+            this.Load += new System.EventHandler(this.frmMantenimientoPerfil_Load);
             this.gbxDatosPerfil.ResumeLayout(false);
             this.gbxDatosPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).EndInit();
-            this.gbxAplicacionesAsignadas.ResumeLayout(false);
-            this.gbxAplicacionesAsignadas.PerformLayout();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,25 +296,19 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblNombrePerfil;
         private System.Windows.Forms.Label lblCodigoPerfil;
-        private System.Windows.Forms.Label lblGuardar;
         private System.Windows.Forms.Button btnGuardarPerfil;
-        private System.Windows.Forms.DataGridView dgvAplicacionesAsignadas;
-        private System.Windows.Forms.GroupBox gbxAplicacionesAsignadas;
-        private System.Windows.Forms.Button btnEditarPermisos;
-        private System.Windows.Forms.Label lblPermisosaplicacion;
-        private System.Windows.Forms.Button btnAgregarAplicacion;
-        private System.Windows.Forms.Label lblAgregarAplicacion;
-        private System.Windows.Forms.Label lblLimpiar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAplicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
         private System.Windows.Forms.GroupBox gbxEstado;
         private System.Windows.Forms.RadioButton rbtnDesabilitado;
         private System.Windows.Forms.RadioButton rbtnHabilitado;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label lblModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombrePerfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
+        public System.Windows.Forms.DataGridView dgvPerfil;
     }
 }
