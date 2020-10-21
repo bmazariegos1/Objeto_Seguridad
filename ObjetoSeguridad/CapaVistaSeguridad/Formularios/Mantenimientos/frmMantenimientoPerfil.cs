@@ -16,63 +16,24 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
     {
         clsControladorPerfil Controlador = new clsControladorPerfil();
         clsVistaBitacora cn = new clsVistaBitacora();
-        public frmMantenimientoPerfil()
+        string UsuarioAplicacion;
+        public frmMantenimientoPerfil(string usuario)
         {
             InitializeComponent();
+            UsuarioAplicacion = usuario;
+            navegador1.Usuario = UsuarioAplicacion;
+            inicio();
         }
 
         public void inicio()
         {
-            txtNombrePerfil.Text = "";
-            btnNuevo.Enabled = true;
-            btnGuardarPerfil.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnModificar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnSeleccionar.Enabled = true;
-            txtDescripcion.Text = "";
+            txtEstado.Text = "1";
             rbtnHabilitado.Checked = true;
             rbtnDesabilitado.Checked = false;
-            ValorRadioboton();
-            lblNoCodigo.Text = Controlador.NuevoCodigo();
-            LlenarDgv();
-        }
-        public void LlenarDgv()
-        {
-            dgvPerfil.Rows.Clear();
-            OdbcDataReader mostrar = Controlador.consultaperfil("perfil");
-            try
-            {
-                while (mostrar.Read())
-                {
-                    dgvPerfil.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3));
-                }
-                cn.insert("Consulta perfil", 2);
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-            }
-
-        }
-        int Estado=0;
-        public void ValorRadioboton()
-        {
-            if (rbtnHabilitado.Checked == true)
-            {
-                Estado = 1;
-                rbtnDesabilitado.Checked = false;
-            }
-            else
-            {
-                rbtnDesabilitado.Checked = true;
-                Estado = 0;
-            }
         }
         public bool Validar()
         {
-            ValorRadioboton();
-            if (txtNombrePerfil.Text== "")
+            if (txtCodPerfil.Text== "")
             {
                 MessageBox.Show("Debe de llenar el campo Nombre Perfil");
                 return false;
@@ -87,109 +48,62 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
         private void frmMantenimientoPerfil_Load(object sender, EventArgs e)
         {
-            inicio();
+
         }
 
-        private void btnGuardarPerfil_Click(object sender, EventArgs e)
+        private void Navegador_Load(object sender, EventArgs e)
         {
-           if(Validar())
+           // ValorRadioboton();
+            List<string> CamposTabla = new List<string>();
+            List<Control> lista = new List<Control>();
+            //List<Control> lista = new List<Control>();
+            navegador1.aplicacion = 4;
+            navegador1.tbl = "perfil";
+            navegador1.campoEstado = "estado_perfil";
+
+            //se agregan los componentes del formulario a la lista tipo control
+
+            foreach (Control C in this.Controls)
             {
-                if (Controlador.InsertarPerfil(lblNoCodigo.Text, txtNombrePerfil.Text, txtDescripcion.Text) == null)
+                if (C.Tag != null)
                 {
-                    MessageBox.Show("NO se pudo Guardar los datos Contacte al encargado de sistemas");
+                    //  MessageBox.Show(""+C.Name)
+                    if (C is TextBox)
+                    {
+                        lista.Add(C);
+
+                    }
+                    else if (C is ComboBox)
+                    {
+                        lista.Add(C);
+
+                    }
+                    else if (C is DateTimePicker)
+                    {
+                        lista.Add(C);
+
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Datos guardados");
-                    cn.insert("Inserción de nuevo perfil: "+ txtNombrePerfil.Text, 2);
-                    dgvPerfil.Enabled = true;
-                    inicio();
-                }
+
+
             }
-            
+
+            navegador1.control = lista;
+            navegador1.DatosActualizar = dgvperfil;
+            navegador1.actualizarData();
+            navegador1.cargar();
+            navegador1.ruta = "AgregarCliente.html";
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void rbtnHabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            if (Validar())
-            {
-                if (Controlador.Modificar_perfil(lblNoCodigo.Text, txtNombrePerfil.Text, txtDescripcion.Text, Estado) == null)
-                {
-                    MessageBox.Show("NO se pudo Modificar los datos Contacte al encargado de sistemas");
-                }
-                else
-                {
-                    MessageBox.Show("Datos Modificados");
-                    cn.insert("Modificacion de perfil :"+txtNombrePerfil.Text, 2);
-                    inicio();
-                }
-            }
+            txtEstado.Text = "1";
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void rbtnDesabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            if (Validar())
-            {
-                if (Controlador.Eliminar_perfil(lblNoCodigo.Text) == null)
-                {
-                    MessageBox.Show("NO se pudo eliminar los datos Contacte al encargado de sistemas");
-                }
-                else
-                {
-                    MessageBox.Show("Datos Eliminados");
-                    cn.insert("Eliminación de perfil :" + txtNombrePerfil.Text, 2);
-                    inicio();
-                }
-            }
+            txtEstado.Text = "0";
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            btnNuevo.Enabled = false;
-            btnGuardarPerfil.Enabled = true;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnCancelar.Enabled = true;
-            dgvPerfil.Enabled = false;
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            inicio();
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            btnNuevo.Enabled = false;
-            btnGuardarPerfil.Enabled = false;
-            btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            btnCancelar.Enabled = true;
-            btnSeleccionar.Enabled = false;
-
-            if (dgvPerfil.Rows.Count!=0)
-            {
-                lblNoCodigo.Text = dgvPerfil.Rows[dgvPerfil.CurrentRow.Index].Cells[0].Value.ToString();
-                txtNombrePerfil.Text = dgvPerfil.Rows[dgvPerfil.CurrentRow.Index].Cells[1].Value.ToString();
-                txtDescripcion.Text = dgvPerfil.Rows[dgvPerfil.CurrentRow.Index].Cells[2].Value.ToString();
-                string Dato = dgvPerfil.Rows[dgvPerfil.CurrentRow.Index].Cells[3].Value.ToString();
-                if (Dato == "1")
-                {
-                    rbtnHabilitado.Checked = true;
-                    rbtnDesabilitado.Checked = false;
-                }
-                else
-                {
-                    rbtnHabilitado.Checked = false;
-                    rbtnDesabilitado.Checked = true;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe Seleccionar una fila");
-            }
-            
-        }
     }
 }

@@ -190,7 +190,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -231,8 +231,6 @@ namespace CapaVistaSeguridad.Formularios
         private void btnEditar_Click(object sender, EventArgs e)
         {
             enviar_datos();
-           
-            
 
         }
 

@@ -74,11 +74,9 @@
             this.gbxUsuarioSelect.Controls.Add(this.lblUsuario);
             this.gbxUsuarioSelect.Controls.Add(this.txtUsuario);
             this.gbxUsuarioSelect.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxUsuarioSelect.Location = new System.Drawing.Point(28, 14);
-            this.gbxUsuarioSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxUsuarioSelect.Location = new System.Drawing.Point(21, 11);
             this.gbxUsuarioSelect.Name = "gbxUsuarioSelect";
-            this.gbxUsuarioSelect.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxUsuarioSelect.Size = new System.Drawing.Size(771, 96);
+            this.gbxUsuarioSelect.Size = new System.Drawing.Size(578, 78);
             this.gbxUsuarioSelect.TabIndex = 0;
             this.gbxUsuarioSelect.TabStop = false;
             this.gbxUsuarioSelect.Text = "Usuario Seleccionado";
@@ -86,20 +84,18 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(279, 42);
-            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(209, 34);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(138, 20);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(102, 16);
             this.lblNombreUsuario.TabIndex = 4;
             this.lblNombreUsuario.Text = "Nombre Usuario";
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(231, 38);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(173, 31);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(30, 25);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -107,38 +103,34 @@
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Enabled = false;
-            this.txtNombreUsuario.Location = new System.Drawing.Point(421, 38);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(316, 31);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(327, 27);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(246, 23);
             this.txtNombreUsuario.TabIndex = 3;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(7, 43);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(5, 35);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(52, 16);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(77, 39);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Location = new System.Drawing.Point(58, 32);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(152, 27);
+            this.txtUsuario.Size = new System.Drawing.Size(115, 23);
             this.txtUsuario.TabIndex = 0;
             // 
             // lblPerfilesDisponibles
             // 
             this.lblPerfilesDisponibles.AutoSize = true;
             this.lblPerfilesDisponibles.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfilesDisponibles.Location = new System.Drawing.Point(44, 23);
-            this.lblPerfilesDisponibles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerfilesDisponibles.Location = new System.Drawing.Point(33, 19);
             this.lblPerfilesDisponibles.Name = "lblPerfilesDisponibles";
-            this.lblPerfilesDisponibles.Size = new System.Drawing.Size(166, 20);
+            this.lblPerfilesDisponibles.Size = new System.Drawing.Size(120, 16);
             this.lblPerfilesDisponibles.TabIndex = 3;
             this.lblPerfilesDisponibles.Text = "Perfiles Disponibles";
             // 
@@ -146,10 +138,9 @@
             // 
             this.lblAplicacionesDisponibles.AutoSize = true;
             this.lblAplicacionesDisponibles.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAplicacionesDisponibles.Location = new System.Drawing.Point(32, 236);
-            this.lblAplicacionesDisponibles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAplicacionesDisponibles.Location = new System.Drawing.Point(24, 192);
             this.lblAplicacionesDisponibles.Name = "lblAplicacionesDisponibles";
-            this.lblAplicacionesDisponibles.Size = new System.Drawing.Size(208, 20);
+            this.lblAplicacionesDisponibles.Size = new System.Drawing.Size(152, 16);
             this.lblAplicacionesDisponibles.TabIndex = 4;
             this.lblAplicacionesDisponibles.Text = "Aplicaciones Disponibles";
             // 
@@ -170,11 +161,9 @@
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblPerfilesDisponibles);
             this.gbxPerfilesyAplicaciones.Controls.Add(this.lblAplicacionesDisponibles);
             this.gbxPerfilesyAplicaciones.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxPerfilesyAplicaciones.Location = new System.Drawing.Point(28, 117);
-            this.gbxPerfilesyAplicaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxPerfilesyAplicaciones.Location = new System.Drawing.Point(21, 95);
             this.gbxPerfilesyAplicaciones.Name = "gbxPerfilesyAplicaciones";
-            this.gbxPerfilesyAplicaciones.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxPerfilesyAplicaciones.Size = new System.Drawing.Size(771, 448);
+            this.gbxPerfilesyAplicaciones.Size = new System.Drawing.Size(578, 364);
             this.gbxPerfilesyAplicaciones.TabIndex = 4;
             this.gbxPerfilesyAplicaciones.TabStop = false;
             this.gbxPerfilesyAplicaciones.Text = "Perfiles y Aplicaciones";
@@ -185,13 +174,14 @@
             this.dgvAplicacionesAsignadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAplicacionesAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAplicacionesD});
-            this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(451, 248);
+            this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(338, 202);
+            this.dgvAplicacionesAsignadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAplicacionesAsignadas.Name = "dgvAplicacionesAsignadas";
             this.dgvAplicacionesAsignadas.RowHeadersVisible = false;
             this.dgvAplicacionesAsignadas.RowHeadersWidth = 51;
             this.dgvAplicacionesAsignadas.RowTemplate.Height = 24;
             this.dgvAplicacionesAsignadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAplicacionesAsignadas.Size = new System.Drawing.Size(279, 150);
+            this.dgvAplicacionesAsignadas.Size = new System.Drawing.Size(209, 122);
             this.dgvAplicacionesAsignadas.TabIndex = 24;
             // 
             // colAplicacionesD
@@ -207,13 +197,14 @@
             this.dgvPerfilesAsignados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerfilesAsignados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPerfil});
-            this.dgvPerfilesAsignados.Location = new System.Drawing.Point(451, 52);
+            this.dgvPerfilesAsignados.Location = new System.Drawing.Point(338, 42);
+            this.dgvPerfilesAsignados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPerfilesAsignados.Name = "dgvPerfilesAsignados";
             this.dgvPerfilesAsignados.RowHeadersVisible = false;
             this.dgvPerfilesAsignados.RowHeadersWidth = 51;
             this.dgvPerfilesAsignados.RowTemplate.Height = 24;
             this.dgvPerfilesAsignados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerfilesAsignados.Size = new System.Drawing.Size(279, 172);
+            this.dgvPerfilesAsignados.Size = new System.Drawing.Size(209, 140);
             this.dgvPerfilesAsignados.TabIndex = 23;
             // 
             // colPerfil
@@ -229,13 +220,12 @@
             this.dgvAplicacionesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAplicacionesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre_Aplicacion});
-            this.dgvAplicacionesDisponibles.Location = new System.Drawing.Point(20, 260);
-            this.dgvAplicacionesDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAplicacionesDisponibles.Location = new System.Drawing.Point(15, 211);
             this.dgvAplicacionesDisponibles.Name = "dgvAplicacionesDisponibles";
             this.dgvAplicacionesDisponibles.RowHeadersVisible = false;
             this.dgvAplicacionesDisponibles.RowHeadersWidth = 51;
             this.dgvAplicacionesDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAplicacionesDisponibles.Size = new System.Drawing.Size(280, 161);
+            this.dgvAplicacionesDisponibles.Size = new System.Drawing.Size(210, 131);
             this.dgvAplicacionesDisponibles.TabIndex = 21;
             // 
             // colNombre_Aplicacion
@@ -251,13 +241,12 @@
             this.dgvPerfilesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerfilesDisponibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre_Perfil});
-            this.dgvPerfilesDisponibles.Location = new System.Drawing.Point(20, 52);
-            this.dgvPerfilesDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPerfilesDisponibles.Location = new System.Drawing.Point(15, 42);
             this.dgvPerfilesDisponibles.Name = "dgvPerfilesDisponibles";
             this.dgvPerfilesDisponibles.RowHeadersVisible = false;
             this.dgvPerfilesDisponibles.RowHeadersWidth = 51;
             this.dgvPerfilesDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerfilesDisponibles.Size = new System.Drawing.Size(280, 172);
+            this.dgvPerfilesDisponibles.Size = new System.Drawing.Size(210, 140);
             this.dgvPerfilesDisponibles.TabIndex = 20;
             // 
             // colNombre_Perfil
@@ -270,19 +259,17 @@
             // lblEditar
             // 
             this.lblEditar.AutoSize = true;
-            this.lblEditar.Location = new System.Drawing.Point(337, 278);
-            this.lblEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEditar.Location = new System.Drawing.Point(253, 226);
             this.lblEditar.Name = "lblEditar";
-            this.lblEditar.Size = new System.Drawing.Size(56, 20);
+            this.lblEditar.Size = new System.Drawing.Size(43, 16);
             this.lblEditar.TabIndex = 19;
             this.lblEditar.Text = "Editar";
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(340, 302);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(255, 245);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(53, 37);
+            this.btnEditar.Size = new System.Drawing.Size(40, 30);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -290,10 +277,9 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(340, 228);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(255, 185);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 37);
+            this.button1.Size = new System.Drawing.Size(40, 30);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -301,30 +287,27 @@
             // lblQuitar
             // 
             this.lblQuitar.AutoSize = true;
-            this.lblQuitar.Location = new System.Drawing.Point(335, 204);
-            this.lblQuitar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuitar.Location = new System.Drawing.Point(251, 166);
             this.lblQuitar.Name = "lblQuitar";
-            this.lblQuitar.Size = new System.Drawing.Size(59, 20);
+            this.lblQuitar.Size = new System.Drawing.Size(44, 16);
             this.lblQuitar.TabIndex = 13;
             this.lblQuitar.Text = "Quitar";
             // 
             // lblAgregar
             // 
             this.lblAgregar.AutoSize = true;
-            this.lblAgregar.Location = new System.Drawing.Point(336, 117);
-            this.lblAgregar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAgregar.Location = new System.Drawing.Point(252, 95);
             this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(74, 20);
+            this.lblAgregar.Size = new System.Drawing.Size(57, 16);
             this.lblAgregar.TabIndex = 12;
             this.lblAgregar.Text = "Agregar";
             // 
             // btnAgregarTodo
             // 
             this.btnAgregarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTodo.Image")));
-            this.btnAgregarTodo.Location = new System.Drawing.Point(340, 151);
-            this.btnAgregarTodo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarTodo.Location = new System.Drawing.Point(255, 123);
             this.btnAgregarTodo.Name = "btnAgregarTodo";
-            this.btnAgregarTodo.Size = new System.Drawing.Size(53, 37);
+            this.btnAgregarTodo.Size = new System.Drawing.Size(40, 30);
             this.btnAgregarTodo.TabIndex = 6;
             this.btnAgregarTodo.UseVisualStyleBackColor = true;
             this.btnAgregarTodo.Click += new System.EventHandler(this.btnAgregarTodo_Click);
@@ -332,10 +315,9 @@
             // rbtnAplicaciones
             // 
             this.rbtnAplicaciones.AutoSize = true;
-            this.rbtnAplicaciones.Location = new System.Drawing.Point(568, 405);
-            this.rbtnAplicaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnAplicaciones.Location = new System.Drawing.Point(426, 329);
             this.rbtnAplicaciones.Name = "rbtnAplicaciones";
-            this.rbtnAplicaciones.Size = new System.Drawing.Size(132, 24);
+            this.rbtnAplicaciones.Size = new System.Drawing.Size(100, 20);
             this.rbtnAplicaciones.TabIndex = 12;
             this.rbtnAplicaciones.TabStop = true;
             this.rbtnAplicaciones.Text = "Aplicaciones";
@@ -345,10 +327,9 @@
             // rbtnPerfiles
             // 
             this.rbtnPerfiles.AutoSize = true;
-            this.rbtnPerfiles.Location = new System.Drawing.Point(469, 405);
-            this.rbtnPerfiles.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnPerfiles.Location = new System.Drawing.Point(352, 329);
             this.rbtnPerfiles.Name = "rbtnPerfiles";
-            this.rbtnPerfiles.Size = new System.Drawing.Size(90, 24);
+            this.rbtnPerfiles.Size = new System.Drawing.Size(68, 20);
             this.rbtnPerfiles.TabIndex = 11;
             this.rbtnPerfiles.TabStop = true;
             this.rbtnPerfiles.Text = "Perfiles";
@@ -357,10 +338,9 @@
             // 
             // BtnLimpiar
             // 
-            this.BtnLimpiar.Location = new System.Drawing.Point(468, 582);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnLimpiar.Location = new System.Drawing.Point(351, 473);
             this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(80, 31);
+            this.BtnLimpiar.Size = new System.Drawing.Size(60, 25);
             this.BtnLimpiar.TabIndex = 13;
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
@@ -368,46 +348,42 @@
             // lblLimpiar
             // 
             this.lblLimpiar.AutoSize = true;
-            this.lblLimpiar.Location = new System.Drawing.Point(389, 588);
-            this.lblLimpiar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLimpiar.Location = new System.Drawing.Point(292, 478);
             this.lblLimpiar.Name = "lblLimpiar";
-            this.lblLimpiar.Size = new System.Drawing.Size(54, 17);
+            this.lblLimpiar.Size = new System.Drawing.Size(40, 13);
             this.lblLimpiar.TabIndex = 16;
             this.lblLimpiar.Text = "Limpiar";
             // 
             // lblSalir
             // 
             this.lblSalir.AutoSize = true;
-            this.lblSalir.Location = new System.Drawing.Point(573, 591);
-            this.lblSalir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSalir.Location = new System.Drawing.Point(430, 480);
             this.lblSalir.Name = "lblSalir";
-            this.lblSalir.Size = new System.Drawing.Size(36, 17);
+            this.lblSalir.Size = new System.Drawing.Size(27, 13);
             this.lblSalir.TabIndex = 17;
             this.lblSalir.Text = "Salir";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(629, 583);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(472, 474);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(80, 31);
+            this.btnSalir.Size = new System.Drawing.Size(60, 25);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmAsignacionDeAplicaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(828, 629);
+            this.ClientSize = new System.Drawing.Size(621, 511);
             this.Controls.Add(this.gbxPerfilesyAplicaciones);
             this.Controls.Add(this.gbxUsuarioSelect);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblSalir);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.lblLimpiar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAsignacionDeAplicaciones";
