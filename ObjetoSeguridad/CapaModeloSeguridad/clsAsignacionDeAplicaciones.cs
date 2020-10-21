@@ -69,7 +69,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "select P.nombre_perfil FROM PERFIL P INNER JOIN PERFILUSUARIO PU on P.pk_id_perfil = PU.fk_idperfil_perfilusuario INNER JOIN LOGIN LO on PU.fk_idusuario_perfilusuario = LO.pk_id_login where LO.usuario_login = '" + txtUsuario + "';";
+                string strConsulta = "select P.nombre_perfil FROM PERFIL P INNER JOIN PERFIL_USUARIO PU on P.pk_id_perfil = PU.fk_idperfil_perfil_usuario INNER JOIN LOGIN LO on PU.fk_idusuario_perfil_usuario = LO.pk_id_login where LO.usuario_login = '" + txtUsuario + "';";
 
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
@@ -86,7 +86,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "select AP.nombre_aplicacion FROM APLICACION AP INNER JOIN APLICACIONUSUARIO APU on AP.pk_id_aplicacion = APU.fk_idaplicacion_aplicacionusuario INNER JOIN LOGIN LO on APU.fk_idlogin_aplicacionusuario = LO.pk_id_login where LO.usuario_login = '" + txtUsuario + "';";
+                string strConsulta = "select AP.nombre_aplicacion FROM APLICACION AP INNER JOIN APLICACION_USUARIO APU on AP.pk_id_aplicacion = APU.fk_idaplicacion_aplicacion_usuario INNER JOIN LOGIN LO on APU.fk_idlogin_aplicacion_usuario = LO.pk_id_login where LO.usuario_login = '" + txtUsuario + "';";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -103,7 +103,7 @@ namespace CapaModeloSeguridad
             try
             {
                 //Console.WriteLine(txtUsuario + " " + txtAplicacion);
-                string strConsulta = "insert into perfilusuario (fk_idusuario_perfilusuario, fk_idperfil_perfilusuario) values ((select pk_id_login from login where (usuario_login='" + txtUsuario + "')),(select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))); ";
+                string strConsulta = "insert into perfil_usuario (fk_idusuario_perfil_usuario, fk_idperfil_perfil_usuario) values ((select pk_id_login from login where (usuario_login='" + txtUsuario + "')),(select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -120,7 +120,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "insert into aplicacionusuario (fk_idlogin_aplicacionusuario, fk_idaplicacion_aplicacionusuario, fk_idpermiso_aplicacionusuario)  values((select pk_id_login from login where (usuario_login = '" + txtUsuario + "')), (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')), (SELECT MAX(pk_id_permiso) FROM permiso)); ";
+                string strConsulta = "insert into aplicacion_usuario (fk_idlogin_aplicacion_usuario, fk_idaplicacion_aplicacion_usuario, fk_idpermiso_aplicacion_usuario)  values((select pk_id_login from login where (usuario_login = '" + txtUsuario + "')), (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')), (SELECT MAX(pk_id_permiso) FROM permiso)); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -137,7 +137,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "select * from permiso where ((pk_id_permiso = (select pk_id_permiso from permiso p inner join aplicacionusuario apu on p.pk_id_permiso = apu.fk_idpermiso_aplicacionusuario inner join aplicacion ap on ap.pk_id_aplicacion = apu.fk_idaplicacion_aplicacionusuario inner join login lo on lo.pk_id_login = apu.fk_idlogin_aplicacionusuario  where lo.usuario_login = '"+txtUsuario+"' and ap.nombre_aplicacion= '"+txtAplicacion+"'))); ";
+                string strConsulta = "select * from permiso where ((pk_id_permiso = (select pk_id_permiso from permiso p inner join aplicacion_usuario apu on p.pk_id_permiso = apu.fk_idpermiso_aplicacion_usuario inner join aplicacion ap on ap.pk_id_aplicacion = apu.fk_idaplicacion_aplicacion_usuario inner join login lo on lo.pk_id_login = apu.fk_idlogin_aplicacion_usuario  where lo.usuario_login = '"+txtUsuario+"' and ap.nombre_aplicacion= '"+txtAplicacion+"'))); ";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -171,7 +171,7 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                string strConsulta = "delete from aplicacionusuario where (fk_idlogin_aplicacionusuario = (select pk_id_login from login where (usuario_login = '" + txtUsuario + "')) and  fk_idaplicacion_aplicacionusuario = (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')));";
+                string strConsulta = "delete from aplicacion_usuario where (fk_idlogin_aplicacion_usuario = (select pk_id_login from login where (usuario_login = '" + txtUsuario + "')) and  fk_idaplicacion_aplicacion_usuario = (select pk_id_aplicacion from aplicacion where(nombre_aplicacion= '" + txtAplicacion + "')));";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;
@@ -188,7 +188,7 @@ namespace CapaModeloSeguridad
             try
             {
                
-                string strConsulta = "delete from perfilusuario where ((fk_idusuario_perfilusuario = (select pk_id_login from login where (usuario_login='" + txtUsuario + "'))) and (fk_idperfil_perfilusuario = (select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))));";
+                string strConsulta = "delete from perfil_usuario where ((fk_idusuario_perfil_usuario = (select pk_id_login from login where (usuario_login='" + txtUsuario + "'))) and (fk_idperfil_perfil_usuario = (select pk_id_perfil from perfil where (nombre_perfil='" + txtAplicacion + "'))));";
                 OdbcCommand command = new OdbcCommand(strConsulta, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 return reader;

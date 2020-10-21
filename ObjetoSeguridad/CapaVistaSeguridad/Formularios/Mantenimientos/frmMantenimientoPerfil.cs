@@ -21,7 +21,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
             InitializeComponent();
             UsuarioAplicacion = usuario;
-            navegador1.Usuario = UsuarioAplicacion;
+            navegador.Usuario = UsuarioAplicacion;
             inicio();
         }
 
@@ -48,7 +48,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
         private void frmMantenimientoPerfil_Load(object sender, EventArgs e)
         {
-
+            inicio();
         }
 
         private void Navegador_Load(object sender, EventArgs e)
@@ -57,9 +57,9 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //List<Control> lista = new List<Control>();
-            navegador1.aplicacion = 4;
-            navegador1.tbl = "perfil";
-            navegador1.campoEstado = "estado_perfil";
+            navegador.aplicacion = 4;
+            navegador.tbl = "perfil";
+            navegador.campoEstado = "estado_perfil";
 
             //se agregan los componentes del formulario a la lista tipo control
 
@@ -88,11 +88,12 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
             }
 
-            navegador1.control = lista;
-            navegador1.DatosActualizar = dgvperfil;
-            navegador1.actualizarData();
-            navegador1.cargar();
-            navegador1.ruta = "AgregarCliente.html";
+            navegador.control = lista;
+            navegador.DatosActualizar = dgvperfil;
+            navegador.actualizarData();
+            navegador.cargar();
+            navegador.ayudaRuta = "AyudasSeguridad/Mantenimiento_Perfil/Mantenimiento_Perfil.chm";
+            navegador.ruta = "Mantenimiento-Perfil.html";
         }
 
         private void rbtnHabilitado_CheckedChanged(object sender, EventArgs e)
@@ -105,5 +106,9 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             txtEstado.Text = "0";
         }
 
+        private void txtNombrePerfil_TextChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
+        }
     }
 }

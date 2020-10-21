@@ -50,7 +50,7 @@
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreAPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxPermisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppAsignadas)).BeginInit();
             this.SuspendLayout();
@@ -295,18 +295,19 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // button1
+            // btnAyuda
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(401, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 51);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Ayuda";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAyuda.BackColor = System.Drawing.Color.White;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAyuda.Location = new System.Drawing.Point(401, 12);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(61, 51);
+            this.btnAyuda.TabIndex = 15;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAsignarAplicacionesAPerfil
             // 
@@ -314,7 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(656, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvAppAsignadas);
             this.Controls.Add(this.gbxPermisos);
@@ -365,6 +366,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAPP;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
