@@ -70,14 +70,14 @@ namespace CapaModeloSeguridad
                                                         "ON APP.fk_idperfil_aplicacionperfil = P.pk_id_perfil INNER JOIN PERFILUSUARIO PEU " +
                                                         "ON PEU.pk_id_perfilusuario = P.pk_id_perfil INNER JOIN LOGIN LO " +
                                                         "ON LO.pk_id_login = PEU.fk_idperfil_perfilusuario " +
-                                                        "WHERE APP.fk_idaplicacion_aplicacionperfil = "+ strAplicacion + " and LO.usuario_login = "+ strCodigo + " and " +
+                                                        "WHERE APP.fk_idaplicacion_aplicacionperfil = "+ strAplicacion + " and LO.pk_id_login = "+ strCodigo + " and " +
                                                         "APP.fk_idperfil_aplicacionperfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFILUSUARIO PEUS " +
                                                         "ON PEUS.fk_idperfil_perfilusuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
                                                         "ON PEUS.fk_idusuario_perfilusuario = LOG.pk_id_login " +
                                                         "WHERE LOG.pk_id_login = "+ strCodigo + ")", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
-                strPermisoPerfil = reader.GetString(0) + "," + reader.GetString(1) + "," + reader.GetString(2) + "," + reader.GetString(4) + "," + reader.GetString(5);
+                strPermisoPerfil = reader.GetString(0) + "," + reader.GetString(1) + "," + reader.GetString(2) + "," + reader.GetString(3) + "," + reader.GetString(4);
                 reader.Close();
                 return strPermisoPerfil;
             }

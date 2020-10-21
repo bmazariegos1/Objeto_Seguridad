@@ -20,16 +20,27 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             InitializeComponent();
             LlenarDgv();
         }
+        DataTable Dt = new DataTable();
         public void LlenarDgv()
         {
             dgvAplicaciones.Rows.Clear();
+            Dt.Columns.Add("Codigo", typeof(string));
+            Dt.Columns.Add("Nombre_Aplicación", typeof(string));
+            Dt.Columns.Add("Descripcion", typeof(string));
             OdbcDataReader mostrar = Controlador.consulta("aplicacion","estado_aplicacion");
             try
             {
                 while (mostrar.Read())
                 {
-                    dgvAplicaciones.Rows.Add(mostrar.GetString(0), mostrar.GetString(1));
+                    //dgvAplicaciones.Rows.Add(mostrar.GetString(0), mostrar.GetString(2), mostrar.GetString(3);
+                    DataRow row;
+                    row = Dt.NewRow();
+                    row["Codigo"] = mostrar.GetString(0);
+                    row["Nombre_Aplicación"] = mostrar.GetString(2);
+                    row["Descripcion"] = mostrar.GetString(3);
+                    Dt.Rows.Add(row);
                 }
+                dgvAplicaciones.DataSource = Dt;
             }
             catch (Exception err)
             {
@@ -55,6 +66,30 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == " ")
+            {
+                dgvAplicaciones.Rows.Clear();
+                dgvAplicaciones.DataSource = Dt;
+                return;
+            }
+
+            Dt.DefaultView.RowFilter = $"Codigo LIKE '{txtCodigo.Text}%'";
+        }
+
+        private void txtAplicacion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == " ")
+            {
+                dgvAplicaciones.Rows.Clear();
+                dgvAplicaciones.DataSource = Dt;
+                return;
+            }
+
+            Dt.DefaultView.RowFilter = $"Nombre_Aplicación LIKE '{txtAplicacion.Text}%'";
         }
     }
 }

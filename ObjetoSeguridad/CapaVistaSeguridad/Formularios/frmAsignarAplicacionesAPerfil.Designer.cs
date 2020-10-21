@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarAplicacionesAPerfil));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -49,63 +50,85 @@
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreAPP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbxPermisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppAsignadas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Font = new System.Drawing.Font("Rockwell", 8.25F);
-            this.btnCancelar.Location = new System.Drawing.Point(334, 25);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(334, 12);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(61, 39);
+            this.btnCancelar.Size = new System.Drawing.Size(61, 52);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.White;
             this.btnNuevo.Font = new System.Drawing.Font("Rockwell", 8.25F);
-            this.btnNuevo.Location = new System.Drawing.Point(62, 25);
+            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNuevo.Location = new System.Drawing.Point(62, 12);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(57, 39);
+            this.btnNuevo.Size = new System.Drawing.Size(57, 52);
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
             this.btnEliminar.Font = new System.Drawing.Font("Rockwell", 8F);
-            this.btnEliminar.Location = new System.Drawing.Point(262, 25);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(262, 12);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(66, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(66, 52);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.White;
             this.btnModificar.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(191, 25);
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModificar.Location = new System.Drawing.Point(191, 12);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(65, 39);
+            this.btnModificar.Size = new System.Drawing.Size(65, 52);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.White;
             this.btnGuardar.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(125, 25);
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(125, 12);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(60, 39);
+            this.btnGuardar.Size = new System.Drawing.Size(60, 52);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblPerfil
@@ -146,6 +169,7 @@
             // 
             // btnPerfil
             // 
+            this.btnPerfil.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.Location = new System.Drawing.Point(273, 89);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(24, 25);
@@ -156,6 +180,7 @@
             // 
             // btnAplicación
             // 
+            this.btnAplicación.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAplicación.Location = new System.Drawing.Point(618, 86);
             this.btnAplicación.Name = "btnAplicación";
             this.btnAplicación.Size = new System.Drawing.Size(24, 25);
@@ -171,6 +196,7 @@
             this.gbxPermisos.Controls.Add(this.chkEliminar);
             this.gbxPermisos.Controls.Add(this.chkModificar);
             this.gbxPermisos.Controls.Add(this.chkIngreso);
+            this.gbxPermisos.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxPermisos.Location = new System.Drawing.Point(52, 133);
             this.gbxPermisos.Name = "gbxPermisos";
             this.gbxPermisos.Size = new System.Drawing.Size(290, 124);
@@ -183,7 +209,7 @@
             this.chkImprimir.AutoSize = true;
             this.chkImprimir.Location = new System.Drawing.Point(93, 89);
             this.chkImprimir.Name = "chkImprimir";
-            this.chkImprimir.Size = new System.Drawing.Size(61, 17);
+            this.chkImprimir.Size = new System.Drawing.Size(77, 20);
             this.chkImprimir.TabIndex = 4;
             this.chkImprimir.Text = "Imprimir";
             this.chkImprimir.UseVisualStyleBackColor = true;
@@ -193,7 +219,7 @@
             this.chkConsultar.AutoSize = true;
             this.chkConsultar.Location = new System.Drawing.Point(152, 60);
             this.chkConsultar.Name = "chkConsultar";
-            this.chkConsultar.Size = new System.Drawing.Size(70, 17);
+            this.chkConsultar.Size = new System.Drawing.Size(83, 20);
             this.chkConsultar.TabIndex = 3;
             this.chkConsultar.Text = "Consultar";
             this.chkConsultar.UseVisualStyleBackColor = true;
@@ -203,7 +229,7 @@
             this.chkEliminar.AutoSize = true;
             this.chkEliminar.Location = new System.Drawing.Point(32, 60);
             this.chkEliminar.Name = "chkEliminar";
-            this.chkEliminar.Size = new System.Drawing.Size(62, 17);
+            this.chkEliminar.Size = new System.Drawing.Size(74, 20);
             this.chkEliminar.TabIndex = 2;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
@@ -213,7 +239,7 @@
             this.chkModificar.AutoSize = true;
             this.chkModificar.Location = new System.Drawing.Point(155, 27);
             this.chkModificar.Name = "chkModificar";
-            this.chkModificar.Size = new System.Drawing.Size(69, 17);
+            this.chkModificar.Size = new System.Drawing.Size(82, 20);
             this.chkModificar.TabIndex = 1;
             this.chkModificar.Text = "Modificar";
             this.chkModificar.UseVisualStyleBackColor = true;
@@ -223,19 +249,21 @@
             this.chkIngreso.AutoSize = true;
             this.chkIngreso.Location = new System.Drawing.Point(32, 27);
             this.chkIngreso.Name = "chkIngreso";
-            this.chkIngreso.Size = new System.Drawing.Size(61, 17);
+            this.chkIngreso.Size = new System.Drawing.Size(71, 20);
             this.chkIngreso.TabIndex = 0;
             this.chkIngreso.Text = "Ingreso";
             this.chkIngreso.UseVisualStyleBackColor = true;
             // 
             // dgvAppAsignadas
             // 
+            this.dgvAppAsignadas.AllowUserToAddRows = false;
             this.dgvAppAsignadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodigo,
             this.colNombreAPP});
             this.dgvAppAsignadas.Location = new System.Drawing.Point(31, 263);
             this.dgvAppAsignadas.Name = "dgvAppAsignadas";
+            this.dgvAppAsignadas.ReadOnly = true;
             this.dgvAppAsignadas.Size = new System.Drawing.Size(448, 175);
             this.dgvAppAsignadas.TabIndex = 13;
             // 
@@ -243,22 +271,42 @@
             // 
             this.colCodigo.HeaderText = "Código";
             this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
             // 
             // colNombreAPP
             // 
             this.colNombreAPP.HeaderText = "Nombre de aplicación";
             this.colNombreAPP.Name = "colNombreAPP";
+            this.colNombreAPP.ReadOnly = true;
             this.colNombreAPP.Width = 300;
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSeleccionar.Location = new System.Drawing.Point(479, 263);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(73, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(80, 55);
             this.btnSeleccionar.TabIndex = 14;
             this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(401, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 51);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Ayuda";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmAsignarAplicacionesAPerfil
             // 
@@ -266,6 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(656, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvAppAsignadas);
             this.Controls.Add(this.gbxPermisos);
@@ -284,7 +333,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAsignarAplicacionesAPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAsignarAplicacionesAPerfil";
+            this.Text = "0005-Asignación de Apliaciones  Perfil";
             this.gbxPermisos.ResumeLayout(false);
             this.gbxPermisos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppAsignadas)).EndInit();
@@ -316,5 +365,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAPP;
+        private System.Windows.Forms.Button button1;
     }
 }

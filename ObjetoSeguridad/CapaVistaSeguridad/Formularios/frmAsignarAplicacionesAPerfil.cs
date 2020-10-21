@@ -143,6 +143,7 @@ namespace CapaVistaSeguridad.Formularios
                     LlenarDgv();
                     btnAplicación.Enabled = true;
                     btnSeleccionar.Enabled = true;
+                    dgvAppAsignadas.Enabled = true;
                 }
             }
         }
