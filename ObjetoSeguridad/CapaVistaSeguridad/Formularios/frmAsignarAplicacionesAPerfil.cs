@@ -305,5 +305,10 @@ namespace CapaVistaSeguridad.Formularios
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasSeguridad/Asignacion_de_Aplicaciones perfil/Ayuda Asignacion de Aplicaciones perfil.chm", "Asignación-de-aplicaciones-perfil.html");
+        }
     }
 }

@@ -58,6 +58,7 @@
             this.lblLimpiar = new System.Windows.Forms.Label();
             this.lblSalir = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxUsuarioSelect.SuspendLayout();
             this.gbxPerfilesyAplicaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAplicacionesAsignadas)).BeginInit();
@@ -76,7 +77,7 @@
             this.gbxUsuarioSelect.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxUsuarioSelect.Location = new System.Drawing.Point(21, 11);
             this.gbxUsuarioSelect.Name = "gbxUsuarioSelect";
-            this.gbxUsuarioSelect.Size = new System.Drawing.Size(578, 78);
+            this.gbxUsuarioSelect.Size = new System.Drawing.Size(554, 78);
             this.gbxUsuarioSelect.TabIndex = 0;
             this.gbxUsuarioSelect.TabStop = false;
             this.gbxUsuarioSelect.Text = "Usuario Seleccionado";
@@ -105,7 +106,7 @@
             this.txtNombreUsuario.Enabled = false;
             this.txtNombreUsuario.Location = new System.Drawing.Point(316, 31);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(246, 23);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(231, 23);
             this.txtNombreUsuario.TabIndex = 3;
             // 
             // lblUsuario
@@ -175,7 +176,7 @@
             this.dgvAplicacionesAsignadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAplicacionesD});
             this.dgvAplicacionesAsignadas.Location = new System.Drawing.Point(338, 202);
-            this.dgvAplicacionesAsignadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAplicacionesAsignadas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAplicacionesAsignadas.Name = "dgvAplicacionesAsignadas";
             this.dgvAplicacionesAsignadas.RowHeadersVisible = false;
             this.dgvAplicacionesAsignadas.RowHeadersWidth = 51;
@@ -198,7 +199,7 @@
             this.dgvPerfilesAsignados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPerfil});
             this.dgvPerfilesAsignados.Location = new System.Drawing.Point(338, 42);
-            this.dgvPerfilesAsignados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPerfilesAsignados.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPerfilesAsignados.Name = "dgvPerfilesAsignados";
             this.dgvPerfilesAsignados.RowHeadersVisible = false;
             this.dgvPerfilesAsignados.RowHeadersWidth = 51;
@@ -372,12 +373,23 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(581, 11);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 18;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // frmAsignacionDeAplicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(621, 511);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.gbxPerfilesyAplicaciones);
             this.Controls.Add(this.gbxUsuarioSelect);
             this.Controls.Add(this.btnSalir);
@@ -434,5 +446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAplicacionesD;
         private System.Windows.Forms.DataGridView dgvPerfilesAsignados;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPerfil;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

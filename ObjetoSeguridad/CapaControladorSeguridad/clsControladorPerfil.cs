@@ -59,15 +59,15 @@ namespace CapaControladorSeguridad
         }
         public OdbcDataReader consulta_ApPerfil(string CodPerfil)
         {
-            string Consulta = "SELECT ap.pk_id_aplicacion,ap.nombre_aplicacion FROM aplicacion ap INNER JOIN aplicacionperfil ap_perfil ON ap.pk_id_aplicacion = ap_perfil.fk_idaplicacion_aplicacionperfil " +
-                              "WHERE ap_perfil.fk_idperfil_aplicacionperfil = "+CodPerfil;
+            string Consulta = "SELECT ap.pk_id_aplicacion,ap.nombre_aplicacion FROM aplicacion ap INNER JOIN aplicacion_perfil ap_perfil ON ap.pk_id_aplicacion = ap_perfil.fk_idaplicacion_aplicacion_perfil " +
+                              "WHERE ap_perfil.fk_idperfil_aplicacion_perfil = "+CodPerfil;
             return Modelo.Consulta(Consulta);
         }
         public OdbcDataReader consulta_permisos(string CodApli, string CodPerfil)
         {
             string Consulta = "SELECT per.pk_id_permiso, per.insertar_permiso, per.modificar_permiso, per.eliminar_permiso, per.consultar_permiso, per.imprimir_permiso " +
-                              "FROM permiso per INNER JOIN aplicacionperfil app ON per.pk_id_permiso = app.fk_idpermiso_aplicacionperfil" +
-                              " WHERE app.fk_idaplicacion_aplicacionperfil = "+CodApli+" AND app.fk_idperfil_aplicacionperfil = "+CodPerfil;
+                              "FROM permiso per INNER JOIN aplicacion_perfil app ON per.pk_id_permiso = app.fk_idpermiso_aplicacion_perfil" +
+                              " WHERE app.fk_idaplicacion_aplicacion_perfil = "+CodApli+" AND app.fk_idperfil_aplicacion_perfil = "+CodPerfil;
             return Modelo.Consulta(Consulta);
         }
         public OdbcDataReader insertarpermisosPerfil(int permisos0, int permisos1, int permisos2, int permisos3, int permisos4)
@@ -78,8 +78,8 @@ namespace CapaControladorSeguridad
         }
         public OdbcDataReader insertarApliPerfil(string CodApli, string CodPerfil)
         {
-            string Cod = Modelo.obtenerNuevocodigo("aplicacionperfil", "pk_id_aplicacionperfil");
-            string Consulta = "INSERT INTO aplicacionperfil VALUES( " + Cod + ", "+ CodApli +", "+ CodPerfil + ", (SELECT MAX(pk_id_permiso) FROM permiso)); ";
+            string Cod = Modelo.obtenerNuevocodigo("aplicacion_perfil", "pk_id_aplicacion_perfil");
+            string Consulta = "INSERT INTO aplicacion_perfil VALUES( " + Cod + ", "+ CodApli +", "+ CodPerfil + ", (SELECT MAX(pk_id_permiso) FROM permiso)); ";
             return Modelo.Insertar(Consulta);
         }
         public OdbcDataReader ModificarAppPerfil(int permisos0, int permisos1, int permisos2, int permisos3, int permisos4,string CodPermiso)

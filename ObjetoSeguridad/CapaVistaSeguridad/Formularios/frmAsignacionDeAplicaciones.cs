@@ -228,6 +228,11 @@ namespace CapaVistaSeguridad.Formularios
             ControlRadioBoton();
         }
 
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasSeguridad/Asignacion_de_Aplicaciones/Ayuda_Asignacion_de_Aplicaciones.chm", "Asignación-de-Aplicaciones.html");
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             enviar_datos();

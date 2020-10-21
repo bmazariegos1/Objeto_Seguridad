@@ -34,7 +34,8 @@
     <Reference Include="CapaControladorSeguridad">
       <HintPath>..\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll</HintPath>
     </Reference>
-    <Reference Include="CapaVistaNavegador">
+    <Reference Include="CapaVistaNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>
     </Reference>
     <Reference Include="System" />

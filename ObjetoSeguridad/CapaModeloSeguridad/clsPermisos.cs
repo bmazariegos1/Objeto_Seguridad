@@ -38,10 +38,10 @@ namespace CapaModeloSeguridad
             try
             {
                 OdbcCommand command = new OdbcCommand("SELECT PER.insertar_permiso, PER.modificar_permiso, PER.eliminar_permiso, PER.consultar_permiso, PER.imprimir_permiso " +
-                                                    "FROM PERMISO PER INNER JOIN APLICACIONUSUARIO APU " +
-                                                    "ON APU.fk_idpermiso_aplicacionusuario = PER.pk_id_permiso INNER JOIN LOGIN LO " +
-                                                    "ON LO.pk_id_login = APU.fk_idlogin_aplicacionusuario INNER JOIN APLICACION AP " +
-                                                    "ON APU.fk_idaplicacion_aplicacionusuario = AP.pk_id_aplicacion " +
+                                                    "FROM PERMISO PER INNER JOIN APLICACION_USUARIO APU " +
+                                                    "ON APU.fk_idpermiso_aplicacion_usuario = PER.pk_id_permiso INNER JOIN LOGIN LO " +
+                                                    "ON LO.pk_id_login = APU.fk_idlogin_aplicacion_usuario INNER JOIN APLICACION AP " +
+                                                    "ON APU.fk_idaplicacion_aplicacion_usuario = AP.pk_id_aplicacion " +
                                                     "WHERE LO.pk_id_login = " + strCodigo + " AND AP.pk_id_aplicacion = " + strAplicacion + "", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
@@ -64,16 +64,16 @@ namespace CapaModeloSeguridad
             try
             {
                 OdbcCommand command = new OdbcCommand("SELECT PER.insertar_permiso, PER.modificar_permiso, PER.eliminar_permiso, PER.consultar_permiso, PER.imprimir_permiso " +
-                                                        "FROM PERMISO PER INNER JOIN APLICACIONPERFIL APP " +
-                                                        "ON PER.pk_id_permiso = APP.fk_idpermiso_aplicacionperfil INNER JOIN APLICACION AP " +
-                                                        "ON AP.pk_id_aplicacion = APP.fk_idaplicacion_aplicacionperfil INNER JOIN PERFIL P " +
-                                                        "ON APP.fk_idperfil_aplicacionperfil = P.pk_id_perfil INNER JOIN PERFILUSUARIO PEU " +
-                                                        "ON PEU.pk_id_perfilusuario = P.pk_id_perfil INNER JOIN LOGIN LO " +
-                                                        "ON LO.pk_id_login = PEU.fk_idperfil_perfilusuario " +
-                                                        "WHERE APP.fk_idaplicacion_aplicacionperfil = "+ strAplicacion + " and LO.pk_id_login = "+ strCodigo + " and " +
-                                                        "APP.fk_idperfil_aplicacionperfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFILUSUARIO PEUS " +
-                                                        "ON PEUS.fk_idperfil_perfilusuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
-                                                        "ON PEUS.fk_idusuario_perfilusuario = LOG.pk_id_login " +
+                                                        "FROM PERMISO PER INNER JOIN APLICACION_PERFIL APP " +
+                                                        "ON PER.pk_id_permiso = APP.fk_idpermiso_aplicacion_perfil INNER JOIN APLICACION AP " +
+                                                        "ON AP.pk_id_aplicacion = APP.fk_idaplicacion_aplicacion_perfil INNER JOIN PERFIL P " +
+                                                        "ON APP.fk_idperfil_aplicacion_perfil = P.pk_id_perfil INNER JOIN PERFIL_USUARIO PEU " +
+                                                        "ON PEU.pk_id_perfil_usuario = P.pk_id_perfil INNER JOIN LOGIN LO " +
+                                                        "ON LO.pk_id_login = PEU.fk_idperfil_perfil_usuario " +
+                                                        "WHERE APP.fk_idaplicacion_aplicacion_perfil = "+ strAplicacion + " and LO.pk_id_login = "+ strCodigo + " and " +
+                                                        "APP.fk_idperfil_aplicacion_perfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFIL_USUARIO PEUS " +
+                                                        "ON PEUS.fk_idperfil_perfil_usuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
+                                                        "ON PEUS.fk_idusuario_perfil_usuario = LOG.pk_id_login " +
                                                         "WHERE LOG.pk_id_login = "+ strCodigo + ")", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 reader.Read();
@@ -93,13 +93,13 @@ namespace CapaModeloSeguridad
         {
             try
             {
-                OdbcCommand command = new OdbcCommand("SELECT APP.fk_idaplicacion_aplicacionperfil, P.nombre_perfil " +
-                                                        "FROM APLICACIONPERFIL APP INNER JOIN APLICACION AP " +
-                                                        "ON APP.fk_idaplicacion_aplicacionperfil = AP.pk_id_aplicacion INNER JOIN PERFIL P " +
-                                                        "ON APP.fk_idperfil_aplicacionperfil = P.pk_id_perfil " +
-                                                        "where AP.pk_id_aplicacion = " + strIdAplicacion + " and P.pk_id_perfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFILUSUARIO PEUS " +
-                                                        "ON PEUS.fk_idperfil_perfilusuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
-                                                        "ON PEUS.fk_idusuario_perfilusuario = LOG.pk_id_login " +
+                OdbcCommand command = new OdbcCommand("SELECT APP.fk_idaplicacion_aplicacion_perfil, P.nombre_perfil " +
+                                                        "FROM APLICACION_PERFIL APP INNER JOIN APLICACION AP " +
+                                                        "ON APP.fk_idaplicacion_aplicacion_perfil = AP.pk_id_aplicacion INNER JOIN PERFIL P " +
+                                                        "ON APP.fk_idperfil_aplicacion_perfil = P.pk_id_perfil " +
+                                                        "where AP.pk_id_aplicacion = " + strIdAplicacion + " and P.pk_id_perfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFIL_USUARIO PEUS " +
+                                                        "ON PEUS.fk_idperfil_perfil_usuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
+                                                        "ON PEUS.fk_idusuario_perfil_usuario = LOG.pk_id_login " +
                                                         "WHERE LOG.usuario_login = '" + strNombreUsuario + "')", cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 if (reader.Read())
@@ -126,10 +126,10 @@ namespace CapaModeloSeguridad
             string prueba1;
             try
             {
-                OdbcCommand command = new OdbcCommand("SELECT APU.fk_idaplicacion_aplicacionusuario "+
-                                                        "FROM APLICACIONUSUARIO APU INNER JOIN LOGIN LO "+
-                                                        "ON APU.fk_idlogin_aplicacionusuario = LO.pk_id_login "+
-                                                        "WHERE usuario_login = '"+strNombreUsuario+"' and APU.fk_idaplicacion_aplicacionusuario = "+strIdAplicacion, cn.conexion());
+                OdbcCommand command = new OdbcCommand("SELECT APU.fk_idaplicacion_aplicacion_usuario "+
+                                                        "FROM APLICACION_USUARIO APU INNER JOIN LOGIN LO "+
+                                                        "ON APU.fk_idlogin_aplicacion_usuario = LO.pk_id_login "+
+                                                        "WHERE usuario_login = '"+strNombreUsuario+"' and APU.fk_idaplicacion_aplicacion_usuario = "+strIdAplicacion, cn.conexion());
                 OdbcDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
