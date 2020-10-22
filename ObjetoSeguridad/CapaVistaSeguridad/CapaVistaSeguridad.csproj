@@ -70,17 +70,23 @@
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frm_mantenimiento_usuario.cs">
+    <Compile Include="Formularios\frmMantenimientoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frm_mantenimiento_usuario.designer.cs">
-      <DependentUpon>frm_mantenimiento_usuario.cs</DependentUpon>
+    <Compile Include="Formularios\frmMantenimientoUsuario.designer.cs">
+      <DependentUpon>frmMantenimientoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmAgregarAplicacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmAgregarAplicacion.Designer.cs">
       <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmAplicativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmAplicativo.Designer.cs">
+      <DependentUpon>frmAplicativo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmConsultarPerfil.cs">
       <SubType>Form</SubType>
@@ -100,11 +106,11 @@
     <Compile Include="Formularios\Mantenimientos\frmModificarPermisos.Designer.cs">
       <DependentUpon>frmModificarPermisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimientos\frm_aplicacion.cs">
+    <Compile Include="Formularios\Mantenimientos\frmModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimientos\frm_aplicacion.designer.cs">
-      <DependentUpon>frm_aplicacion.cs</DependentUpon>
+    <Compile Include="Formularios\Mantenimientos\frmModulo.Designer.cs">
+      <DependentUpon>frmModulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -126,11 +132,14 @@
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frm_mantenimiento_usuario.resx">
-      <DependentUpon>frm_mantenimiento_usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmMantenimientoUsuario.resx">
+      <DependentUpon>frmMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmAgregarAplicacion.resx">
       <DependentUpon>frmAgregarAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimientos\frmAplicativo.resx">
+      <DependentUpon>frmAplicativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmConsultarPerfil.resx">
       <DependentUpon>frmConsultarPerfil.cs</DependentUpon>
@@ -141,8 +150,8 @@
     <EmbeddedResource Include="Formularios\Mantenimientos\frmModificarPermisos.resx">
       <DependentUpon>frmModificarPermisos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimientos\frm_aplicacion.resx">
-      <DependentUpon>frm_aplicacion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Mantenimientos\frmModulo.resx">
+      <DependentUpon>frmModulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

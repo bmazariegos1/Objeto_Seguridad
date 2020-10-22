@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ClsControladorBitacora.cs" />
     <Compile Include="clsControladorPerfil.cs" />
+    <Compile Include="clsControlAplicativo.cs" />
     <Compile Include="clsControlAsignacionDeAplicaciones.cs" />
     <Compile Include="clsObtenerPermisos.cs" />
     <Compile Include="Cls_aplicacion.cs" />
