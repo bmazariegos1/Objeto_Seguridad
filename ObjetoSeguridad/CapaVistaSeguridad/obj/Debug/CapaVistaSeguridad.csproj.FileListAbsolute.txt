@@ -151,10 +151,8 @@ C:\Users\CARLOS JAVIER\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\D
 C:\Users\CARLOS JAVIER\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModificarPermisos.resources
 C:\Users\CARLOS JAVIER\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frm_aplicacion.resources
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.frmAsignarAplicacionesAPerfil.resources
-D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frm_mantenimiento_usuario.resources
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmConsultarPerfil.resources
 D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModificarPermisos.resources
-D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frm_aplicacion.resources
 C:\Users\CARLOS JAVIER\Desktop\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll
 C:\Users\CARLOS JAVIER\Desktop\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.pdb
 C:\Users\CARLOS JAVIER\Desktop\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.dll
@@ -293,3 +291,6 @@ C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSegurida
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.dll
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.pdb
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAplicativo.resources
+D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoUsuario.resources
+D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAplicativo.resources
+D:\Escritorio\Objeto_Seguridad\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModulo.resources

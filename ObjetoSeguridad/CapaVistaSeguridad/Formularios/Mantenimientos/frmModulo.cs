@@ -57,7 +57,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //List<Control> lista = new List<Control>();
-            navegadorModulo.aplicacion = 3;
+            navegadorModulo.aplicacion = 8;
             navegadorModulo.tbl = "modulo";
             navegadorModulo.campoEstado = "estado_modulo";
 

@@ -143,7 +143,7 @@
             this.MinimizeBox = false;
             this.Name = "frmConsultarPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0008-Consultar Perfil";
+            this.Text = "0009-Consultar Perfil";
             this.gbxPerfilesdisponibles.ResumeLayout(false);
             this.gbxPerfilesdisponibles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilDisponibles)).EndInit();

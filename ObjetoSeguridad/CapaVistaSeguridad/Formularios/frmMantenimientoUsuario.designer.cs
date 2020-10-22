@@ -52,7 +52,7 @@
             this.lblCodigo.Location = new System.Drawing.Point(29, 230);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(135, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(112, 17);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código usuario:";
             // 
@@ -62,7 +62,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(29, 286);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(75, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(60, 17);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -72,7 +72,7 @@
             this.lblContraseña.Location = new System.Drawing.Point(29, 340);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(105, 20);
+            this.lblContraseña.Size = new System.Drawing.Size(85, 17);
             this.lblContraseña.TabIndex = 2;
             this.lblContraseña.Text = "Contraseña:";
             // 
@@ -82,7 +82,7 @@
             this.lblNombreCompleto.Location = new System.Drawing.Point(29, 385);
             this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(160, 20);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(133, 17);
             this.lblNombreCompleto.TabIndex = 4;
             this.lblNombreCompleto.Text = "Nombre Completo:\r\n";
             // 
@@ -103,7 +103,7 @@
             this.txtCodigoUsuario.Location = new System.Drawing.Point(279, 230);
             this.txtCodigoUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtCodigoUsuario.Name = "txtCodigoUsuario";
-            this.txtCodigoUsuario.Size = new System.Drawing.Size(58, 27);
+            this.txtCodigoUsuario.Size = new System.Drawing.Size(58, 23);
             this.txtCodigoUsuario.TabIndex = 6;
             this.txtCodigoUsuario.Tag = "pk_id_login";
             // 
@@ -112,7 +112,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(279, 286);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 27);
+            this.txtUsuario.Size = new System.Drawing.Size(200, 23);
             this.txtUsuario.TabIndex = 7;
             this.txtUsuario.Tag = "usuario_login";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
@@ -123,7 +123,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(200, 27);
+            this.txtContraseña.Size = new System.Drawing.Size(200, 23);
             this.txtContraseña.TabIndex = 8;
             this.txtContraseña.Tag = "contraseña_login";
             // 
@@ -132,7 +132,7 @@
             this.txtCodigoEmpleado.Location = new System.Drawing.Point(279, 385);
             this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(200, 27);
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(200, 23);
             this.txtCodigoEmpleado.TabIndex = 10;
             this.txtCodigoEmpleado.Tag = "nombreCompleto_login";
             // 
@@ -167,7 +167,7 @@
             this.rbtnDesabilitado.Location = new System.Drawing.Point(207, 27);
             this.rbtnDesabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnDesabilitado.Name = "rbtnDesabilitado";
-            this.rbtnDesabilitado.Size = new System.Drawing.Size(138, 24);
+            this.rbtnDesabilitado.Size = new System.Drawing.Size(105, 20);
             this.rbtnDesabilitado.TabIndex = 8;
             this.rbtnDesabilitado.TabStop = true;
             this.rbtnDesabilitado.Text = "Deshabilitado";
@@ -180,7 +180,7 @@
             this.rbtnHabilitado.Location = new System.Drawing.Point(24, 27);
             this.rbtnHabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnHabilitado.Name = "rbtnHabilitado";
-            this.rbtnHabilitado.Size = new System.Drawing.Size(110, 24);
+            this.rbtnHabilitado.Size = new System.Drawing.Size(85, 20);
             this.rbtnHabilitado.TabIndex = 7;
             this.rbtnHabilitado.TabStop = true;
             this.rbtnHabilitado.Text = "Habilitado";
@@ -193,14 +193,14 @@
             this.txtEstado.Location = new System.Drawing.Point(33, 444);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(65, 27);
+            this.txtEstado.Size = new System.Drawing.Size(65, 23);
             this.txtEstado.TabIndex = 19;
             this.txtEstado.Tag = "estado_login";
             this.txtEstado.Visible = false;
             // 
             // frmMantenimientoUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1345, 549);
@@ -220,7 +220,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.Name = "frmMantenimientoUsuario";
-            this.Text = "frmMantenimientoUsuario";
+            this.Text = "0002-Mantenimiento Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.dtlRegistroUsuario)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();

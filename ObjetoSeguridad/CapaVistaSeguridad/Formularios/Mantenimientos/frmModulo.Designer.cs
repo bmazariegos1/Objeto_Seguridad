@@ -50,7 +50,7 @@
             this.txtDescripcionModulo.Location = new System.Drawing.Point(281, 321);
             this.txtDescripcionModulo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtDescripcionModulo.Name = "txtDescripcionModulo";
-            this.txtDescripcionModulo.Size = new System.Drawing.Size(198, 27);
+            this.txtDescripcionModulo.Size = new System.Drawing.Size(198, 23);
             this.txtDescripcionModulo.TabIndex = 27;
             this.txtDescripcionModulo.Tag = "descripcion_modulo";
             // 
@@ -60,7 +60,7 @@
             this.lblCodigoModulo.Location = new System.Drawing.Point(29, 221);
             this.lblCodigoModulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCodigoModulo.Name = "lblCodigoModulo";
-            this.lblCodigoModulo.Size = new System.Drawing.Size(72, 20);
+            this.lblCodigoModulo.Size = new System.Drawing.Size(61, 17);
             this.lblCodigoModulo.TabIndex = 26;
             this.lblCodigoModulo.Text = "Codigo:";
             this.lblCodigoModulo.Click += new System.EventHandler(this.lb_codigo_aplicacion_Click);
@@ -71,7 +71,7 @@
             this.lblRegistroAplicacion.Location = new System.Drawing.Point(586, 189);
             this.lblRegistroAplicacion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRegistroAplicacion.Name = "lblRegistroAplicacion";
-            this.lblRegistroAplicacion.Size = new System.Drawing.Size(151, 20);
+            this.lblRegistroAplicacion.Size = new System.Drawing.Size(124, 17);
             this.lblRegistroAplicacion.TabIndex = 25;
             this.lblRegistroAplicacion.Text = "Registros modulo:";
             this.lblRegistroAplicacion.Click += new System.EventHandler(this.lb_registros_aplicacion_Click);
@@ -92,7 +92,7 @@
             this.txtNombreModulo.Location = new System.Drawing.Point(281, 268);
             this.txtNombreModulo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtNombreModulo.Name = "txtNombreModulo";
-            this.txtNombreModulo.Size = new System.Drawing.Size(198, 27);
+            this.txtNombreModulo.Size = new System.Drawing.Size(198, 23);
             this.txtNombreModulo.TabIndex = 19;
             this.txtNombreModulo.Tag = "nombre_modulo";
             this.txtNombreModulo.TextChanged += new System.EventHandler(this.txtNombreModulo_TextChanged);
@@ -102,7 +102,7 @@
             this.txtCodigoModulo.Location = new System.Drawing.Point(281, 215);
             this.txtCodigoModulo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtCodigoModulo.Name = "txtCodigoModulo";
-            this.txtCodigoModulo.Size = new System.Drawing.Size(198, 27);
+            this.txtCodigoModulo.Size = new System.Drawing.Size(198, 23);
             this.txtCodigoModulo.TabIndex = 18;
             this.txtCodigoModulo.Tag = "pk_id_modulo";
             // 
@@ -112,7 +112,7 @@
             this.lblDescripcionModulo.Location = new System.Drawing.Point(29, 321);
             this.lblDescripcionModulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDescripcionModulo.Name = "lblDescripcionModulo";
-            this.lblDescripcionModulo.Size = new System.Drawing.Size(197, 20);
+            this.lblDescripcionModulo.Size = new System.Drawing.Size(163, 17);
             this.lblDescripcionModulo.TabIndex = 17;
             this.lblDescripcionModulo.Text = "Descripcion de modulo:";
             this.lblDescripcionModulo.Click += new System.EventHandler(this.lb_infome_de_aplicacion_Click);
@@ -123,7 +123,7 @@
             this.lblNombreModulo.Location = new System.Drawing.Point(29, 268);
             this.lblNombreModulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombreModulo.Name = "lblNombreModulo";
-            this.lblNombreModulo.Size = new System.Drawing.Size(166, 20);
+            this.lblNombreModulo.Size = new System.Drawing.Size(139, 17);
             this.lblNombreModulo.TabIndex = 16;
             this.lblNombreModulo.Text = "Nombre de modulo:";
             this.lblNombreModulo.Click += new System.EventHandler(this.lb_nombre_de_aplicacion_Click);
@@ -144,7 +144,7 @@
             this.txtEstado.Location = new System.Drawing.Point(33, 390);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(65, 27);
+            this.txtEstado.Size = new System.Drawing.Size(65, 23);
             this.txtEstado.TabIndex = 30;
             this.txtEstado.Tag = "estado_modulo";
             this.txtEstado.Visible = false;
@@ -169,7 +169,7 @@
             this.rbtnDesabilitado.Location = new System.Drawing.Point(207, 27);
             this.rbtnDesabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnDesabilitado.Name = "rbtnDesabilitado";
-            this.rbtnDesabilitado.Size = new System.Drawing.Size(138, 24);
+            this.rbtnDesabilitado.Size = new System.Drawing.Size(105, 20);
             this.rbtnDesabilitado.TabIndex = 8;
             this.rbtnDesabilitado.TabStop = true;
             this.rbtnDesabilitado.Text = "Deshabilitado";
@@ -182,7 +182,7 @@
             this.rbtnHabilitado.Location = new System.Drawing.Point(59, 28);
             this.rbtnHabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnHabilitado.Name = "rbtnHabilitado";
-            this.rbtnHabilitado.Size = new System.Drawing.Size(110, 24);
+            this.rbtnHabilitado.Size = new System.Drawing.Size(85, 20);
             this.rbtnHabilitado.TabIndex = 7;
             this.rbtnHabilitado.TabStop = true;
             this.rbtnHabilitado.Text = "Habilitado";
@@ -191,7 +191,7 @@
             // 
             // frmModulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1577, 498);
@@ -210,7 +210,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmModulo";
-            this.Text = "frmModulo";
+            this.Text = "0008-Modulo";
             ((System.ComponentModel.ISupportInitialize)(this.dtlModulo)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
