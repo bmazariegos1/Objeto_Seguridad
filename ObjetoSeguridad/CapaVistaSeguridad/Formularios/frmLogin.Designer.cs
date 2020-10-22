@@ -175,7 +175,7 @@
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOGIN";
+            this.Text = "0001-LOGIN";
             ((System.ComponentModel.ISupportInitialize)(this.pbxUsuario)).EndInit();
             this.pnlBlanco.ResumeLayout(false);
             this.pnlBlanco.PerformLayout();

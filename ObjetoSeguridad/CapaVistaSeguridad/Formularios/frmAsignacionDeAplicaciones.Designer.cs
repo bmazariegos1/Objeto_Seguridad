@@ -400,7 +400,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAsignacionDeAplicaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAsignacionDeAplicaciones";
+            this.Text = "0006-Asignacion De Aplicaciones";
             this.Load += new System.EventHandler(this.frmAsignacionDeAplicaciones_Load);
             this.gbxUsuarioSelect.ResumeLayout(false);
             this.gbxUsuarioSelect.PerformLayout();

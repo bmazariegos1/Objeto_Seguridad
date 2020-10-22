@@ -115,25 +115,25 @@
             // 
             // lblFecha
             // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(521, 15);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(56, 20);
+            this.lblFecha.Size = new System.Drawing.Size(46, 17);
             this.lblFecha.TabIndex = 5;
             this.lblFecha.Text = "Fecha";
             // 
             // lblHora
             // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.Location = new System.Drawing.Point(707, 15);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(47, 20);
+            this.lblHora.Size = new System.Drawing.Size(39, 17);
             this.lblHora.TabIndex = 4;
             this.lblHora.Text = "Hora";
             // 
@@ -172,31 +172,31 @@
             // 
             // lblBuscar
             // 
-            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(740, 223);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(62, 20);
+            this.lblBuscar.Size = new System.Drawing.Size(50, 17);
             this.lblBuscar.TabIndex = 15;
             this.lblBuscar.Text = "Buscar";
             // 
             // cmbBuscar
             // 
-            this.cmbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.cmbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBuscar.FormattingEnabled = true;
             this.cmbBuscar.Location = new System.Drawing.Point(829, 220);
             this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(401, 28);
+            this.cmbBuscar.Size = new System.Drawing.Size(401, 25);
             this.cmbBuscar.TabIndex = 14;
             this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
             // 
             // gbxIngresoDatos
             // 
-            this.gbxIngresoDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.gbxIngresoDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxIngresoDatos.BackColor = System.Drawing.Color.White;
             this.gbxIngresoDatos.Controls.Add(this.cmbModulo);
@@ -223,7 +223,7 @@
             this.cmbModulo.FormattingEnabled = true;
             this.cmbModulo.Location = new System.Drawing.Point(138, 106);
             this.cmbModulo.Name = "cmbModulo";
-            this.cmbModulo.Size = new System.Drawing.Size(223, 28);
+            this.cmbModulo.Size = new System.Drawing.Size(223, 25);
             this.cmbModulo.TabIndex = 7;
             // 
             // lblModulo
@@ -231,7 +231,7 @@
             this.lblModulo.AutoSize = true;
             this.lblModulo.Location = new System.Drawing.Point(43, 106);
             this.lblModulo.Name = "lblModulo";
-            this.lblModulo.Size = new System.Drawing.Size(69, 20);
+            this.lblModulo.Size = new System.Drawing.Size(57, 17);
             this.lblModulo.TabIndex = 6;
             this.lblModulo.Text = "Modulo";
             // 
@@ -239,7 +239,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(579, 42);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(229, 27);
+            this.txtDescripcion.Size = new System.Drawing.Size(229, 23);
             this.txtDescripcion.TabIndex = 5;
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
@@ -247,7 +247,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(138, 42);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(223, 27);
+            this.txtNombre.Size = new System.Drawing.Size(223, 23);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -256,7 +256,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(424, 45);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(104, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(85, 17);
             this.lblDescripcion.TabIndex = 3;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -265,7 +265,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(43, 45);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(73, 20);
+            this.lblNombre.Size = new System.Drawing.Size(61, 17);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -310,8 +310,8 @@
             // dgvVistaDatos
             // 
             this.dgvVistaDatos.AllowUserToAddRows = false;
-            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaDatos.BackgroundColor = System.Drawing.Color.White;
@@ -334,13 +334,13 @@
             this.cmsEliminar,
             this.cmsModificar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(158, 52);
+            this.cmsEM.Size = new System.Drawing.Size(140, 48);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(157, 24);
+            this.cmsEliminar.Size = new System.Drawing.Size(139, 22);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -348,7 +348,7 @@
             // 
             this.cmsModificar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsModificar.Name = "cmsModificar";
-            this.cmsModificar.Size = new System.Drawing.Size(157, 24);
+            this.cmsModificar.Size = new System.Drawing.Size(139, 22);
             this.cmsModificar.Text = "Actualizar";
             this.cmsModificar.Click += new System.EventHandler(this.cmsModificar_Click);
             // 
@@ -364,7 +364,7 @@
             // 
             // frmAplicativo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 717);
             this.Controls.Add(this.pnlCuerpo);
@@ -377,7 +377,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAplicativo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aplicativo";
+            this.Text = "0003-Mantenimiento Aplicación";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAplicativo_FormClosing);
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

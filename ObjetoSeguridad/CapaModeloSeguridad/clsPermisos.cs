@@ -67,10 +67,8 @@ namespace CapaModeloSeguridad
                                                         "FROM PERMISO PER INNER JOIN APLICACION_PERFIL APP " +
                                                         "ON PER.pk_id_permiso = APP.fk_idpermiso_aplicacion_perfil INNER JOIN APLICACION AP " +
                                                         "ON AP.pk_id_aplicacion = APP.fk_idaplicacion_aplicacion_perfil INNER JOIN PERFIL P " +
-                                                        "ON APP.fk_idperfil_aplicacion_perfil = P.pk_id_perfil INNER JOIN PERFIL_USUARIO PEU " +
-                                                        "ON PEU.pk_id_perfil_usuario = P.pk_id_perfil INNER JOIN LOGIN LO " +
-                                                        "ON LO.pk_id_login = PEU.fk_idperfil_perfil_usuario " +
-                                                        "WHERE APP.fk_idaplicacion_aplicacion_perfil = "+ strAplicacion + " and LO.pk_id_login = "+ strCodigo + " and " +
+                                                        "ON APP.fk_idperfil_aplicacion_perfil = P.pk_id_perfil "+
+                                                        "WHERE APP.fk_idaplicacion_aplicacion_perfil = "+ strAplicacion + " and " +
                                                         "APP.fk_idperfil_aplicacion_perfil = (SELECT PER.pk_id_perfil FROM PERFIL PER INNER JOIN PERFIL_USUARIO PEUS " +
                                                         "ON PEUS.fk_idperfil_perfil_usuario = PER.pk_id_perfil  INNER JOIN LOGIN LOG " +
                                                         "ON PEUS.fk_idusuario_perfil_usuario = LOG.pk_id_login " +
