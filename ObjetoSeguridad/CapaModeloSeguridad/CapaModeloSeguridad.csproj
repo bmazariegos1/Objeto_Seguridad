@@ -43,11 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aplicacion.cs" />
+    <Compile Include="clsAplicativo.cs" />
     <Compile Include="clsAsignacionDeAplicaciones.cs" />
     <Compile Include="ClsModeloBitacora.cs" />
     <Compile Include="clsModeloPerfil.cs" />
     <Compile Include="clsPermisos.cs" />
     <Compile Include="clsConexion.cs" />
+    <Compile Include="clsSentencia.cs" />
     <Compile Include="clsVariableGlobal.cs" />
     <Compile Include="clsVariableUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
