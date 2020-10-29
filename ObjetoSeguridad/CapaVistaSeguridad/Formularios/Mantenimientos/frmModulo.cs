@@ -87,11 +87,12 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
                 
             }
             navegadorModulo.control = lista;
+            navegadorModulo.formulario = this;
             navegadorModulo.DatosActualizar = dtlModulo;
-            navegadorModulo.actualizarData();
-            navegadorModulo.cargar();
-            navegadorModulo.ayudaRuta = "AyudasSeguridad/Mantenimiento_Perfil/Mantenimiento_Perfil.chm";
-            navegadorModulo.ruta = "Mantenimiento-Perfil.html";
+            navegadorModulo.procActualizarData();
+            navegadorModulo.procCargar();
+            navegadorModulo.ayudaRuta = "AyudasSeguridad/Modulo/ayuda.chm";
+            navegadorModulo.ruta = "Ayuda-Modulo.html";
             
         }
 

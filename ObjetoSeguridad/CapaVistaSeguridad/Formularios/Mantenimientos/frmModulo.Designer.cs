@@ -36,11 +36,11 @@
             this.txtCodigoModulo = new System.Windows.Forms.TextBox();
             this.lblDescripcionModulo = new System.Windows.Forms.Label();
             this.lblNombreModulo = new System.Windows.Forms.Label();
-            this.navegadorModulo = new CapaVistaNavegador.Navegador();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
             this.rbtnDesabilitado = new System.Windows.Forms.RadioButton();
             this.rbtnHabilitado = new System.Windows.Forms.RadioButton();
+            this.navegadorModulo = new CapaVistaNavegador.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dtlModulo)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             // lblRegistroAplicacion
             // 
             this.lblRegistroAplicacion.AutoSize = true;
-            this.lblRegistroAplicacion.Location = new System.Drawing.Point(586, 189);
+            this.lblRegistroAplicacion.Location = new System.Drawing.Point(523, 189);
             this.lblRegistroAplicacion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRegistroAplicacion.Name = "lblRegistroAplicacion";
             this.lblRegistroAplicacion.Size = new System.Drawing.Size(124, 17);
@@ -79,7 +79,7 @@
             // dtlModulo
             // 
             this.dtlModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtlModulo.Location = new System.Drawing.Point(743, 189);
+            this.dtlModulo.Location = new System.Drawing.Point(650, 189);
             this.dtlModulo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dtlModulo.Name = "dtlModulo";
             this.dtlModulo.RowHeadersWidth = 51;
@@ -127,16 +127,6 @@
             this.lblNombreModulo.TabIndex = 16;
             this.lblNombreModulo.Text = "Nombre de modulo:";
             this.lblNombreModulo.Click += new System.EventHandler(this.lb_nombre_de_aplicacion_Click);
-            // 
-            // navegadorModulo
-            // 
-            this.navegadorModulo.BackColor = System.Drawing.Color.Transparent;
-            this.navegadorModulo.Location = new System.Drawing.Point(16, 16);
-            this.navegadorModulo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.navegadorModulo.Name = "navegadorModulo";
-            this.navegadorModulo.Size = new System.Drawing.Size(1520, 161);
-            this.navegadorModulo.TabIndex = 28;
-            this.navegadorModulo.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // txtEstado
             // 
@@ -189,15 +179,25 @@
             this.rbtnHabilitado.UseVisualStyleBackColor = true;
             this.rbtnHabilitado.CheckedChanged += new System.EventHandler(this.rbtnHabilitado_CheckedChanged);
             // 
+            // navegadorModulo
+            // 
+            this.navegadorModulo.BackColor = System.Drawing.Color.Transparent;
+            this.navegadorModulo.Location = new System.Drawing.Point(13, 13);
+            this.navegadorModulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegadorModulo.Name = "navegadorModulo";
+            this.navegadorModulo.Size = new System.Drawing.Size(1418, 117);
+            this.navegadorModulo.TabIndex = 31;
+            this.navegadorModulo.Load += new System.EventHandler(this.navegador1_Load);
+            // 
             // frmModulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1577, 498);
+            this.ClientSize = new System.Drawing.Size(1422, 498);
+            this.Controls.Add(this.navegadorModulo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.gbxEstado);
-            this.Controls.Add(this.navegadorModulo);
             this.Controls.Add(this.txtDescripcionModulo);
             this.Controls.Add(this.lblCodigoModulo);
             this.Controls.Add(this.lblRegistroAplicacion);
@@ -228,10 +228,10 @@
         private System.Windows.Forms.TextBox txtCodigoModulo;
         private System.Windows.Forms.Label lblDescripcionModulo;
         private System.Windows.Forms.Label lblNombreModulo;
-        private CapaVistaNavegador.Navegador navegadorModulo;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.GroupBox gbxEstado;
         private System.Windows.Forms.RadioButton rbtnDesabilitado;
         private System.Windows.Forms.RadioButton rbtnHabilitado;
+        private CapaVistaNavegador.Navegador navegadorModulo;
     }
 }

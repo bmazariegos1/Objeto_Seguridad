@@ -50,41 +50,46 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
             foreach (Control C in this.Controls)
             {
+               
                 if (C.Tag != null)
                 {
+                    if(C.Tag.ToString() == "saltar")
+                    {
+
+                    }
+                    else
+                    {
+                        if (C is TextBox)
+                        {
+                            lista.Add(C);
+
+                        }
+                        else if (C is ComboBox)
+                        {
+                            lista.Add(C);
+
+                        }
+                        else if (C is DateTimePicker)
+                        {
+                            lista.Add(C);
+
+                        }
+                    }
                     //  MessageBox.Show(""+C.Name)
-                    if (C is TextBox)
-                    {
-                        lista.Add(C);
-
-                    }
-                    else if (C is ComboBox)
-                    {
-                        lista.Add(C);
-
-                    }
-                    else if (C is DateTimePicker)
-                    {
-                        lista.Add(C);
-
-                    }
+                    
                 }
 
 
             }
 
             navegadorMUsuario.control = lista;
+            navegadorMUsuario.formulario = this;
             navegadorMUsuario.DatosActualizar = dtlRegistroUsuario;
-            navegadorMUsuario.actualizarData();
-            navegadorMUsuario.cargar();
-            navegadorMUsuario.ayudaRuta = "AyudasSeguridad/Mantenimiento_Perfil/Mantenimiento_Perfil.chm";
-            navegadorMUsuario.ruta = "Mantenimiento-Perfil.html";
-            
-
-        }
-
-        private void gbxEstado_Enter(object sender, EventArgs e)
-        {
+            navegadorMUsuario.procActualizarData();
+            navegadorMUsuario.procCargar();
+            navegadorMUsuario.ayudaRuta = "AyudasSeguridad/Usuario/ayuda.chm";
+            navegadorMUsuario.ruta = "Ayuda-Usuario.html";
+            habilitar();
 
         }
 
@@ -101,6 +106,49 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "1";
+            habilitar();
+        }
+
+        private void frmMantenimientoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+           if(txtPassword.Text != "")
+            {
+                var key = "b14ca5898a4e4133bbce2ea2315a1916";
+                clcEncriptar encriptar = new clcEncriptar();
+                string Encriptado = encriptar.funcEncryptString(key, txtPassword.Text);
+                txtEncriptado.Text = Encriptado;
+            }
+            
+        }
+
+        private void txtEncriptado_TextChanged_1(object sender, EventArgs e)
+        {
+            if(txtEncriptado.Text != "")
+            {
+                var key = "b14ca5898a4e4133bbce2ea2315a1916";
+                clcEncriptar encriptar = new clcEncriptar();
+                string Desencriptado = encriptar.funcDecryptString(key, txtEncriptado.Text);
+                txtPassword.Text = Desencriptado;
+            }
+            
+        }
+        public void habilitar()
+        {
+            if(txtUsuario.Enabled == true)
+            {
+                txtPassword.Enabled = true;
+            }
+            else
+            {
+                txtPassword.Enabled = false;
+                txtPassword.Text = "";
+            }
         }
     }
 }

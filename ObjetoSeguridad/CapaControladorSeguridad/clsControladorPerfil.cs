@@ -92,5 +92,10 @@ namespace CapaControladorSeguridad
             string Consulta = "UPDATE permiso SET insertar_permiso = 0, modificar_permiso = 0, eliminar_permiso = 0, consultar_permiso = 0, imprimir_permiso =  0 WHERE pk_id_permiso = " + CodPermiso + ";";
             return Modelo.Modificar(Consulta);
         }
+        public OdbcDataReader Modificar_Contraseña(string Usuario, string Contraseña)
+        {
+            string Consulta = "UPDATE login SET contraseña_login = '" + Contraseña + "' where usuario_login = '" + Usuario + "';";
+            return Modelo.Modificar(Consulta);
+        }
     }
 }

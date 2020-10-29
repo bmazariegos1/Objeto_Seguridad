@@ -4,7 +4,6 @@ using System;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
-
 namespace CapaVistaSeguridad
 {
     public partial class frmLogin : Form
@@ -38,11 +37,16 @@ namespace CapaVistaSeguridad
             return txtUsuario.Text;
         }
         int contador = 0;
+        
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            var key = "b14ca5898a4e4133bbce2ea2315a1916";
             if (contador <= 3)
             {
-                if (controlador.Login(txtUsuario.Text, txtPassword.Text) == 1)
+                clcEncriptar encriptar = new clcEncriptar();
+                string password = encriptar.funcEncryptString(key, txtPassword.Text);
+                Console.WriteLine(password);
+                if (controlador.Login(txtUsuario.Text, password) == 1)
                 {
                     //para registro de usuario en bitacora
                     cn.user(txtUsuario.Text);

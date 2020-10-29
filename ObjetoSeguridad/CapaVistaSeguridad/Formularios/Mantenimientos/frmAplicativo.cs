@@ -221,7 +221,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         // boton para visualizar la ayudas al usuario 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "AyudasReporteador/AyudasObjetoReporteador.chm", "Aplicativo.html");
+            Help.ShowHelp(this, "AyudasSeguridad/Aplicativo/Ayuda.chm", "Ayuda-Aplicativo.html");
         }
 
         private void cmbBuscar_SelectedIndexChanged(object sender, EventArgs e)

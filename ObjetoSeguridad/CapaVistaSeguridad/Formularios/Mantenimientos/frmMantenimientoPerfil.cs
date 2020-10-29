@@ -21,7 +21,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
             InitializeComponent();
             UsuarioAplicacion = usuario;
-            navegador.Usuario = UsuarioAplicacion;
+            navegador1.Usuario = UsuarioAplicacion;
             inicio();
         }
 
@@ -57,9 +57,9 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //List<Control> lista = new List<Control>();
-            navegador.aplicacion = 4;
-            navegador.tbl = "perfil";
-            navegador.campoEstado = "estado_perfil";
+            navegador1.aplicacion = 4;
+            navegador1.tbl = "perfil";
+            navegador1.campoEstado = "estado_perfil";
 
             //se agregan los componentes del formulario a la lista tipo control
 
@@ -88,12 +88,14 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
             }
 
-            navegador.control = lista;
-            navegador.DatosActualizar = dgvperfil;
-            navegador.actualizarData();
-            navegador.cargar();
-            navegador.ayudaRuta = "AyudasSeguridad/Mantenimiento_Perfil/Mantenimiento_Perfil.chm";
-            navegador.ruta = "Mantenimiento-Perfil.html";
+            navegador1.control = lista;
+            navegador1.formulario = this;
+            navegador1.DatosActualizar = dgvperfil;
+            navegador1.procActualizarData();
+            navegador1.procCargar();
+            navegador1.ayudaRuta = "AyudasSeguridad/Mantenimiento_Perfil/Mantenimiento_Perfil.chm";
+            navegador1.ruta = "Mantenimiento-Perfil.html";
+
         }
 
         private void rbtnHabilitado_CheckedChanged(object sender, EventArgs e)
