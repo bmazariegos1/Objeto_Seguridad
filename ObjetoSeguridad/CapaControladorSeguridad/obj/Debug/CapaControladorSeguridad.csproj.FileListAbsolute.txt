@@ -88,3 +88,12 @@ C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSe
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.dll
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csprojAssemblyReference.cache
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CoreCompileInputs.cache
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
+D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb

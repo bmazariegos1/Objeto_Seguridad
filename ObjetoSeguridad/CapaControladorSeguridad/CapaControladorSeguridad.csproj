@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clcEncriptar.cs" />
     <Compile Include="ClsControladorBitacora.cs" />
     <Compile Include="clsControladorPerfil.cs" />
     <Compile Include="clsControlAplicativo.cs" />

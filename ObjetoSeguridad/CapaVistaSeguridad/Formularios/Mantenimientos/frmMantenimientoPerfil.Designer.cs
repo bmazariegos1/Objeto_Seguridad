@@ -39,7 +39,7 @@
             this.txtNombrePerfil = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.navegador = new CapaVistaNavegador.Navegador();
+            this.navegador1 = new CapaVistaNavegador.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dgvperfil)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
@@ -156,22 +156,22 @@
             this.txtEstado.Tag = "estado_perfil";
             this.txtEstado.Visible = false;
             // 
-            // navegador
+            // navegador1
             // 
-            this.navegador.BackColor = System.Drawing.Color.Transparent;
-            this.navegador.Location = new System.Drawing.Point(14, 10);
-            this.navegador.Name = "navegador";
-            this.navegador.Size = new System.Drawing.Size(929, 105);
-            this.navegador.TabIndex = 19;
-            this.navegador.Load += new System.EventHandler(this.Navegador_Load);
+            this.navegador1.BackColor = System.Drawing.Color.Transparent;
+            this.navegador1.Location = new System.Drawing.Point(17, 17);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1059, 98);
+            this.navegador1.TabIndex = 19;
+            this.navegador1.Load += new System.EventHandler(this.Navegador_Load);
             // 
             // frmMantenimientoPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(952, 440);
-            this.Controls.Add(this.navegador);
+            this.ClientSize = new System.Drawing.Size(1089, 440);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombrePerfil);
@@ -182,7 +182,6 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombrePerfil);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmMantenimientoPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0004-Mantenimiento Perfil";
@@ -207,6 +206,6 @@
         private System.Windows.Forms.TextBox txtNombrePerfil;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtEstado;
-        private CapaVistaNavegador.Navegador navegador;
+        private CapaVistaNavegador.Navegador navegador1;
     }
 }

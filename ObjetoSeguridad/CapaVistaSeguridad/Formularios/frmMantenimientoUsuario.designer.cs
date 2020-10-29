@@ -33,15 +33,16 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblNombreCompleto = new System.Windows.Forms.Label();
             this.dtlRegistroUsuario = new System.Windows.Forms.DataGridView();
-            this.txtCodigoUsuario = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
-            this.navegadorMUsuario = new CapaVistaNavegador.Navegador();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
             this.rbtnDesabilitado = new System.Windows.Forms.RadioButton();
             this.rbtnHabilitado = new System.Windows.Forms.RadioButton();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEncriptado = new System.Windows.Forms.TextBox();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.navegadorMUsuario = new CapaVistaNavegador.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dtlRegistroUsuario)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(29, 340);
+            this.lblContraseña.Location = new System.Drawing.Point(29, 327);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(85, 17);
@@ -95,56 +96,8 @@
             this.dtlRegistroUsuario.RowHeadersWidth = 51;
             this.dtlRegistroUsuario.RowTemplate.Height = 24;
             this.dtlRegistroUsuario.Size = new System.Drawing.Size(582, 251);
-            this.dtlRegistroUsuario.TabIndex = 5;
+            this.dtlRegistroUsuario.TabIndex = 10;
             this.dtlRegistroUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtl_registro_usuario_CellContentClick);
-            // 
-            // txtCodigoUsuario
-            // 
-            this.txtCodigoUsuario.Location = new System.Drawing.Point(279, 230);
-            this.txtCodigoUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtCodigoUsuario.Name = "txtCodigoUsuario";
-            this.txtCodigoUsuario.Size = new System.Drawing.Size(58, 23);
-            this.txtCodigoUsuario.TabIndex = 6;
-            this.txtCodigoUsuario.Tag = "pk_id_login";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(279, 286);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 23);
-            this.txtUsuario.TabIndex = 7;
-            this.txtUsuario.Tag = "usuario_login";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(279, 332);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(200, 23);
-            this.txtContraseña.TabIndex = 8;
-            this.txtContraseña.Tag = "contraseña_login";
-            // 
-            // txtCodigoEmpleado
-            // 
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(279, 385);
-            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(200, 23);
-            this.txtCodigoEmpleado.TabIndex = 10;
-            this.txtCodigoEmpleado.Tag = "nombreCompleto_login";
-            // 
-            // navegadorMUsuario
-            // 
-            this.navegadorMUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.navegadorMUsuario.Location = new System.Drawing.Point(4, 32);
-            this.navegadorMUsuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.navegadorMUsuario.Name = "navegadorMUsuario";
-            this.navegadorMUsuario.Size = new System.Drawing.Size(1532, 119);
-            this.navegadorMUsuario.TabIndex = 16;
-            this.navegadorMUsuario.Load += new System.EventHandler(this.navegadorMUsuario_Load);
             // 
             // gbxEstado
             // 
@@ -156,10 +109,9 @@
             this.gbxEstado.Name = "gbxEstado";
             this.gbxEstado.Padding = new System.Windows.Forms.Padding(4);
             this.gbxEstado.Size = new System.Drawing.Size(388, 80);
-            this.gbxEstado.TabIndex = 17;
+            this.gbxEstado.TabIndex = 7;
             this.gbxEstado.TabStop = false;
             this.gbxEstado.Text = "Estado";
-            this.gbxEstado.Enter += new System.EventHandler(this.gbxEstado_Enter);
             // 
             // rbtnDesabilitado
             // 
@@ -187,30 +139,87 @@
             this.rbtnHabilitado.UseVisualStyleBackColor = true;
             this.rbtnHabilitado.CheckedChanged += new System.EventHandler(this.rbtnHabilitado_CheckedChanged);
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(269, 227);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(66, 23);
+            this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.Tag = "pk_id_login";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(269, 280);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(168, 23);
+            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.Tag = "usuario_login";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // txtEncriptado
+            // 
+            this.txtEncriptado.Enabled = false;
+            this.txtEncriptado.Location = new System.Drawing.Point(269, 353);
+            this.txtEncriptado.Name = "txtEncriptado";
+            this.txtEncriptado.Size = new System.Drawing.Size(168, 23);
+            this.txtEncriptado.TabIndex = 3;
+            this.txtEncriptado.Tag = "contraseña_login";
+            this.txtEncriptado.Visible = false;
+            this.txtEncriptado.TextChanged += new System.EventHandler(this.txtEncriptado_TextChanged_1);
+            // 
+            // txtNombreCompleto
+            // 
+            this.txtNombreCompleto.Location = new System.Drawing.Point(269, 382);
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.Size = new System.Drawing.Size(168, 23);
+            this.txtNombreCompleto.TabIndex = 4;
+            this.txtNombreCompleto.Tag = "nombreCompleto_login";
+            // 
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(33, 444);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEstado.Location = new System.Drawing.Point(25, 456);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(65, 23);
-            this.txtEstado.TabIndex = 19;
+            this.txtEstado.Size = new System.Drawing.Size(64, 23);
+            this.txtEstado.TabIndex = 5;
             this.txtEstado.Tag = "estado_login";
             this.txtEstado.Visible = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(269, 324);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(168, 23);
+            this.txtPassword.TabIndex = 17;
+            this.txtPassword.Tag = "saltar";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
+            // navegadorMUsuario
+            // 
+            this.navegadorMUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.navegadorMUsuario.Location = new System.Drawing.Point(13, 33);
+            this.navegadorMUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegadorMUsuario.Name = "navegadorMUsuario";
+            this.navegadorMUsuario.Size = new System.Drawing.Size(1404, 124);
+            this.navegadorMUsuario.TabIndex = 18;
+            this.navegadorMUsuario.Load += new System.EventHandler(this.navegadorMUsuario_Load);
             // 
             // frmMantenimientoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1345, 549);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.gbxEstado);
+            this.ClientSize = new System.Drawing.Size(1426, 549);
             this.Controls.Add(this.navegadorMUsuario);
-            this.Controls.Add(this.txtCodigoEmpleado);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtNombreCompleto);
+            this.Controls.Add(this.txtEncriptado);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtCodigoUsuario);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.gbxEstado);
             this.Controls.Add(this.dtlRegistroUsuario);
             this.Controls.Add(this.lblNombreCompleto);
             this.Controls.Add(this.lblContraseña);
@@ -221,6 +230,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMantenimientoUsuario";
             this.Text = "0002-Mantenimiento Usuario";
+            this.Load += new System.EventHandler(this.frmMantenimientoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtlRegistroUsuario)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
@@ -236,14 +246,15 @@
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblNombreCompleto;
         private System.Windows.Forms.DataGridView dtlRegistroUsuario;
-        private System.Windows.Forms.TextBox txtCodigoUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtCodigoEmpleado;
-        private CapaVistaNavegador.Navegador navegadorMUsuario;
         private System.Windows.Forms.GroupBox gbxEstado;
         private System.Windows.Forms.RadioButton rbtnDesabilitado;
         private System.Windows.Forms.RadioButton rbtnHabilitado;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEncriptado;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtPassword;
+        private CapaVistaNavegador.Navegador navegadorMUsuario;
     }
 }
