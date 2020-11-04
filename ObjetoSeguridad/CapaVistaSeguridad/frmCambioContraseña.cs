@@ -23,7 +23,7 @@ namespace CapaVistaSeguridad
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             var key = "b14ca5898a4e4133bbce2ea2315a1916";
-            clcEncriptar encriptar = new clcEncriptar();
+            clsEncriptar encriptar = new clsEncriptar();
             clsControladorPerfil controladorPerfil = new clsControladorPerfil();
             if (txtNuevaContraseña.Text == "" || txtConfirmarContraseña.Text == "")
             {
@@ -34,7 +34,7 @@ namespace CapaVistaSeguridad
                 if(txtNuevaContraseña.Text == txtConfirmarContraseña.Text)
                 {
                     string password = encriptar.funcEncryptString(key, txtConfirmarContraseña.Text);
-                    controladorPerfil.Modificar_Contraseña(Usuario, password);
+                    controladorPerfil.funcModificar_Contraseña(Usuario, password);
                     MessageBox.Show("Contraseña Actualizada Exitozamente");
                     txtNuevaContraseña.Text = "";
                     txtConfirmarContraseña.Text = "";
@@ -61,6 +61,11 @@ namespace CapaVistaSeguridad
                 txtConfirmarContraseña.PasswordChar = '*';
                 txtNuevaContraseña.PasswordChar = '*';
             }
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasSeguridad/AyudaContrasena/Ayuda.chm", "Cambio-de-Contraseña.html");
         }
     }
 }

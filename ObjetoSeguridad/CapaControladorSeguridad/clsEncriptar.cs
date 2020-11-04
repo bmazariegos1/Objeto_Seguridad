@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 
 namespace CapaControladorSeguridad
 {
-    public class clcEncriptar
+    public class clsEncriptar
     {
         //Funcion para encriptar
         public string funcEncryptString(string key, string plainText)

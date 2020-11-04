@@ -43,10 +43,10 @@ namespace CapaVistaSeguridad
             var key = "b14ca5898a4e4133bbce2ea2315a1916";
             if (contador <= 3)
             {
-                clcEncriptar encriptar = new clcEncriptar();
+                clsEncriptar encriptar = new clsEncriptar();
                 string password = encriptar.funcEncryptString(key, txtPassword.Text);
                 Console.WriteLine(password);
-                if (controlador.Login(txtUsuario.Text, password) == 1)
+                if (controlador.funcLogin(txtUsuario.Text, password) == 1)
                 {
                     //para registro de usuario en bitacora
                     cn.user(txtUsuario.Text);
@@ -67,7 +67,7 @@ namespace CapaVistaSeguridad
                 //para registro de usuario en bitacora  
                 cn.user(txtUsuario.Text);
                 cn.insert("Logeo erroneo bloqueo de Usuario", 1);
-                controlador.BloquearUsuario(txtUsuario.Text);
+                controlador.funcBloquearUsuario(txtUsuario.Text);
                 MessageBox.Show("A completado los intentos posibles, el usuario a sido Bloqueado por seguridad, contacte a su jefe inmediato.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             

@@ -21,12 +21,12 @@ namespace CapaControladorSeguridad
 
 
         // Metodo para insertar datos en el aplicativo 
-        public void insertarAplicativo(clsAplicativo aplicativo)
+        public void funcInsertarAplicativo(clsAplicativo aplicativo)
         {
             try
             {
                 string sComando = string.Format("INSERT INTO APLICACION(fk_id_modulo, nombre_aplicacion, descripcion_aplicacion, estado_aplicacion) VALUES ({0},'{1}','{2}',{3});", aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion,aplicativo.IEstado);
-                this.sentencia.ejecutarQuery(sComando);
+                this.sentencia.funcEjecutarQuery(sComando);
             }
             catch (Exception ex)
             {
@@ -37,12 +37,12 @@ namespace CapaControladorSeguridad
 
 
         // Metodos para modificar el aplicativo 
-        public void modificarAplicativo(clsAplicativo aplicativo)
+        public void funcModificarAplicativo(clsAplicativo aplicativo)
         {
             try
             {
                 string sComando = string.Format("UPDATE APLICACION SET fk_id_modulo={1}, nombre_aplicacion='{2}', descripcion_aplicacion='{3}' WHERE pk_id_aplicacion={0};", aplicativo.IIdAplicativo, aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion);
-                this.sentencia.ejecutarQuery(sComando);
+                this.sentencia.funcEjecutarQuery(sComando);
             }
             catch (Exception ex)
             {
@@ -52,12 +52,12 @@ namespace CapaControladorSeguridad
         }
 
         // Metodo para eliminar el aplicativo 
-        public void eliminarAplicativo(int iIDApp)
+        public void funcEliminarAplicativo(int iIDApp)
         {
             try
             {
                 string sComando = string.Format("UPDATE APLICATIVO SET estado_aplicacion=0 WHERE pk_id_aplicacion={0};", iIDApp.ToString());
-                this.sentencia.ejecutarQuery(sComando);
+                this.sentencia.funcEjecutarQuery(sComando);
             }
             catch (Exception ex)
             {
@@ -67,7 +67,7 @@ namespace CapaControladorSeguridad
         }
         
         //Metodo para obtener los datos del data table al datagridview
-        public DataTable obtenerTodo()
+        public DataTable funcObtenerTodo()
         {
             
             try
@@ -87,7 +87,7 @@ namespace CapaControladorSeguridad
         }
 
         // Metodo para obtener los datos en el combo box 
-        public DataTable obtenerCamposCombobox(string sCampo1, string sCampo2, string sTabla, string sEstado)
+        public DataTable funcObtenerCamposCombobox(string sCampo1, string sCampo2, string sTabla, string sEstado)
         {
             try
             {
@@ -106,7 +106,7 @@ namespace CapaControladorSeguridad
         }
 
         // metodos para realizar la busqueda por id 
-        public DataTable obtenerDatos(int iIDModulo)
+        public DataTable funcObtenerDatos(int iIDModulo)
         {
             try
             {

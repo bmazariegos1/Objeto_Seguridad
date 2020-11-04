@@ -13,57 +13,57 @@ namespace CapaControladorSeguridad
         clsAsignacionDeAplicaciones asignacionDeAplicaciones = new clsAsignacionDeAplicaciones();
 
 
-        public string NombreUsuario(string UserName)
+        public string funcNombreUsuario(string UserName)
         {
-            return asignacionDeAplicaciones.ObtenerNombreUsuario(UserName);
+            return asignacionDeAplicaciones.funcObtenerNombreUsuario(UserName);
         }
 
         //Obtener los datos de la tabla perfil
-        public OdbcDataReader consulta_perfiles()
+        public OdbcDataReader funcConsulta_perfiles()
         {
-            return asignacionDeAplicaciones.consultaperfil();
+            return asignacionDeAplicaciones.funcConsultaperfil();
         }
         //Obtener los datos de la tabla aplicacion.
-        public OdbcDataReader consulta_aplicaciones()
+        public OdbcDataReader funcConsulta_aplicaciones()
         {
-            return asignacionDeAplicaciones.consultaaplicacion();
+            return asignacionDeAplicaciones.funcConsultaaplicacion();
         }
-        public OdbcDataReader consulta_perfiles_asignados(string UserName)
+        public OdbcDataReader funcConsulta_perfiles_asignados(string UserName)
         {
-            return asignacionDeAplicaciones.consultaperfilasignado(UserName);
+            return asignacionDeAplicaciones.funcConsultaperfilasignado(UserName);
         }
         //Obtener los datos de la tabla aplicacion.
-        public OdbcDataReader consulta_aplicaciones_asignadas(string UserName)
+        public OdbcDataReader funcConsulta_aplicaciones_asignadas(string UserName)
         {
-            return asignacionDeAplicaciones.consultaaplicacionasignada(UserName);
+            return asignacionDeAplicaciones.funcConsultaaplicacionasignada(UserName);
         }
-        public OdbcDataReader consulta_adb(string UserName, string Aplicacion)
+        public OdbcDataReader funcConsulta_adb(string UserName, string Aplicacion)
         {
-            return asignacionDeAplicaciones.consultadb(UserName, Aplicacion);
+            return asignacionDeAplicaciones.funcConsultadb(UserName, Aplicacion);
         }
-        public OdbcDataReader consulta_adbper(string UserName, string Aplicacion)
+        public OdbcDataReader funcConsulta_adbper(string UserName, string Aplicacion)
         {
-            return asignacionDeAplicaciones.consultadbper(UserName, Aplicacion);
+            return asignacionDeAplicaciones.funcConsultadbper(UserName, Aplicacion);
         }
-        public OdbcDataReader eliminar_adb(string UserName, string Aplicacion)
+        public OdbcDataReader funcEliminar_adb(string UserName, string Aplicacion)
         {
-            return asignacionDeAplicaciones.eliminaradb(UserName, Aplicacion);
+            return asignacionDeAplicaciones.funcEliminaradb(UserName, Aplicacion);
         }
-        public OdbcDataReader eliminar_adbper(string UserName, string Aplicacion)
+        public OdbcDataReader funcEliminar_adbper(string UserName, string Aplicacion)
         {
-            return asignacionDeAplicaciones.eliminardbper(UserName, Aplicacion);
+            return asignacionDeAplicaciones.funcEliminardbper(UserName, Aplicacion);
         }
-        public OdbcDataReader consultapermiso()
+        public OdbcDataReader funcConsultapermiso()
         {
-            return asignacionDeAplicaciones.consultapermisos();
+            return asignacionDeAplicaciones.funcConsultapermisos();
         }
-        public OdbcDataReader consulta_aplicaciones_activas(string UserName, string Aplicacion)
+        public OdbcDataReader funcConsulta_aplicaciones_activas(string UserName, string Aplicacion)
         {
             return asignacionDeAplicaciones.consulta_aplicaciones_activas(UserName, Aplicacion);
         }
-        public OdbcDataReader cambio_aplicaciones_activas(string UserName, string Aplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string apliid)
+        public OdbcDataReader funcCambio_aplicaciones_activas(string UserName, string Aplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string apliid)
         {
-            return asignacionDeAplicaciones.actualizacion_aplicaciones_activas(UserName, Aplicacion, insertar, modificar,eliminar,consultar,imprimir, apliid);
+            return asignacionDeAplicaciones.funcActualizacion_aplicaciones_activas(UserName, Aplicacion, insertar, modificar,eliminar,consultar,imprimir, apliid);
         }
     }
 }

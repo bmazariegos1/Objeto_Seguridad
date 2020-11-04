@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace CapaModeloSeguridad
 {
-    public class Aplicacion
+    public class clsAplicacion
     {
         //Funcion para insertar------------ 
         clsConexion cn = new clsConexion();
 
-        public void insertarAplicacion(string codigo, String nombre, String informe)
+        public void funcInsertarAplicacion(string codigo, String nombre, String informe)
         {
 
             try
@@ -87,7 +87,7 @@ namespace CapaModeloSeguridad
 
         }
 
-        public void insertarUsuario(String usuario, String contraseña, String nombreempleado, String estado)
+        public void funcInsertarUsuario(String usuario, String contraseña, String nombreempleado, String estado)
         {
 
 
@@ -100,7 +100,7 @@ namespace CapaModeloSeguridad
         }
 
 
-        public OdbcDataAdapter buscar(string id)
+        public OdbcDataAdapter funcBuscar(string id)
         {
             int id1 = int.Parse(id);
 
@@ -109,7 +109,7 @@ namespace CapaModeloSeguridad
             return cadena2;
         }
 
-        public OdbcDataAdapter buscarUsuario(string id)
+        public OdbcDataAdapter funcBuscarUsuario(string id)
         {
             int id1 = int.Parse(id);
 
@@ -118,18 +118,18 @@ namespace CapaModeloSeguridad
             return cadena2;
         }
 
-        public void OdbcDataAdapter(string nombre, string informe)
+        public void funcOdbcDataAdapter(string nombre, string informe)
         {
             throw new NotImplementedException();
         }
 
-        public void OdbcDataAdapterUsuario(String usuario, String contraseña, String nombreempleado, String estadoo)
+        public void funcOdbcDataAdapterUsuario(String usuario, String contraseña, String nombreempleado, String estadoo)
         {
             throw new NotImplementedException();
         }
 
 
-        public void modificarAplicacion(string id, String nombre, String informe)
+        public void funcModificarAplicacion(string id, String nombre, String informe)
         {
 
             int id1 = int.Parse(id);
@@ -141,7 +141,7 @@ namespace CapaModeloSeguridad
 
         }
 
-        public void modificarUsuario(string id, String usuario, String contraseña, String nombreempleado, String estado)
+        public void funcModificarUsuario(string id, String usuario, String contraseña, String nombreempleado, String estado)
         {
 
             int id1 = int.Parse(id);
@@ -153,7 +153,7 @@ namespace CapaModeloSeguridad
 
         }
 
-        public void eliminarAplicacion(string id)
+        public void funcEliminarAplicacion(string id)
         {
             int id1 = int.Parse(id);
 
@@ -166,7 +166,7 @@ namespace CapaModeloSeguridad
             //return cadena2;
         }
 
-        public void eliminarUsuario(string id)
+        public void funcEliminarUsuario(string id)
         {
             int id1 = int.Parse(id);
 

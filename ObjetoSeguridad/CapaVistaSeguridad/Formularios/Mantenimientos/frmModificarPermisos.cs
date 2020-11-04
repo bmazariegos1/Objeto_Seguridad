@@ -54,7 +54,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             string usuario = glo.usuariog;
             string valor = glo.aplica;
 
-            OdbcDataReader mostrar = asignacionDeAplicaciones.cambio_aplicaciones_activas(usuario,valor,cinsertar, cmodificar,celiminar,cconsultar,cimprimir, aplicacionid);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcCambio_aplicaciones_activas(usuario,valor,cinsertar, cmodificar,celiminar,cconsultar,cimprimir, aplicacionid);
             try
             {
                 MessageBox.Show("Actualizacion con exito");
@@ -77,7 +77,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
                 valor = glo.aplica;
             Console.WriteLine("lo que recibe es:   "+usuario +"  "+valor);
 
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_aplicaciones_activas(usuario, valor);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_aplicaciones_activas(usuario, valor);
             try
             {
                 while (mostrar.Read())

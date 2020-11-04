@@ -50,7 +50,7 @@ namespace CapaVistaSeguridad.Formularios
         public void LlenarDgv()
         {
             dgvAppAsignadas.Rows.Clear();
-            OdbcDataReader mostrar = Controlador.consulta_ApPerfil(CodPerfil);
+            OdbcDataReader mostrar = Controlador.funcConsulta_ApPerfil(CodPerfil);
             try
             {
                 while (mostrar.Read())
@@ -192,7 +192,7 @@ namespace CapaVistaSeguridad.Formularios
             {
                 CodAplicacion= dgvAppAsignadas.Rows[dgvAppAsignadas.CurrentRow.Index].Cells[0].Value.ToString();
                 txtAplicacion.Text = dgvAppAsignadas.Rows[dgvAppAsignadas.CurrentRow.Index].Cells[1].Value.ToString();
-                OdbcDataReader mostrar = Controlador.consulta_permisos(CodAplicacion, CodPerfil);
+                OdbcDataReader mostrar = Controlador.funcConsulta_permisos(CodAplicacion, CodPerfil);
                 if (mostrar.Read())
                 {
                     CodPermisos = mostrar.GetString(0);
@@ -253,7 +253,7 @@ namespace CapaVistaSeguridad.Formularios
                 }
                 else
                 {
-                    if (Controlador.insertarApliPerfil(CodAplicacion, CodPerfil) == null)
+                    if (Controlador.funcInsertarApliPerfil(CodAplicacion, CodPerfil) == null)
                     {
                         MessageBox.Show("NO se pudo Guardar los datos Contacte al encargado de sistemas");
                     }
@@ -273,7 +273,7 @@ namespace CapaVistaSeguridad.Formularios
             btnAplicación.Enabled = false;
             if (Validar())
             {
-                if (Controlador.ModificarAppPerfil(Permisos1, Permisos2, Permisos3, Permisos4, Permisos5,CodPermisos) == null)
+                if (Controlador.funcModificarAppPerfil(Permisos1, Permisos2, Permisos3, Permisos4, Permisos5,CodPermisos) == null)
                 {
                     MessageBox.Show("NO se pudo Guardar los datos Contacte al encargado de sistemas");
                 }
@@ -293,7 +293,7 @@ namespace CapaVistaSeguridad.Formularios
             btnAplicación.Enabled = false;
             if(Validar())
             {
-                if (Controlador.EliminarrAppPerfil(CodPermisos) == null)
+                if (Controlador.funcEliminarrAppPerfil(CodPermisos) == null)
                 {
                     MessageBox.Show("NO se pudo eliminar los datos Contacte al encargado de sistemas");
                 }

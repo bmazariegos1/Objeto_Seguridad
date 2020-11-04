@@ -120,7 +120,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
            if(txtPassword.Text != "")
             {
                 var key = "b14ca5898a4e4133bbce2ea2315a1916";
-                clcEncriptar encriptar = new clcEncriptar();
+                clsEncriptar encriptar = new clsEncriptar();
                 string Encriptado = encriptar.funcEncryptString(key, txtPassword.Text);
                 txtEncriptado.Text = Encriptado;
             }
@@ -132,12 +132,13 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             if(txtEncriptado.Text != "")
             {
                 var key = "b14ca5898a4e4133bbce2ea2315a1916";
-                clcEncriptar encriptar = new clcEncriptar();
+                clsEncriptar encriptar = new clsEncriptar();
                 string Desencriptado = encriptar.funcDecryptString(key, txtEncriptado.Text);
                 txtPassword.Text = Desencriptado;
             }
             
         }
+
         public void habilitar()
         {
             if(txtUsuario.Enabled == true)

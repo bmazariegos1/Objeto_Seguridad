@@ -27,7 +27,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             Dt.Columns.Add("Codigo", typeof(string));
             Dt.Columns.Add("Nombre_Aplicación", typeof(string));
             Dt.Columns.Add("Descripcion", typeof(string));
-            OdbcDataReader mostrar = Controlador.consulta("aplicacion","estado_aplicacion");
+            OdbcDataReader mostrar = Controlador.funcConsulta("aplicacion","estado_aplicacion");
             try
             {
                 while (mostrar.Read())

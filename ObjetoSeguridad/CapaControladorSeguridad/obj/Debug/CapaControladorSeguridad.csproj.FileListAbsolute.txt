@@ -97,3 +97,12 @@ D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSegurida
 D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
 D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
 D:\Escritorio\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csprojAssemblyReference.cache
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete

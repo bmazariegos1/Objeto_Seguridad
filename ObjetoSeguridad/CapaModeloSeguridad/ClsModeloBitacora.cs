@@ -28,7 +28,7 @@ namespace CapaModeloSeguridad
         static string fecha = now.ToString("dd-MM-yyyy");
 
 
-        public void Insertar(string acc, int app) // funcion para insertar en base de datos los movimientos
+        public void funcInsertar(string acc, int app) // funcion para insertar en base de datos los movimientos
         {
             try
             {

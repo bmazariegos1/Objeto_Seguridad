@@ -14,12 +14,12 @@ namespace CapaVistaSeguridad
 
         public void insert(string Accion, int Aplicacion)
         {
-            conBit.acciones(Aplicacion, Accion);
+            conBit.funcAcciones(Aplicacion, Accion);
         }
 
         public void user(string usu)
         {
-            conBit.usuario(usu);
+            conBit.funcUsuario(usu);
         }
 
     }
