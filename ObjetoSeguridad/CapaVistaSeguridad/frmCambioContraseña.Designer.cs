@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambioContraseña));
             this.lblCambioContraseña = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblConfirmarContraseña = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.txtConfirmarContraseña = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.cbkVer = new System.Windows.Forms.CheckBox();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCambioContraseña
@@ -109,12 +111,23 @@
             this.cbkVer.UseVisualStyleBackColor = true;
             this.cbkVer.CheckedChanged += new System.EventHandler(this.cbkVer_CheckedChanged);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(400, 8);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(35, 33);
+            this.btnAyuda.TabIndex = 19;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // frmCambioContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(444, 246);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.cbkVer);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtConfirmarContraseña);
@@ -125,7 +138,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCambioContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " 0012-Cambio Contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +153,6 @@
         private System.Windows.Forms.TextBox txtConfirmarContraseña;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.CheckBox cbkVer;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

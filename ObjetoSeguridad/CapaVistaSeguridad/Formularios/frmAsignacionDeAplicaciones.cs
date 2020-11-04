@@ -58,7 +58,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void mostrar_consulta_perfil()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_perfiles();
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_perfiles();
             try
             {
                 while (mostrar.Read())
@@ -73,7 +73,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void mostrar_consulta_perfil_asignado()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_perfiles_asignados(txtUsuario.Text);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_perfiles_asignados(txtUsuario.Text);
             try
             {
                 while (mostrar.Read())
@@ -88,7 +88,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void mostrar_consulta_aplicacion()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_aplicaciones();
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_aplicaciones();
             try
             {
                 while (mostrar.Read())
@@ -103,7 +103,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void mostrar_consulta_aplicacion_asignada()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_aplicaciones_asignadas(txtUsuario.Text);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_aplicaciones_asignadas(txtUsuario.Text);
             try
             {
                 while (mostrar.Read())
@@ -118,7 +118,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void insertar_adb()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_adb(txtUsuario.Text, valor);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_adb(txtUsuario.Text, valor);
             try
             {
     
@@ -142,7 +142,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void insertar_apermisos()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consultapermiso();
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsultapermiso();
             try
             {
 
@@ -154,7 +154,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void insertar_adbper()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.consulta_adbper(txtUsuario.Text, valor1);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcConsulta_adbper(txtUsuario.Text, valor1);
             try
             {
             
@@ -166,7 +166,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void eliminar_adb()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.eliminar_adb(txtUsuario.Text, modificar_aplicacion);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcEliminar_adb(txtUsuario.Text, modificar_aplicacion);
             try
             {
 
@@ -178,7 +178,7 @@ namespace CapaVistaSeguridad.Formularios
         }
         public void eliminar_adbper()
         {
-            OdbcDataReader mostrar = asignacionDeAplicaciones.eliminar_adbper(txtUsuario.Text, modificar_perfil);
+            OdbcDataReader mostrar = asignacionDeAplicaciones.funcEliminar_adbper(txtUsuario.Text, modificar_perfil);
             try
             {
 
@@ -200,7 +200,7 @@ namespace CapaVistaSeguridad.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            String NombreUsuario = asignacionDeAplicaciones.NombreUsuario(txtUsuario.Text);
+            String NombreUsuario = asignacionDeAplicaciones.funcNombreUsuario(txtUsuario.Text);
             if (String.IsNullOrEmpty(NombreUsuario))
             {
                 MessageBox.Show("Usuario " + txtUsuario.Text + " Invalido");

@@ -11,24 +11,24 @@ namespace CapaControladorSeguridad
     public class clsObtenerPermisos
     {
         clsPermisos permisos = new clsPermisos();
-        public string PermisosPorAplicacion(string strAplicacion, string strUsuario)
+        public string funcPermisosPorAplicacion(string strAplicacion, string strUsuario)
         {
-            return permisos.PermisosPorAplicacion(strAplicacion, strUsuario);
+            return permisos.funcPermisosPorAplicacion(strAplicacion, strUsuario);
         }
 
-        public string PermisosPorPerfil(string strAplicacion, string strUsuario)
+        public string funcPermisosPorPerfil(string strAplicacion, string strUsuario)
         {
-            return permisos.PermisosPorPerfil(strAplicacion, strUsuario);
+            return permisos.funcPermisosPorPerfil(strAplicacion, strUsuario);
         }
 
-        public int AccesoAplicacionPerfil(string strIdAplicacion, string strUsuario)
+        public int funcAccesoAplicacionPerfil(string strIdAplicacion, string strUsuario)
         {
-            return permisos.AccesoAplicacionPerfil(strIdAplicacion, strUsuario);
+            return permisos.funcAccesoAplicacionPerfil(strIdAplicacion, strUsuario);
         }
 
-        public int AccesoAplicacion(string strIdAplicacion, string strUsuario)
+        public int funcAccesoAplicacion(string strIdAplicacion, string strUsuario)
         {
-            return permisos.AccesoAplicacion(strIdAplicacion, strUsuario);
+            return permisos.funcAccesoAplicacion(strIdAplicacion, strUsuario);
         }
     }
 }

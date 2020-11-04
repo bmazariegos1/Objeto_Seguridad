@@ -40,6 +40,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaVistaNavegador.Navegador();
+            this.navegador2 = new CapaVistaNavegador.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dgvperfil)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
@@ -165,12 +166,21 @@
             this.navegador1.TabIndex = 19;
             this.navegador1.Load += new System.EventHandler(this.Navegador_Load);
             // 
+            // navegador2
+            // 
+            this.navegador2.BackColor = System.Drawing.Color.Transparent;
+            this.navegador2.Location = new System.Drawing.Point(373, 441);
+            this.navegador2.Name = "navegador2";
+            this.navegador2.Size = new System.Drawing.Size(1059, 105);
+            this.navegador2.TabIndex = 20;
+            // 
             // frmMantenimientoPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1089, 440);
+            this.Controls.Add(this.navegador2);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDescripcion);
@@ -207,5 +217,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtEstado;
         private CapaVistaNavegador.Navegador navegador1;
+        private CapaVistaNavegador.Navegador navegador2;
     }
 }

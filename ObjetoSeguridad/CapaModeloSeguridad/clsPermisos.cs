@@ -11,7 +11,7 @@ namespace CapaModeloSeguridad
     {
         clsConexion cn = new clsConexion();
         //Funcion para obtener el codigo del usuario
-        public string obtenerCodigoUsuario(string usuarioLogin)
+        public string funcObtenerCodigoUsuario(string usuarioLogin)
         {
             string strCodigo = "";
             try
@@ -31,9 +31,9 @@ namespace CapaModeloSeguridad
 
 
         //funcion para obtener los permisos por aplicacion del usuario.
-        public string PermisosPorAplicacion(string strAplicacion, string strUsuario)
+        public string funcPermisosPorAplicacion(string strAplicacion, string strUsuario)
         {
-            string strCodigo = obtenerCodigoUsuario(strUsuario);
+            string strCodigo = funcObtenerCodigoUsuario(strUsuario);
             string strPermisosAplicacion="";
             try
             {
@@ -57,9 +57,9 @@ namespace CapaModeloSeguridad
             
         }
         //Permiso por perfil
-        public string PermisosPorPerfil(string strAplicacion, string strUsuario)
+        public string funcPermisosPorPerfil(string strAplicacion, string strUsuario)
         {
-            string strCodigo = obtenerCodigoUsuario(strUsuario);
+            string strCodigo = funcObtenerCodigoUsuario(strUsuario);
             string strPermisoPerfil = "";
             try
             {
@@ -87,7 +87,7 @@ namespace CapaModeloSeguridad
             
         }
         //Acceso a aplicacion por perfil
-        public int AccesoAplicacionPerfil(string strIdAplicacion, string strNombreUsuario)
+        public int funcAccesoAplicacionPerfil(string strIdAplicacion, string strNombreUsuario)
         {
             try
             {
@@ -119,9 +119,8 @@ namespace CapaModeloSeguridad
 
 
         //ACCESO A APLICACION
-        public int AccesoAplicacion(string strIdAplicacion, string strNombreUsuario)
+        public int funcAccesoAplicacion(string strIdAplicacion, string strNombreUsuario)
         {
-            string prueba1;
             try
             {
                 OdbcCommand command = new OdbcCommand("SELECT APU.fk_idaplicacion_aplicacion_usuario "+

@@ -37,7 +37,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
             cmbModulo.DisplayMember = "nombre_modulo";
             cmbModulo.ValueMember = "pk_id_modulo";
-            cmbModulo.DataSource = controlAplicativo.obtenerCamposCombobox("pk_id_modulo","nombre_modulo","MODULO","estado_modulo");
+            cmbModulo.DataSource = controlAplicativo.funcObtenerCamposCombobox("pk_id_modulo","nombre_modulo","MODULO","estado_modulo");
             cmbModulo.SelectedIndex = -1;
         }
 
@@ -46,7 +46,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
             cmbBuscar.DisplayMember = "nombre_aplicacion";
             cmbBuscar.ValueMember = "pk_id_aplicacion";
-            cmbBuscar.DataSource = controlAplicativo.obtenerCamposCombobox("pk_id_aplicacion","nombre_aplicacion","APLICACION","estado_aplicacion");
+            cmbBuscar.DataSource = controlAplicativo.funcObtenerCamposCombobox("pk_id_aplicacion","nombre_aplicacion","APLICACION","estado_aplicacion");
             cmbBuscar.SelectedIndex = -1;
             cmbBuscar.Refresh();
         }
@@ -54,7 +54,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         // cargar todos los datos a utilzar 
         private void cargarDatos()
         {
-            dgvVistaDatos.DataSource = controlAplicativo.obtenerTodo();
+            dgvVistaDatos.DataSource = controlAplicativo.funcObtenerTodo();
         }
 
         // metodo para bloquear los botones cuando sea necesario 
@@ -103,7 +103,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             {
                 if (ValidarTextbox() == true)
                 {
-                    controlAplicativo.insertarAplicativo(this.aplicativo);
+                    controlAplicativo.funcInsertarAplicativo(this.aplicativo);
                     cargarDatos();
                     MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
@@ -140,7 +140,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             {
                 if (ValidarTextbox() == true)
                 {
-                    controlAplicativo.modificarAplicativo(this.aplicativo);
+                    controlAplicativo.funcModificarAplicativo(this.aplicativo);
                     cargarDatos();
                     MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
@@ -181,7 +181,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
                 if (dgMensaje == DialogResult.Yes)
                 {
 
-                    this.controlAplicativo.eliminarAplicativo(iIDAux);
+                    this.controlAplicativo.funcEliminarAplicativo(iIDAux);
                     cargarDatos();
                     MessageBox.Show("Datos Correctamente Eliminados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }else if (dgMensaje == DialogResult.No)
@@ -229,7 +229,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             if (cmbBuscar.SelectedIndex >= 0)
             {
                 int iIDAux = int.Parse(cmbBuscar.SelectedValue.ToString());
-                dgvVistaDatos.DataSource = controlAplicativo.obtenerDatos(iIDAux);
+                dgvVistaDatos.DataSource = controlAplicativo.funcObtenerDatos(iIDAux);
             }
             else if (cmbBuscar.SelectedIndex < 0)
             {

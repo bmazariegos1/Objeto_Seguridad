@@ -13,7 +13,7 @@ namespace CapaModeloSeguridad
         clsConexion cn = new clsConexion();
 
         //funcion para obtener el nombre de usuario
-        public string ObtenerNombreUsuario(string UserName)
+        public string funcObtenerNombreUsuario(string UserName)
         {
             string NombreUsuario = "";
             try
@@ -32,7 +32,7 @@ namespace CapaModeloSeguridad
         }
 
         //Llenar las listas de permisos y aplicaciones
-        public OdbcDataReader consultaperfil()
+        public OdbcDataReader funcConsultaperfil()
         {
             try
             {
@@ -49,7 +49,7 @@ namespace CapaModeloSeguridad
             }
         }
    
-        public OdbcDataReader consultaaplicacion()
+        public OdbcDataReader funcConsultaaplicacion()
         {
             try
             {
@@ -65,7 +65,7 @@ namespace CapaModeloSeguridad
                 return null;
             }
         }
-        public OdbcDataReader consultaperfilasignado(string txtUsuario)
+        public OdbcDataReader funcConsultaperfilasignado(string txtUsuario)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace CapaModeloSeguridad
                 return null;
             }
         }
-        public OdbcDataReader consultaaplicacionasignada(string txtUsuario)
+        public OdbcDataReader funcConsultaaplicacionasignada(string txtUsuario)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace CapaModeloSeguridad
                 return null;
             }
         }
-        public OdbcDataReader consultadbper(string txtUsuario, string txtAplicacion)
+        public OdbcDataReader funcConsultadbper(string txtUsuario, string txtAplicacion)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace CapaModeloSeguridad
             }
 
         }
-        public OdbcDataReader consultadb(string txtUsuario, string txtAplicacion)
+        public OdbcDataReader funcConsultadb(string txtUsuario, string txtAplicacion)
         {
             try
             {
@@ -150,7 +150,7 @@ namespace CapaModeloSeguridad
             }
 
         }
-        public OdbcDataReader consultapermisos()
+        public OdbcDataReader funcConsultapermisos()
         {
             try
             {
@@ -167,7 +167,7 @@ namespace CapaModeloSeguridad
             }
 
         }
-        public OdbcDataReader eliminaradb(string txtUsuario, string txtAplicacion)
+        public OdbcDataReader funcEliminaradb(string txtUsuario, string txtAplicacion)
         {
             try
             {
@@ -183,7 +183,7 @@ namespace CapaModeloSeguridad
                 return null;
             }
         }
-        public OdbcDataReader eliminardbper(string txtUsuario, string txtAplicacion)
+        public OdbcDataReader funcEliminardbper(string txtUsuario, string txtAplicacion)
         {
             try
             {
@@ -201,7 +201,7 @@ namespace CapaModeloSeguridad
             }
 
         }
-        public OdbcDataReader actualizacion_aplicaciones_activas(string txtUsuario, string txtAplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string txtAplicacionid)
+        public OdbcDataReader funcActualizacion_aplicaciones_activas(string txtUsuario, string txtAplicacion, string insertar, string modificar, string eliminar, string consultar, string imprimir, string txtAplicacionid)
         {
             try
             {

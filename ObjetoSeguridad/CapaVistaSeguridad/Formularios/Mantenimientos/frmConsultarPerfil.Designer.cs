@@ -37,6 +37,7 @@
             this.dgvPerfilDisponibles = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxPerfilesdisponibles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfilDisponibles)).BeginInit();
             this.SuspendLayout();
@@ -132,12 +133,22 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(487, 12);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(35, 33);
+            this.btnAyuda.TabIndex = 20;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // frmConsultarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(534, 361);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.gbxPerfilesdisponibles);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -161,5 +172,6 @@
         private System.Windows.Forms.TextBox txtPerfil;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblcodigo;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

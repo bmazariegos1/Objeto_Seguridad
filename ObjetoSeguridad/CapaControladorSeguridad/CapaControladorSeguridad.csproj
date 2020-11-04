@@ -45,13 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clcEncriptar.cs" />
-    <Compile Include="ClsControladorBitacora.cs" />
+    <Compile Include="clsEncriptar.cs" />
+    <Compile Include="clsControladorBitacora.cs" />
     <Compile Include="clsControladorPerfil.cs" />
     <Compile Include="clsControlAplicativo.cs" />
     <Compile Include="clsControlAsignacionDeAplicaciones.cs" />
     <Compile Include="clsObtenerPermisos.cs" />
-    <Compile Include="Cls_aplicacion.cs" />
+    <Compile Include="clsAplicacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

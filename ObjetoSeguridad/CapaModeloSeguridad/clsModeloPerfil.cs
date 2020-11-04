@@ -17,7 +17,7 @@ namespace CapaModeloSeguridad
         clsConexion cn = new clsConexion();
         OdbcCommand Comm;
         //funcion para insertar
-        public int Login(string strUsuario, string strContrasena)
+        public int funcLogin(string strUsuario, string strContrasena)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace CapaModeloSeguridad
             }
         }
         //funcion para obtener nuevos codigos
-        public string obtenerNuevocodigo(string Tabla, string Campo)
+        public string funcObtenerNuevocodigo(string Tabla, string Campo)
         {
             String CampoResultante = "";
             try
@@ -66,7 +66,7 @@ namespace CapaModeloSeguridad
             return CampoResultante;
         }
         //funcion para insertar en la BD
-        public OdbcDataReader Insertar(String Consulta)
+        public OdbcDataReader funcInsertar(String Consulta)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace CapaModeloSeguridad
             }
         }
         //funcion para la modificacion en la DB
-        public OdbcDataReader Modificar(string Consulta)
+        public OdbcDataReader funcModificar(string Consulta)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace CapaModeloSeguridad
             }
         }
         //funcion para realizar consultas al a DB
-        public OdbcDataReader Consulta(string Consulta)
+        public OdbcDataReader funcConsulta(string Consulta)
         {
             try
             {

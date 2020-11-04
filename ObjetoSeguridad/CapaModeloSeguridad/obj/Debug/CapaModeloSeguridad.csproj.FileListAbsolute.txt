@@ -58,3 +58,9 @@ C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSegurid
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
 C:\Users\dairy\Desktop\estesi\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csprojAssemblyReference.cache
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+C:\Users\BillyS\Desktop\Proyectos\Objeto_Seguridad\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb

@@ -15,7 +15,7 @@ namespace CapaModeloSeguridad
     {
         clsConexion cn = new clsConexion();
 
-        public static OdbcCommand obtenerComando(string sComando, OdbcConnection conexion, bool bEsSP = false)
+        public static OdbcCommand funcObtenerComando(string sComando, OdbcConnection conexion, bool bEsSP = false)
         {
             dynamic cmd = new OdbcCommand(sComando, conexion);
             if (bEsSP)
@@ -24,7 +24,7 @@ namespace CapaModeloSeguridad
             }
             return cmd;
         }
-        public bool ejecutarQuery(string sConsulta, bool bEsSP = false)
+        public bool funcEjecutarQuery(string sConsulta, bool bEsSP = false)
         {
             bool bRespuesta = false;
 
@@ -35,7 +35,7 @@ namespace CapaModeloSeguridad
 
             OdbcConnection con = cn.conexion();
 
-            using (OdbcCommand cmd = obtenerComando(sConsulta, con, bEsSP))
+            using (OdbcCommand cmd = funcObtenerComando(sConsulta, con, bEsSP))
             {
                 try
                 {

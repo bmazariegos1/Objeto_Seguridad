@@ -12,17 +12,17 @@ namespace CapaControladorSeguridad
 
         clsModeloBitacora b = new clsModeloBitacora();
 
-        public void usuario(string usu) //obtiene el usuario
+        public void funcUsuario(string usu) //obtiene el usuario
         {
             b.getUsuario(usu);
         }
 
-        public void acciones(int aplicacion, String accion) //obtiene los valores necesarios para registrar movimientos
+        public void funcAcciones(int aplicacion, String accion) //obtiene los valores necesarios para registrar movimientos
         {
             b.nombreAplicacion = aplicacion;
             b.accion = accion;
 
-            b.Insertar(accion, aplicacion);
+            b.funcInsertar(accion, aplicacion);
         }
 
     }
