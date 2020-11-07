@@ -10,6 +10,7 @@ namespace CapaModeloSeguridad
 {
     public class clsAplicativo
     {
+
         private int iIdAplicativo;
         private int iModulo;
         private string sNombre;
