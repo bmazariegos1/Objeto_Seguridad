@@ -16,6 +16,7 @@ namespace CapaControladorSeguridad
         clsSentencia sentencia = new clsSentencia(); // instanciar la clase sentencia
         clsConexion conexion = new clsConexion(); // instanciar la conexion
         
+        
         private DataTable tabla; // variable tipo Datatable
         private OdbcDataAdapter datos; // variable tipo OdbcDataAdapter
 
@@ -25,7 +26,7 @@ namespace CapaControladorSeguridad
         {
             try
             {
-                string sComando = string.Format("INSERT INTO APLICACION(fk_id_modulo, nombre_aplicacion, descripcion_aplicacion, estado_aplicacion) VALUES ({0},'{1}','{2}',{3});", aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion,aplicativo.IEstado);
+                string sComando = string.Format("INSERT INTO APLICACION(pk_id_aplicacion, fk_id_modulo, nombre_aplicacion, descripcion_aplicacion, estado_aplicacion) VALUES ({0},{1},'{2}','{3}',{4});",aplicativo.IIdAplicativo, aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion,aplicativo.IEstado);
                 this.sentencia.funcEjecutarQuery(sComando);
             }
             catch (Exception ex)

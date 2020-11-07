@@ -9,6 +9,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
     public partial class frmAplicativo : Form
     {
         private clsAplicativo aplicativo; // instanciar la clase aplicativo
+        clsValidaciones validaciones = new clsValidaciones();
         private string sNombreAux, sDescAux; // variables para manejar los textbox
         private int iIDAux, iIDModAux; // Variable para manejar el id 
 
@@ -30,6 +31,26 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
             ttMensaje.SetToolTip(this.btnModificar, "Guarda los cambios de datos previamente seleccionados que usted modificó");
             ttMensaje.SetToolTip(this.btnRefrescar, "Actualiza las opciones de Datos a Buscar y Muestra todos los datos del Grid");
+            ttMensaje.SetToolTip(this.txtCod,
+                "Rango de Codigos\n" +
+                "Seguridad 1-100\n" +
+                "Reporteador 101-200\n" +
+                "Consultas inteligentes 201-300\n" +
+                "Modulo HRM 301-1300\n" +
+                "Modulo FRM 1301-2300\n" +
+                "Modulo SCM 2301-3300\n" +
+                "Modulo MRP 3301-4300\n" +
+                "Moculo CRM 4301-5300\n");
+            ttMensaje.SetToolTip(this.lblCodigoAplicacion,
+                "Rango de Codigos\n" +
+                "Seguridad 1-100\n" +
+                "Reporteador 101-200\n" +
+                "Consultas inteligentes 201-300\n" +
+                "Modulo HRM 301-1300\n" +
+                "Modulo FRM 1301-2300\n" +
+                "Modulo SCM 2301-3300\n" +
+                "Modulo MRP 3301-4300\n" +
+                "Moculo CRM 4301-5300\n");
         }
 
         //busqueda de datos el el combo box
@@ -68,6 +89,7 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         private clsAplicativo llenarCampos()
         {
             clsAplicativo auxAplicativo = new clsAplicativo();
+            auxAplicativo.IIdAplicativo = int.Parse(txtCod.Text);
             auxAplicativo.SNombre = txtNombre.Text;
             auxAplicativo.SDescripcion = txtDescripcion.Text;
             auxAplicativo.IModulo = int.Parse(cmbModulo.SelectedValue.ToString());
@@ -78,10 +100,11 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         // metodo para limpiar todos los atributos del formulario 
         private void LimpiarComponentes()
         {
+            txtCod.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             cmbModulo.SelectedIndex = -1;
-            txtNombre.Focus();
+            txtCod.Focus();
         }
 
         // metodo para retornar datos cuando se realiza una modificación 
@@ -98,38 +121,61 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         // Metodo para verificar la inserción de los datos 
         private bool guardarDatos()
         {
-            this.aplicativo = llenarCampos();
-            try
+            bool guardar = true;
+            DialogResult r = MessageBox.Show("Datos a Guardar: \nCodigo:" +txtCod.Text+
+                                             "\nNombre: "+txtNombre.Text+
+                                             "\nDescripcion: "+txtDescripcion.Text,
+                                             "Confirmación De Datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if(r == DialogResult.OK)
             {
-                if (ValidarTextbox() == true)
+                this.aplicativo = llenarCampos();
+                try
                 {
-                    controlAplicativo.funcInsertarAplicativo(this.aplicativo);
-                    cargarDatos();
-                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
+                    if (ValidarTextbox() == true)
+                    {
+                        controlAplicativo.funcInsertarAplicativo(this.aplicativo);
+                        cargarDatos();
+                        MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        guardar = true;
+                    }
+                    else
+                    {
+                        guardar = false;
+                    }
+
                 }
-                else
-                    return false;
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al Guardar los Datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine(ex.Message);
+                    guardar = false;
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al Guardar los Datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(ex.Message);
-                return false;
+                guardar = false;
             }
+            
+            return guardar;
         }
 
         // metodo para limpiar los componentes cuando la insercion de los datos fue correcta 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (guardarDatos() == true)
+
+            if (funcValidarCodigo() == true)
             {
-                LimpiarComponentes();
+                if (guardarDatos() == true)
+                {
+                    LimpiarComponentes();
+                }
+                else
+                {
+                    LimpiarComponentes();
+                }
             }
-            else
-            {
-                LimpiarComponentes();
-            }
+
+            
         }
 
         // metodo para verificar los datos modificados 
@@ -278,7 +324,12 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             }
         }
 
-        
+        private void cmbModulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
         //metodo para validar los atributos que estan vacios 
         private bool ValidarTextbox()
         {
@@ -314,6 +365,16 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
         }
 
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtCod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // Metodo que permite modificar 
         private void cmsModificar_Click(object sender, EventArgs e)
         {
@@ -321,6 +382,379 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             btnGuardar.Enabled = false;
             txtNombre.Text = sNombreAux;
             txtDescripcion.Text = sDescAux;
+        }
+
+        public void procExisteCodigo()
+        {
+            clsControlCodAplicacion aplicacion = new clsControlCodAplicacion();
+            int Aux = aplicacion.funcExisteCodigo(txtCod.Text);
+            
+        }
+
+        private void gbxIngresoDatos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
+        }
+
+        public bool funcValidarCodigo()
+        {
+            
+            clsControlCodAplicacion aplicacion = new clsControlCodAplicacion();
+            bool Validado = false;
+            string codigo;
+            if (String.IsNullOrEmpty(txtCod.Text))
+            {
+                MessageBox.Show("Codigo Vacio\nIngrese Un Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int Codigo = Convert.ToInt32(txtCod.Text);
+                string modulo = cmbModulo.SelectedValue.ToString();
+                int Aux = aplicacion.funcExisteCodigo(txtCod.Text);
+
+                Console.WriteLine(Codigo);
+                Console.WriteLine(modulo);
+                if ((Codigo <= 100) && (Codigo >= 1))//Seguridad
+                {
+                    Console.WriteLine("SEGURIDAD");
+                    if (modulo.Equals("1"))
+                    {
+                        Console.WriteLine("PERTENECE SEGURIDAD");
+                        if(Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "1";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "1";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+
+                }
+                else if ((Codigo <= 200) && (Codigo >= 101))//reporteador
+                {
+                    Console.WriteLine("REPORTEADOR");
+                    if (modulo.Equals("2"))
+                    {
+                        Console.WriteLine(" PERTENECE REPORTEADOR");
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "101";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "101";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 300) && (Codigo >= 201))//consultas inteligentes
+                {
+                    Console.WriteLine("CONSULTAS");
+                    if (modulo.Equals("3"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "201";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "201";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 1300) && (Codigo >= 301))//HRM
+                {
+                    Console.WriteLine("HRM");
+                    if (modulo.Equals("4"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 2300) && (Codigo >= 1301))//FRM
+                {
+                    Console.WriteLine("FRM");
+                    if (modulo.Equals("5"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "1301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "1301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 3300) && (Codigo >= 2301))//SCM
+                {
+                    Console.WriteLine("SCM");
+                    if (modulo.Equals("6"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "2301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "2301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        codigo = funcObtenerId(modulo);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 4300) && (Codigo >= 3301))//MRP
+                {
+                    Console.WriteLine("MRP");
+                    if (modulo.Equals("7"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "3301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "3301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validado = false;
+                    }
+                }
+                else if ((Codigo <= 5300) && (Codigo >= 4301))//CRM
+                {
+                    Console.WriteLine("CRM");
+                    if (modulo.Equals("8"))
+                    {
+                        if (Aux == 1)//Existe
+                        {
+                            MessageBox.Show("Codigo Ya Existe\nVerifique El Codigo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "4301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = false;
+                        }
+                        else
+                        {
+                            codigo = funcObtenerId(modulo);
+                            if (codigo.Equals("Vacio"))
+                            {
+                                txtCod.Text = "4301";
+                            }
+                            else
+                            {
+                                txtCod.Text = codigo;
+                            }
+                            Validado = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Modulo No Pertenece Al Rango De Codigos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                        Validado = false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("NO PERTENECE A NINGUNO");
+                    Validado = false;
+                }
+            }
+            return Validado;
+        }
+
+        //metodo para Obtener el codigo de las aplicacion
+        public string funcObtenerId(string modulo)
+        {
+            
+            clsControlCodAplicacion aplicacion = new clsControlCodAplicacion();
+            string codigo = "";
+            Console.WriteLine("El modulo a obtener el max id es:"+modulo);
+            codigo = aplicacion.funcObtenerCodigoAplicacion(modulo);
+            return codigo;
+            //txtCod.Text = codigo;
         }
     }
 }

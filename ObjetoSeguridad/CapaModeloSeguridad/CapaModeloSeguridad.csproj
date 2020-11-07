@@ -45,6 +45,7 @@
     <Compile Include="clsAplicacion.cs" />
     <Compile Include="clsAplicativo.cs" />
     <Compile Include="clsAsignacionDeAplicaciones.cs" />
+    <Compile Include="clsCodAplicacion.cs" />
     <Compile Include="clsModeloBitacora.cs" />
     <Compile Include="clsModeloPerfil.cs" />
     <Compile Include="clsPermisos.cs" />

@@ -41,6 +41,9 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.gbxIngresoDatos = new System.Windows.Forms.GroupBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
+            this.lblAplicacion = new System.Windows.Forms.Label();
+            this.lblCodigoAplicacion = new System.Windows.Forms.Label();
             this.cmbModulo = new System.Windows.Forms.ComboBox();
             this.lblModulo = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -199,6 +202,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxIngresoDatos.BackColor = System.Drawing.Color.White;
+            this.gbxIngresoDatos.Controls.Add(this.txtCod);
+            this.gbxIngresoDatos.Controls.Add(this.lblAplicacion);
+            this.gbxIngresoDatos.Controls.Add(this.lblCodigoAplicacion);
             this.gbxIngresoDatos.Controls.Add(this.cmbModulo);
             this.gbxIngresoDatos.Controls.Add(this.lblModulo);
             this.gbxIngresoDatos.Controls.Add(this.txtDescripcion);
@@ -215,21 +221,49 @@
             this.gbxIngresoDatos.TabIndex = 5;
             this.gbxIngresoDatos.TabStop = false;
             this.gbxIngresoDatos.Text = "Datos de Aplicativo";
+            this.gbxIngresoDatos.Enter += new System.EventHandler(this.gbxIngresoDatos_Enter);
+            // 
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(203, 28);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(158, 23);
+            this.txtCod.TabIndex = 17;
+            this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
+            this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
+            // 
+            // lblAplicacion
+            // 
+            this.lblAplicacion.AutoSize = true;
+            this.lblAplicacion.Location = new System.Drawing.Point(188, 31);
+            this.lblAplicacion.Name = "lblAplicacion";
+            this.lblAplicacion.Size = new System.Drawing.Size(0, 17);
+            this.lblAplicacion.TabIndex = 9;
+            // 
+            // lblCodigoAplicacion
+            // 
+            this.lblCodigoAplicacion.AutoSize = true;
+            this.lblCodigoAplicacion.Location = new System.Drawing.Point(43, 31);
+            this.lblCodigoAplicacion.Name = "lblCodigoAplicacion";
+            this.lblCodigoAplicacion.Size = new System.Drawing.Size(154, 17);
+            this.lblCodigoAplicacion.TabIndex = 8;
+            this.lblCodigoAplicacion.Text = "Codigo de Aplicacion:";
             // 
             // cmbModulo
             // 
             this.cmbModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbModulo.FormattingEnabled = true;
-            this.cmbModulo.Location = new System.Drawing.Point(138, 106);
+            this.cmbModulo.Location = new System.Drawing.Point(138, 123);
             this.cmbModulo.Name = "cmbModulo";
             this.cmbModulo.Size = new System.Drawing.Size(223, 25);
             this.cmbModulo.TabIndex = 7;
+            this.cmbModulo.SelectedIndexChanged += new System.EventHandler(this.cmbModulo_SelectedIndexChanged);
             // 
             // lblModulo
             // 
             this.lblModulo.AutoSize = true;
-            this.lblModulo.Location = new System.Drawing.Point(43, 106);
+            this.lblModulo.Location = new System.Drawing.Point(43, 123);
             this.lblModulo.Name = "lblModulo";
             this.lblModulo.Size = new System.Drawing.Size(57, 17);
             this.lblModulo.TabIndex = 6;
@@ -237,7 +271,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(579, 42);
+            this.txtDescripcion.Location = new System.Drawing.Point(579, 73);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(229, 23);
             this.txtDescripcion.TabIndex = 5;
@@ -245,16 +279,17 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(138, 42);
+            this.txtNombre.Location = new System.Drawing.Point(138, 70);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 23);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(424, 45);
+            this.lblDescripcion.Location = new System.Drawing.Point(424, 76);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(85, 17);
             this.lblDescripcion.TabIndex = 3;
@@ -263,7 +298,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(43, 45);
+            this.lblNombre.Location = new System.Drawing.Point(43, 73);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(61, 17);
             this.lblNombre.TabIndex = 2;
@@ -420,5 +455,8 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.Label lblAplicacion;
+        private System.Windows.Forms.Label lblCodigoAplicacion;
     }
 }

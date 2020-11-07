@@ -15,9 +15,9 @@ namespace CapaModeloSeguridad
 {
     public class clsAplicacion
     {
-        //Funcion para insertar------------ 
+        
         clsConexion cn = new clsConexion();
-
+        //Funcion para insertar------------ 
         public void funcInsertarAplicacion(string codigo, String nombre, String informe)
         {
 
@@ -176,11 +176,10 @@ namespace CapaModeloSeguridad
         }
         // public void seleccionar(string seleccionar) { 
         //string cadena = cb
+
+        //funcion obtener el codigo maximo de aplicacion
         
     }
-        
-
-
-
-    }
+       
+}
     
